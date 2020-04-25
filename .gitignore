@@ -2,3 +2,12 @@
 PROCESOR.qws
 PROCESOR.qsf
 PROCESOR.qws
+ALU.vhd.bak
+CLOCK.vhd.bak
+IMR.vhd.bak
+IR.vhd.bak
+PC.vhd.bak
+REG_1.vhd.bak
+REG_2.vhd.bak
+db/PROCESOR.db_info
+db/PROCESOR.sld_design_entry.sci
