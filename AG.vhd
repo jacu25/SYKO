@@ -3,7 +3,7 @@ use IEEE.STD_LOGIC_1164.all;
 
 entity AG is
 
-	generic( delay : time );
+	generic( delay : time := 1 ns );
 	
 	port( 
 		cag : in std_logic_vector (2 downto 0);
