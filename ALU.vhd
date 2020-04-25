@@ -2,8 +2,10 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 entity alu is
-	generic(ND : integer := 7;
-	delay : time := 1 ns);
+
+	generic(	ND : integer := 7;
+				delay : time := 1 ns
+	);
 	port(	x, y : in std_logic_vector (ND downto 0);
 			z : out std_logic_vector (ND downto 0) := "00000000";
 			flags : out std_logic_vector (4 downto 0) := "00000"
@@ -24,6 +26,7 @@ begin
 	variable carry : std_logic;
 	variable flags_buf : std_logic_vector(5 downto 0);
 	variable parity_v : std_logic := '1';  --CHECK THIS
+	
 process(x, y)
 begin
 
@@ -33,7 +36,7 @@ begin
 	ADD_LOOP: for i in 0 to ND loop
 		result(i) := (carry xor a(i)) xor b(i);
 		carry := (a(i) and b(i)) or ((a(i) xor b(i)) and carry);
-		end loop;
+	end loop;
 	
 	--OF
 	if (a(ND)=b(ND) and a(ND)/=result(ND)) then
