@@ -3,11 +3,9 @@ use ieee . std_logic_1164 . all ;
 
 entity PC is
 
-	generic
-		( 
+	generic( 
 		NA : integer := 7;
-		delay : time := 2 ns
-		);
+		delay : time := 2 ns);
 
 	port( 
 		clk, rst, incr, jump : in std_logic;
