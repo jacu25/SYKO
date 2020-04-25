@@ -1,5 +1,4 @@
 PROCESOR.qws
-PROCESOR.qws
 PROCESOR.qsf
 ALU.vhd.bak
 CLOCK.vhd.bak
@@ -10,4 +9,3 @@ REG_1.vhd.bak
 REG_2.vhd.bak
 db/PROCESOR.db_info
 db/PROCESOR.sld_design_entry.sci
-
