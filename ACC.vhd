@@ -1,7 +1,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.all;
 
-entity ACC is
+entity Acc is
  
 	generic(	ND : integer := 7;
 				delay : time := 1 ns
@@ -13,9 +13,9 @@ entity ACC is
 		acc_io : inout std_logic_vector(ND downto 0)
 	);
 		
-end ACC;
+end Acc;
 
-architecture arch of ACC is
+architecture arch of Acc is
 begin 
 	
 	process (clk, ie, oe, rst)

@@ -22,16 +22,17 @@ end alu;
 architecture behav of alu is
 begin
 	variable result : std_logic_vector(ND downto 0);
-	variable i : integer; --FOR
+	variable i : integer; --for FOR
 	variable carry : std_logic;
 	variable flags_buf : std_logic_vector(5 downto 0);
-	variable parity_v : std_logic := '1';  --CHECK THIS
+	variable parity_v : std_logic;
 	
 process(x, y)
 begin
 
 	carry := '0';
 	flags_buf:="00000";
+	parity_v := '1';
 	
 	ADD_LOOP: for i in 0 to ND loop
 		result(i) := (carry xor a(i)) xor b(i);
