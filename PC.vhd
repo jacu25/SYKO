@@ -5,7 +5,7 @@ entity PC is
 
 	generic( 
 		NA : integer := 7;
-		delay : time := 2 ns
+		delay : time :=  2 ns
 	);
 
 	port( 
