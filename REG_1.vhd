@@ -14,7 +14,7 @@ entity REG_1 is
 	);
 		
 		
-end IR;
+end REG_1;
 
 architecture arch of REG_1 is
 begin 
