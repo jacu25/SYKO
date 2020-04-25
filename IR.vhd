@@ -1,4 +1,4 @@
-library IEEE;
+ibrary IEEE;
 use IEEE.STD_LOGIC_1164.all;
 
 entity IR is
@@ -6,6 +6,7 @@ entity IR is
 	generic(
 		delay : time := 1 ns 
 	);
+
 	
 	port( 
 		ie, oe, clk, rst : in std_logic;
