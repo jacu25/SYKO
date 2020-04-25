@@ -6,7 +6,7 @@ entity alu is
 	delay : time := 1 ns);
 	port(	x, y : in std_logic_vector (ND downto 0);
 			z : out std_logic_vector (ND downto 0) := "00000000";
-			flags : out std_logic_vector (4 downto 0) := "00000";
+			flags : out std_logic_vector (4 downto 0) := "00000"
 	);
 end alu;
 
