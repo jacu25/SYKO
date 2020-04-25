@@ -5,44 +5,60 @@ entity alu is
 	generic(ND : integer := 7;
 	delay : time := 1 ns);
 	port(	x, y : in std_logic_vector (ND downto 0);
-			z : out std_logic_vector (7 downto 0) := "000000";
-			flags : out std_logic_vector (5 downto 0) := "000000";
+			z : out std_logic_vector (ND downto 0) := "00000000";
+			flags : out std_logic_vector (4 downto 0) := "00000";
 	);
--- flags:	flags(0) = OF,
---				flags(1) = CF,
--- 			flags(2) = SF,
---				flags(3) = ZF, 
---				flags(4) = PF,//partity
---				flags(5) = AF;
 end alu;
+
+-- flags:	flags(0) = OF,// '1' - overflow
+--				flags(1) = CF,// '1' - carry
+-- 			flags(2) = SF,// '1' - minus
+--				flags(3) = ZF,// '1' - zero
+--				flags(4) = PF,// '1' - parity
+
 
 architecture behav of alu is
 begin
-variable i : integer;
-variable ces : std_logic;
-variable ch : std_logic_vector(ND downto 0);
+	variable result : std_logic_vector(ND downto 0);
+	variable i : integer; --FOR
+	variable carry : std_logic;
+	variable flags_buf : std_logic_vector(5 downto 0);
+	variable parity_v : std_logic := '1';  --CHECK THIS
+process(x, y)
 begin
 
-	ces := '0';
-	L1: for i in 0 to ND loop
-		ch(i) := (ces xor a(i)) xor b(i);
-		ces := (a(i) and b(i)) or ((a(i) xor b(i)) and ces);
+	carry := '0';
+	flags_buf:="00000";
+	
+	ADD_LOOP: for i in 0 to ND loop
+		result(i) := (carry xor a(i)) xor b(i);
+		carry := (a(i) and b(i)) or ((a(i) xor b(i)) and carry);
 		end loop;
+	
+	--OF
+	if (a(ND)=b(ND) and a(ND)/=result(ND)) then
+		flags_buf(0) <= '1';
+	else
+		flags_buf(0) <= '0';
+	end if;
+	
+	--CF
+	flags_buf(1) <= carry;
+	
+	--ZF
+	flags_buf(3) <= z(ND);
+
+	--PF
+	for i in 0 to ND loop:
+		parity_v := parity_v xor result(i);
+	end loop;
+	flags_buf(4) <= parity_v;
+	
+	--flags_out
+	flags <= flags_buf after delay;
+	
 	--OUT
-	z <= ch after delay;
+	z <= result after delay;
 	
-	ce <= ces after delay;
-	 --OF
-	if (a(ND)=b(ND) and a(ND)/=ch(ND)) then
-		flags(0) <= '1' after delay;
-	else
-		flags(0) <= '0' after delay;
-	end if;
-	
-	if (z(ND)=1) then
-		flags(0) <= '1' after delay;
-	else
-		flags(0) <= '0' after delay;
-	end if;
 end process;
 end behav;
