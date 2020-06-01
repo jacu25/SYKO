@@ -1,5 +1,5 @@
 library ieee;
-use ieee.std_logic_1164.all
+use ieee.std_logic_1164.all;
 
 entity CU is
 
@@ -51,25 +51,23 @@ begin
 -- zerowanie sygnałów wyjściowych
 	
 	ie_ACC <= ‘0’;
-	oe_ACC <= ‘0’;
-	ie_buf <= ‘0’;
+	buf <= ‘0’;
 	oe_buf <= ‘0’;
 	ie_REG_1 <= ‘0’;
 	oe_REG_1 <= ‘0’;
 	ie_REG_2 <= ‘0’;
-	oe_REG_2 <= ‘0’
+	oe_REG_2 <= ‘0’;
 	ie_IR <= ‘0’;
 	oe_IR <= ‘0’;
 	ie_IMR <= ‘0’
 	oe_IMR <= ‘0’;
 	re_MBR <= ‘0’;
+	we_MBR <= ‘0’;
 	mr <= ‘0’;
 	mw <= ‘0’;
 	lae <= ‘0’;
 	jump <= ‘1’; --nie skacz
-	lae<= ‘0’;
 	incr <= ‘0’;
-	re_MBR <= ‘0’;
 
 --sygnały_bledu <= wartości odpowiadające brakowi błędu;
 --graf przejść
@@ -115,5 +113,7 @@ begin
 	
 end process przejscia;
 
-end arch;
+end architecture arch;
+
+
 

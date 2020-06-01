@@ -1,4 +1,4 @@
-ibrary IEEE;
+library IEEE;
 use IEEE.STD_LOGIC_1164.all;
 
 entity IR is
@@ -33,7 +33,7 @@ begin
 				ir_out <= store after delay;
 			else
 				ir_ir <= “ZZZZZZZZ” after delay;
-			end if
+			end if;
 		end if;
 	end process;
 end arch;
