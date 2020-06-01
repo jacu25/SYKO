@@ -37,10 +37,10 @@ begin
 	if (rising_edge(clk) and (RESET = ‘1’)) then
 		present_state <= s0;
 		r_e<=’1’;
-	elsif rising_edge(clk) then
+	elsif (rising_edge(clk)) then
 		present_state <= next_state;
 		r_e<=’1’;
-	elsif falling_edge(clk) then
+	elsif (falling_edge(clk)) then
 		r_e<=’0’;
 	end if;
 end process clock;

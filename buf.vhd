@@ -23,18 +23,18 @@ begin
 
 	variable store : std_logic_vector (7 downto 0);
 	begin
-		if rising_edge(clk) then
-			if rst=’0’ then
+		if (rising_edge(clk)) then
+			if (rst=’0’) then
 				store := “00000000”;
-			elsif ie=’1’ then
+			elsif (ie=’1’) then
 				store := buf_in;
 			end if;
-		elsif falling_edge(clk) then
-			if oe='1' then
+		elsif (falling_edge(clk)) then
+			if (oe='1') then
 				buf_out <= store after delay;
 			else
 				buf_out <= “ZZZZZZZZ” after delay;
-			end if
+			end if;
 		end if;
 		
 	end process;

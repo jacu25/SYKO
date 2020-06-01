@@ -23,22 +23,22 @@ begin
 	variable store : std_logic_vector (ND downto 0);
 	begin
 		if rising_edge(clk) then
-			if rst=’0’ then
+			if (rst=’0’) then
 				store := “00000000”;
-			elsif re=’1’ then
+			elsif (re=’1’) then
 				store := mem_mbr;
-			elsif we=’1’ then
+			elsif (we=’1’) then
 				store := mbr_data;
 			end if;
 			
 		elsif falling_edge(clk) then
-			if re='1' then
+			if (re='1') then
 				mbr_data <= store after delay;
-			elsif we='1' then
-				mem_mbr <= store afret delay;
+			elsif (we='1') then
+				mem_mbr <= store after delay;
 			else
 				mbr_data <= “ZZZZZZZZ” after delay;
-			end if
+			end if;
 		end if;
 		
 	end process;

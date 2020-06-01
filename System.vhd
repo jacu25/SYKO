@@ -1,10 +1,10 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity system is
-end system;
+entity System is
+end System;
 
-architecture arch of system is
+architecture architectur of System is
 constant period : time := 8 ns ;
 
 --BUSES
@@ -93,4 +93,4 @@ port map(mw=>mw, mr => mr, mem_mbr => mem_mbr, mar_mem=> mar_mem);
 et13: entity work.buf(arch)
 port map(ie => ie_buf, oe=>oe_buf, clk => clk, rst => rst,buf_in=> z, buf_out=>dataBus);
 
-end arch;
+end architectur;

@@ -28,7 +28,7 @@ begin
 
 	begin
 
-		if reset='0' then
+		if (reset='0') then
 			pc_ag <= start_adr;
 		elsif falling_edge(clk) and incr='0' then
 			ces := '0';
