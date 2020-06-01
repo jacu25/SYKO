@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all
 
 entity CU is
 
-	port (clk, RESET: in std_logic; 		//RESET CU-rde
+	port (clk, RESET: in std_logic; 		--RESET CU-rde
 		ird_out : in std_logic_vector (4 downto 0);
 		flags : in std_logic_vector (4 downto 0);
 		
@@ -22,7 +22,7 @@ end entity CU;
 
 architecture arch of CU is
 
-type state is (s0, s1, s2);
+type state is (s0, s1, s2, s3, s4, s5);
 --s0 start
 --s1 praca
 --s2 błąd
@@ -34,32 +34,31 @@ begin
 -- ustawia r_e <= ‘1’ przy zboczu narastającym i re <=’0’ przy zboczu opadającym
 clock: process (clk, RESET) is
 begin
-	if rising_edge(clk) and RESET = ‘1’ then
-	present_state <= s0;
-	r_e<=’1’;
+	if (rising_edge(clk) and (RESET = ‘1’)) then
+		present_state <= s0;
+		r_e<=’1’;
 	elsif rising_edge(clk) then
-	present_state <= next_state;
-	r_e<=’1’;
+		present_state <= next_state;
+		r_e<=’1’;
 	elsif falling_edge(clk) then
-	r_e<=’0’;
+		r_e<=’0’;
 	end if;
 end process clock;
 
 -- ten proces realizuje graf przejść
-przejscia: process (present_state, sygnały_dekodera, znaczniki, re)
+przejscia: process (present_state, ird_out, flags, r_e) is
 begin
 -- zerowanie sygnałów wyjściowych
 	
-			
 	ie_ACC <= ‘0’;
 	oe_ACC <= ‘0’;
 	ie_buf <= ‘0’;
 	oe_buf <= ‘0’;
 	ie_REG_1 <= ‘0’;
-	oe_REG_1 <= ‘0’
+	oe_REG_1 <= ‘0’;
 	ie_REG_2 <= ‘0’;
 	oe_REG_2 <= ‘0’
-	ie_IR <= ‘0’
+	ie_IR <= ‘0’;
 	oe_IR <= ‘0’;
 	ie_IMR <= ‘0’
 	oe_IMR <= ‘0’;
@@ -114,6 +113,7 @@ begin
 		next_state <= s5;
 	end case;
 	
-end process przejścia;
+end process przejscia;
 
+end arch;
 
