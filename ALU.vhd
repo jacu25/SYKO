@@ -18,13 +18,13 @@ end alu;
 --				flags(3) = ZF,// '1' - zero
 --				flags(4) = PF,// '1' - parity
 
-architecture behav of alu is	
+architecture arch of alu is	
 begin
 process(x, y)
 	variable result : std_logic_vector(ND downto 0);
 	variable i : integer; --for FOR
 	variable carry : std_logic;
-	variable flags_buf : std_logic_vector(5 downto 0);
+	variable flags_buf : std_logic_vector(4 downto 0);
 	variable parity_v : std_logic;
 begin
 
@@ -63,4 +63,4 @@ begin
 	z <= result after delay;
 	
 end process;
-end behav;
+end arch;

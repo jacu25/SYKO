@@ -22,7 +22,7 @@ architecture arch of PC is
 
 begin
 
-	process(clk, rst, incr)
+	process(clk, rst, incr, start_adr, jump)
 	variable ch : std_logic_vector(NA downto 0);
 	variable ces: std_logic;
 
