@@ -8,6 +8,7 @@ architecture arch of System is
 
 constant clk_period : time := 8 ns ;
 
+
 --BUSES
 signal dataBus : std_logic_vector(7 downto 0);
 signal addressBus : std_logic_vector(7 downto 0);
