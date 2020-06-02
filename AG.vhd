@@ -25,5 +25,5 @@ begin
 						r1_ag after delay when "001",
 						r2_ag after delay when "010",
 						pc_ag after delay when "011",
-						"ZZZZZZZZ" after delay when others;
+						(other=>'Z') after delay when others;
 end arch;

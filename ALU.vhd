@@ -18,11 +18,7 @@ end alu;
 --				flags(3) = ZF,// '1' - zero
 --				flags(4) = PF,// '1' - parity
 
-
-architecture behav of alu is
-
-
-	
+architecture behav of alu is	
 begin
 process(x, y)
 	variable result : std_logic_vector(ND downto 0);
@@ -33,7 +29,7 @@ process(x, y)
 begin
 
 	carry := '0';
-	flags_buf:="00000";
+	flags_buf:=(other=>'0');
 	parity_v := '1';
 	
 	ADD_LOOP: for i in 0 to ND loop

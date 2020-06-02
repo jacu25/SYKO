@@ -22,19 +22,19 @@ begin
 
 	variable store : std_logic_vector (ND downto 0);
 	begin
-		if rising_edge(clk) then
+		if (rising_edge(clk)) then
 			if (rst=’0’) then
-				store := “00000000”;
+				store := (other=>'0');
 			elsif (ie=’1’) then
 				store := imr_io;
 			end if;
-		elsif falling_edge(clk) then
+		elsif (falling_edge(clk)) then
 			if (oe='1') then
 				imr_io <= store after delay;
 			else
-				imr_io <= “ZZZZZZZZ” after delay;
-			end if
-				imr_ag <= store after delay;
+				imr_io <= (other=>'Z') after delay;
+			end if;
+			imr_ag <= store after delay;
 		end if;
 		
 	end process;

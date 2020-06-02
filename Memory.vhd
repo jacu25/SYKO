@@ -34,7 +34,7 @@ begin
 			rom_data(to_integer(unsigned(mar_mem))) <= mem_mbr after delay;
 		elsif mr='1' then
 			mem_mbr <= rom_data(to_integer(unsigned(mar_mem))) after delay;
-		else mem_mbr <= "ZZZZZZZZ" after delay;
+		else mem_mbr <= (other=>'Z') after delay;
 		end if;
 		
 	end process;

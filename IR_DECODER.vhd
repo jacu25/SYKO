@@ -33,7 +33,7 @@ begin
 				 else "01101"  when (“10-11000")
 				 else "01110"  when (“10-11100")
 				 else "01111"  when (“10-11-11”)
-				 else "00000";
+				 else (other=>'0');
 				 
 				--ADD MORE
 end bech;

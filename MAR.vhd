@@ -24,7 +24,7 @@ begin
 	begin
 		if rising_edge(clk) then
 			if (rst=’0’) then
-				store <= “00000000”;
+				store <= (others=>'0');
 			elsif (lae=’1’) then
 				store <= mar_in;
 			end if;

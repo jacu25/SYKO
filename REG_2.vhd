@@ -24,7 +24,7 @@ begin
 	begin
 		if rising_edge(clk) then
 			if (rst=’0’) then
-				store := “00000000”;
+				store := (other=>'0');
 			elsif (ie=’1’) then
 				store := r2_io;
 			end if;
@@ -32,7 +32,7 @@ begin
 			if (oe='1') then
 				r2_io <= store after delay;
 			else
-				r2_io <= “ZZZZZZZZ” after delay;
+				r2_io <= (other=>'Z'); after delay;
 			end if;
 			r2_ag	<= store after delay;
 		end if;

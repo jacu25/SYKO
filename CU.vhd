@@ -49,7 +49,8 @@ end process clock;
 przejscia: process (present_state, ird_out, flags, r_e) is
 begin
 -- zerowanie sygnałów wyjściowych
-	
+
+	oe_ACC <= ‘0’;
 	ie_ACC <= ‘0’;
 	ie_buf <= ‘0’;
 	oe_buf <= ‘0’;
@@ -66,7 +67,7 @@ begin
 	mr <= ‘0’;
 	mw <= ‘0’;
 	lae <= ‘0’;
-	jump <= ‘1’; --nie skacz
+	jump <= ‘1’;
 	incr <= ‘0’;
 
 --sygnały_bledu <= wartości odpowiadające brakowi błędu;
@@ -74,7 +75,7 @@ begin
 	case present_state is
 	
 	when s0 =>
-	if (r_e=’1’) then
+	if r_e=’1’ then
 		start_adr <= “00000001”; 	--first instruction
 		rst <= '0'; 			--wpisanie start adr
 		cag <= “011”;			 --PC address
@@ -84,14 +85,14 @@ begin
 	end if;
 
 	when s1 =>
-		if (r_e=’1’) then
+		if r_e=’1’ then
 			lae<= ‘1’;
 		else
 			next_state<= s2;
 		end if;
 
 	when s2 =>
-		if (r_e=’1’) then
+		if r_e=’1’ then
 			mr <= ‘1’;
 			re_MBR <= ’1’;
 		else
@@ -99,7 +100,7 @@ begin
 			next_state<= s3;
 		end if;
 	when s3 =>
-		if (r_e=’1’) then
+		if r_e=’1’ then
 			ie_IR<=’1’;
 		else
 			next_state<=s4;

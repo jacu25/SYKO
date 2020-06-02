@@ -20,11 +20,11 @@ begin
 	
 	process (clk, re, we, rst)
 
-	variable store : std_logic_vector (ND downto 0);
+	variable store : std_logic_vector (7 downto 0);
 	begin
-		if rising_edge(clk) then
-			if (rst=’0’) then
-				store := “00000000”;
+		if (rising_edge(clk)) then
+			if (rst='0') then
+				store := (other=>'0');
 			elsif (re=’1’) then
 				store := mem_mbr;
 			elsif (we=’1’) then
@@ -37,7 +37,7 @@ begin
 			elsif (we='1') then
 				mem_mbr <= store after delay;
 			else
-				mbr_data <= “ZZZZZZZZ” after delay;
+				mbr_data <= (other=>'Z') after delay;
 			end if;
 		end if;
 		
