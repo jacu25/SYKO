@@ -21,9 +21,9 @@ architecture arch of AG is
 begin
 
 	with cag select
-		ag_out  <=	imr_in after delay when "000",
+		ag_out  <=	imr_ag after delay when "000",
 						r1_ag after delay when "001",
 						r2_ag after delay when "010",
 						pc_ag after delay when "011",
-						(other=>'Z') after delay when others;
+						(others=>'Z') after delay when others;
 end arch;

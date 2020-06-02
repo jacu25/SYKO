@@ -15,7 +15,7 @@ entity MBR is
 		
 end MBR;
 
-architecture arch of REG_1 is
+architecture arch of MBR is
 begin 
 	
 	process (clk, re, we, rst)
@@ -24,8 +24,8 @@ begin
 	begin
 		if (rising_edge(clk)) then
 			if rst='0' then
-				store := (other=>'0');
-		elsif ie='1' then
+				store := (others=>'0');
+		elsif re='1' then
 				store := mem_mbr;
 			elsif we='1' then
 				store := mbr_data;
@@ -37,7 +37,7 @@ begin
 			elsif (we='1') then
 				mem_mbr <= store after delay;
 			else
-				mbr_data <= (other=>'Z') after delay;
+				mbr_data <= (others=>'Z') after delay;
 			end if;
 		end if;
 		

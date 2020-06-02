@@ -25,7 +25,7 @@ begin
 	begin
 		if (rising_edge(clk)) then
 			if rst='0' then
-				store := (other=>'0');
+				store := (others=>'0');
 		elsif ie='1' then
 				store := buf_in;
 			end if;
@@ -33,7 +33,7 @@ begin
 			if oe='1' then
 				buf_out <= store after delay;
 			else
-				buf_out <= (other=>'Z') after delay;
+				buf_out <= (others=>'Z') after delay;
 			end if;
 		end if;
 		

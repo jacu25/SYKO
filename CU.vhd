@@ -56,7 +56,7 @@ begin
 	oe_REG_2 <= '0';
 	ie_IR <= '0';
 	oe_IR <= '0';
-	ie_IMR <= '0'
+	ie_IMR <= '0';
 	oe_IMR <= '0';
 	re_MBR <= '0';
 	we_MBR <= '0';

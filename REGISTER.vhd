@@ -1,7 +1,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.all;
 
-entity Acc is
+entity REG is
  
 	generic(	ND : integer := 7;
 				delay : time := 1 ns
@@ -9,13 +9,13 @@ entity Acc is
 	
 	port( 
 		ie, oe, clk, rst : in std_logic;
-		acc_alu : out std_logic_vector(ND downto 0);
-		acc_io : inout std_logic_vector(ND downto 0)
+		reg_out : out std_logic_vector(ND downto 0);
+		reg_io : inout std_logic_vector(ND downto 0)
 	);
 		
-end Acc;
+end REG;
 
-architecture arch of Acc is
+architecture arch of REG is
 begin 
 	
 	process (clk, ie, oe, rst)
@@ -25,17 +25,16 @@ begin
 		if rising_edge(clk) then
 			if rst='0' then
 				store := (others=>'0');
-		elsif ie='1' then
-				store := acc_io;
+			elsif ie='1' then
+				store := reg_io;
 			end if;
 		elsif falling_edge(clk) then
-			if (oe='1') then
-				acc_io <= store after delay;
+			if oe='1' then
+				reg_io <= store after delay;
 			else
-				acc_io <= (others=>'Z') after delay;
+				reg_io <= (others=>'Z') after delay;
 			end if;
-				acc_alu <= store after delay;
+				reg_out	<= store after delay;
 		end if;
-		
 	end process;
 end arch;

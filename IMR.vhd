@@ -24,15 +24,15 @@ begin
 	begin
 		if (rising_edge(clk)) then
 			if rst='0' then
-				store := (other=>'0');
-		elsif ie='1' then
-				(store := imr_io)
+				store := (others=>'0');
+			elsif ie='1' then
+				store := imr_io;
 			end if;
 		elsif (falling_edge(clk)) then
 			if (oe='1') then
 				imr_io <= store after delay;
 			else
-				imr_io <= (other=>'Z') after delay;
+				imr_io <= (others=>'Z') after delay;
 			end if;
 			imr_ag <= store after delay;
 		end if;

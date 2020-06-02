@@ -23,19 +23,18 @@ begin
 	variable store : std_logic_vector (ND downto 0);
 	begin
 		if rising_edge(clk) then
-			if (rst='0') then
+			if rst='0' then
 				store := (other=>'0');
-			elsif (ie='1') then
+			elsif ie='1' then
 				store := r1_io;
 			end if;
 		elsif falling_edge(clk) then
-			if (oe='1') then
-				r1_io <= (store) after delay;
+			if oe='1' then
+				r1_io <= store after delay;
 			else
 				r1_io <= (other=>'Z') after delay;
 			end if;
-				r1_ag	<= (store) after delay;
+				r1_ag	<= store after delay;
 		end if;
-		
 	end process;
 end arch;

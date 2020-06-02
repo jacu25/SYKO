@@ -29,32 +29,32 @@ process(x, y)
 begin
 
 	carry := '0';
-	flags_buf:=(other=>'0');
+	flags_buf:=(others=>'0');
 	parity_v := '1';
 	
 	ADD_LOOP: for i in 0 to ND loop
-		result(i) := (carry xor a(i)) xor b(i);
-		carry := (a(i) and b(i)) or ((a(i) xor b(i)) and carry);
+		result(i) := (carry xor x(i)) xor y(i);
+		carry := (x(i) and y(i)) or ((x(i) xor y(i)) and carry);
 	end loop;
 	
 	--OF
-	if (a(ND)=b(ND) and a(ND)/=result(ND)) then
-		flags_buf(0) <= '1';
+	if (x(ND)=y(ND) and x(ND)/=result(ND)) then
+		flags_buf(0) := '1';
 	else
-		flags_buf(0) <= '0';
+		flags_buf(0) := '0';
 	end if;
 	
 	--CF
-	flags_buf(1) <= carry;
+	flags_buf(1) := carry;
 	
 	--ZF
-	flags_buf(3) <= z(ND);
+	flags_buf(3) := result(ND);
 
 	--PF
 	for i in 0 to ND loop
 		parity_v := parity_v xor result(i);
 	end loop;
-	flags_buf(4) <= parity_v;
+	flags_buf(4) := parity_v;
 	
 	--flags_out
 	flags <= flags_buf after delay;
