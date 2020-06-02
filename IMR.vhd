@@ -34,7 +34,7 @@ begin
 			else
 				imr_io <= “ZZZZZZZZ” after delay;
 			end if
-				imr_ag	<= store after delay;
+				imr_ag <= store after delay;
 		end if;
 		
 	end process;

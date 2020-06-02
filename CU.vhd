@@ -18,7 +18,7 @@ entity CU is
 		rst : out std_logic
 		);
 		
-end entity CU;
+end entity;
 
 architecture arch of CU is
 
@@ -27,7 +27,7 @@ type state is (s0, s1, s2, s3, s4, s5);
 --s1 praca
 --s2 błąd
 signal present_state, next_state: state;
-signal r_e: bit; 
+signal r_e: std_logic; 
 begin
 
 -- ten process zmienia present_state na next_state przy zboczu narastającym oraz

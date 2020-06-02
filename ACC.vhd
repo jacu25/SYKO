@@ -33,7 +33,7 @@ begin
 				acc_io <= store after delay;
 			else
 				acc_io <= “ZZZZZZZZ” after delay;
-			end if
+			end if;
 				acc_alu <= store after delay;
 		end if;
 		
