@@ -7,6 +7,7 @@ end System;
 architecture architectur of System is
 constant clk_period : time := 8 ns ;
 
+
 --BUSES
 signal dataBus : std_logic_vector(7 downto 0);
 signal addressBus : std_logic_vector(7 downto 0);
@@ -96,8 +97,14 @@ port map(ir_in=>IR_IRD, ir_out=>IRD_CU);
 et15: entity work.IMR(arch)
 port map(ie =>ie_imr, oe => oe_imr, clk => clk, rst=> rst, imr_ag => imr_ag, imr_io => dataBus); 
 
-CLOCK:
-	clk <= '0' after clk_period/2 when clk ='0' else  --for 0.5 ns signal is '0'.
-			'1' after clk_period/2 	when clk ='1';			--for next 0.5 ns signal is '1'.
+process
+begin 
+
+clk <= '0'
+wait for clk_period/2;
+clk <= '1'; 
+wait for clk_period/2;
+
+end process;
 
 end architectur;
