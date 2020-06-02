@@ -8,16 +8,15 @@ architecture architectur of System is
 constant period : time := 8 ns ;
 
 --BUSES
-signal dataBus : bit_vector (7 downto 0);
-signal addressBus : bit_vector (7 downto 0);
+signal dataBus : std_logic_vector(7 downto 0);
+signal addressBus : std_logic_vector(7 downto 0);
 
 signal clk, rst : std_logic;
-signal RESET : std_ulogic := '1';
-
+signal RESET : std_logic := '1';
 
 --ALU
-signal y, z : bit_vector(7 downto 0);
-signal flags : bit_vector(4 downto 0);
+signal y, z : std_logic_vector(7 downto 0);
+signal flags : std_logic_vector(4 downto 0);
 
 --ACC
 signal ie_ACC, oe_ACC : std_logic;
@@ -27,10 +26,10 @@ signal oe_buf, ie_buf: std_logic;
 
 --MEMORY
 signal lae, re_MBR, wr_MBR, mw, mr : std_logic;
-signal mar_mem, mem_mbr : bit_vector(7 downto 0);
+signal mar_mem, mem_mbr : std_logic_vector(7 downto 0);
 
 --AG
-signal r1_ag, r2_ag, pc_ag, imr_ag : bit_vector (7 downto 0);
+signal r1_ag, r2_ag, pc_ag, imr_ag : std_logic_vector(7 downto 0);
 signal cag : bit_vector(2 downto 0);
 
 --REG_1
@@ -38,16 +37,17 @@ signal oe_REG_1, ie_REG_1: std_logic;
 --REG_2
 signal oe_REG_2, ie_REG_2: std_logic;
 --IR
-signal oe_IR, ie_IR:std_logic;
+signal oe_IR, ie_IR : std_logic;
+
 --IR_DECODER
-signal IR_IRD: bit_vector(7 downto 0);
-signal IRD_CU: bit_vector(4 downto 0);
+signal IR_IRD : std_logic_vector(7 downto 0);
+signal IRD_CU : std_logic_vector(4 downto 0);
 
 --IMR
 signal oe_IMR, ie_IMR: std_logic;
 
 --PC
-signal jump_adr, increment, start_adr : bit_vector(7 downto 0);
+signal jump_adr, increment, start_adr : std_logic_vector(7 downto 0);
 signal jump, incr : std_logic;
 
 begin
@@ -101,5 +101,3 @@ port map(ie =>ie_imr, oe => oe_imr, clk => clk, rst=> rst, imr_ag => imr_ag, imr
 
 
 end architectur;
-
-

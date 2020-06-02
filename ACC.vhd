@@ -23,9 +23,9 @@ begin
 	variable store : std_logic_vector (ND downto 0);
 	begin
 		if rising_edge(clk) then
-			if (rst=’0’) then
+			if rst='0' then
 				store := (other=>'0');
-			elsif (ie=’1’) then
+		elsif ie='1' then
 				store := acc_io;
 			end if;
 		elsif falling_edge(clk) then

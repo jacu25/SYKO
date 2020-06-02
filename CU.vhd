@@ -34,22 +34,20 @@ begin
 -- ustawia r_e <= ‘1’ przy zboczu narastającym i re <=’0’ przy zboczu opadającym
 clock: process (clk, RESET) is
 begin
-	if (rising_edge(clk) and (RESET = ‘1’)) then
+	if rising_edge(clk) and RESET='1' then
 		present_state <= s0;
 		r_e<=’1’;
-	elsif (rising_edge(clk)) then
+	elsif rising_edge(clk) then
 		present_state <= next_state;
-		r_e<=’1’;
-	elsif (falling_edge(clk)) then
-		r_e<=’0’;
+		r_e<='1';
+	elsif falling_edge(clk) then
+		r_e<='0';
 	end if;
 end process clock;
 
 -- ten proces realizuje graf przejść
 przejscia: process (present_state, ird_out, flags, r_e) is
 begin
--- zerowanie sygnałów wyjściowych
-
 	oe_ACC <= ‘0’;
 	ie_ACC <= ‘0’;
 	ie_buf <= ‘0’;
@@ -76,9 +74,9 @@ begin
 	
 	when s0 =>
 	if r_e=’1’ then
-		start_adr <= “00000001”; 	--first instruction
+		start_adr <= '00000001'; 	--first instruction
 		rst <= '0'; 			--wpisanie start adr
-		cag <= “011”;			 --PC address
+		cag <= '011';			 --PC address
 	else --POBRANIE 1 INSTRUKCJ
 		rst <= '1';
 		next_state <= s1;
