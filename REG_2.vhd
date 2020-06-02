@@ -33,7 +33,7 @@ begin
 				r2_io <= store after delay;
 			else
 				r2_io <= “ZZZZZZZZ” after delay;
-			end if
+			end if;
 			r2_ag	<= store after delay;
 		end if;
 		

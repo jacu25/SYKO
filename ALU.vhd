@@ -20,14 +20,16 @@ end alu;
 
 
 architecture behav of alu is
+
+
+	
 begin
+process(x, y)
 	variable result : std_logic_vector(ND downto 0);
 	variable i : integer; --for FOR
 	variable carry : std_logic;
 	variable flags_buf : std_logic_vector(5 downto 0);
 	variable parity_v : std_logic;
-	
-process(x, y)
 begin
 
 	carry := '0';
@@ -53,7 +55,7 @@ begin
 	flags_buf(3) <= z(ND);
 
 	--PF
-	for i in 0 to ND loop:
+	for i in 0 to ND loop
 		parity_v := parity_v xor result(i);
 	end loop;
 	flags_buf(4) <= parity_v;

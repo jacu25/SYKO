@@ -270,7 +270,7 @@ et14: entity work.IR_DECODER(arch)
 port map(ir_in=>IR_IRD, ir_out=>IRD_CU);
 
 et15: entity work.IMR(arch)
-port map(ie =>ie_imr, oe => oe_imr, clk => clk, rst= > rst, imr_ag => imr_ag, imr_io => dataBus); 
+port map(ie =>ie_imr, oe => oe_imr, clk => clk, rst=> rst, imr_ag => imr_ag, imr_io => dataBus); 
 
 
 end architectur;

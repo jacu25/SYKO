@@ -51,7 +51,7 @@ begin
 -- zerowanie sygnałów wyjściowych
 	
 	ie_ACC <= ‘0’;
-	buf <= ‘0’;
+	ie_buf <= ‘0’;
 	oe_buf <= ‘0’;
 	ie_REG_1 <= ‘0’;
 	oe_REG_1 <= ‘0’;
