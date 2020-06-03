@@ -1,0 +1,503 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/ModelSim/projekty
+Eag
+Z0 w1591120966
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z3 dC:/Users/Jacek/Desktop/SYKO/SYKO
+Z4 8C:/Users/Jacek/Desktop/SYKO/SYKO/AG.vhd
+Z5 FC:/Users/Jacek/Desktop/SYKO/SYKO/AG.vhd
+l0
+L4
+Vzfc?>nG8g@MQ:LFfg1XIO3
+!s100 [Q?W[DF[eeZe^W5>DFzOf2
+Z6 OP;C;10.4a;61
+32
+Z7 !s110 1591224798
+!i10b 1
+Z8 !s108 1591224798.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/AG.vhd|
+Z10 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/AG.vhd|
+!i113 1
+Z11 o-work work -2002 -explicit -O0
+Z12 tExplicit 1
+Aarch
+R1
+R2
+DEx4 work 2 ag 0 22 zfc?>nG8g@MQ:LFfg1XIO3
+l21
+L19
+V7hi989T8`f]5AMdCg5bF:0
+!s100 I33N]5gBf_YRGWnYGM@WO1
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Ealu
+Z13 w1591128690
+R1
+R2
+R3
+Z14 8C:/Users/Jacek/Desktop/SYKO/SYKO/ALU.vhd
+Z15 FC:/Users/Jacek/Desktop/SYKO/SYKO/ALU.vhd
+l0
+L4
+VRcfk4i>YKm;7a@1U6_9kF2
+!s100 ^e?4goH5^n[RbGz]z1aOF0
+R6
+32
+R7
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/ALU.vhd|
+Z17 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/ALU.vhd|
+!i113 1
+R11
+R12
+Aarch
+R1
+R2
+DEx4 work 3 alu 0 22 Rcfk4i>YKm;7a@1U6_9kF2
+l22
+L21
+VVRNz;j@Tgidoh:98?A4g>1
+!s100 <>^6DHI^dL3nO?]<Rc>lY2
+R6
+32
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
+Ebuf
+Z18 w1591120011
+R1
+R2
+R3
+Z19 8C:/Users/Jacek/Desktop/SYKO/SYKO/buf.vhd
+Z20 FC:/Users/Jacek/Desktop/SYKO/SYKO/buf.vhd
+l0
+L4
+V>@HGFa;>ijXE[hZ:@243W0
+!s100 L0jEYcC>2E=KL8kajQNZU0
+R6
+32
+R7
+!i10b 1
+R8
+Z21 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/buf.vhd|
+Z22 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/buf.vhd|
+!i113 1
+R11
+R12
+Aarch
+R1
+R2
+DEx4 work 3 buf 0 22 >@HGFa;>ijXE[hZ:@243W0
+l20
+L19
+VilJcJAzD3UYnDknITaoV02
+!s100 d3dY:1K4HIioOl3mT[OC82
+R6
+32
+R7
+!i10b 1
+R8
+R21
+R22
+!i113 1
+R11
+R12
+Eclock
+w1587831975
+R1
+R2
+R3
+8C:/Users/Jacek/Desktop/SYKO/SYKO/Clock.vhd
+FC:/Users/Jacek/Desktop/SYKO/SYKO/Clock.vhd
+l0
+L4
+V3f_GG>RDI<iTbPS1RVLZH2
+!s100 3]H]7JhPJSgKMbF37[c7Q3
+R6
+32
+!s110 1591224246
+!i10b 1
+!s108 1591224246.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/Clock.vhd|
+!s107 C:/Users/Jacek/Desktop/SYKO/SYKO/Clock.vhd|
+!i113 1
+R11
+R12
+Ecu
+Z23 w1591223931
+R1
+R2
+R3
+Z24 8C:/Users/Jacek/Desktop/SYKO/SYKO/CU.vhd
+Z25 FC:/Users/Jacek/Desktop/SYKO/SYKO/CU.vhd
+l0
+L4
+VWmLJ56n=[JU4:4Ff8=78F0
+!s100 8>H@5D09M_RK^_mYgFTlU3
+R6
+32
+R7
+!i10b 1
+R8
+Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/CU.vhd|
+Z27 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/CU.vhd|
+!i113 1
+R11
+R12
+Aarch
+R1
+R2
+DEx4 work 2 cu 0 22 WmLJ56n=[JU4:4Ff8=78F0
+l33
+L23
+VZ@:0YnV@BdYYbKW1Hj8M51
+!s100 _aNE<YcB3Gm_dzKC9<5No0
+R6
+32
+R7
+!i10b 1
+R8
+R26
+R27
+!i113 1
+R11
+R12
+Eimr
+Z28 w1591120009
+R1
+R2
+R3
+Z29 8C:/Users/Jacek/Desktop/SYKO/SYKO/IMR.vhd
+Z30 FC:/Users/Jacek/Desktop/SYKO/SYKO/IMR.vhd
+l0
+L4
+VDg^`aIDM5`WNMY4^DhEJc2
+!s100 V<@ozX7H0Y_n5YPY[R]Ki2
+R6
+32
+R7
+!i10b 1
+R8
+Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/IMR.vhd|
+Z32 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/IMR.vhd|
+!i113 1
+R11
+R12
+Aarch
+R1
+R2
+DEx4 work 3 imr 0 22 Dg^`aIDM5`WNMY4^DhEJc2
+l19
+L18
+VCk3zXAinT`1TahYC2H^`E1
+!s100 E>64OI8WWCN0Q]Q<nZhL>0
+R6
+32
+R7
+!i10b 1
+R8
+R31
+R32
+!i113 1
+R11
+R12
+Eir
+Z33 w1591120899
+R1
+R2
+R3
+Z34 8C:/Users/Jacek/Desktop/SYKO/SYKO/IR.vhd
+Z35 FC:/Users/Jacek/Desktop/SYKO/SYKO/IR.vhd
+l0
+L4
+VPTXA?AjHbT]6@^=zmnHZZ1
+!s100 DDAg<Qh>XST^FAf:moBgE3
+R6
+32
+R7
+!i10b 1
+R8
+Z36 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/IR.vhd|
+Z37 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/IR.vhd|
+!i113 1
+R11
+R12
+Aarch
+R1
+R2
+DEx4 work 2 ir 0 22 PTXA?AjHbT]6@^=zmnHZZ1
+l19
+L18
+V3m>i]_@Ma79>8?0W=g2_=3
+!s100 U[MVg9A=`1JVooHciBQ6:0
+R6
+32
+R7
+!i10b 1
+R8
+R36
+R37
+!i113 1
+R11
+R12
+Eir_decoder
+Z38 w1591119870
+R1
+R2
+R3
+Z39 8C:/Users/Jacek/Desktop/SYKO/SYKO/IR_DECODER.vhd
+Z40 FC:/Users/Jacek/Desktop/SYKO/SYKO/IR_DECODER.vhd
+l0
+L4
+VBlb0V<k8ND`?9ldZZhjN<1
+!s100 ]RhO>cE_WKUI2[n0RVZL01
+R6
+32
+R7
+!i10b 1
+R8
+Z41 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/IR_DECODER.vhd|
+Z42 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/IR_DECODER.vhd|
+!i113 1
+R11
+R12
+Aarch
+R1
+R2
+DEx4 work 10 ir_decoder 0 22 Blb0V<k8ND`?9ldZZhjN<1
+l17
+L16
+VDj4MPD<2=HA:FEc[K8KML2
+!s100 BzhQSj_Vb>P]LVR0dKA8R2
+R6
+32
+R7
+!i10b 1
+R8
+R41
+R42
+!i113 1
+R11
+R12
+Emar
+Z43 w1591120129
+R1
+R2
+R3
+Z44 8C:/Users/Jacek/Desktop/SYKO/SYKO/MAR.vhd
+Z45 FC:/Users/Jacek/Desktop/SYKO/SYKO/MAR.vhd
+l0
+L4
+V]kXoG4[L@o3XSn@XZloaC1
+!s100 6`5?C=AL6P_]O16G[Tc5M2
+R6
+32
+R7
+!i10b 1
+R8
+Z46 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/MAR.vhd|
+Z47 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/MAR.vhd|
+!i113 1
+R11
+R12
+Aarch
+R1
+R2
+DEx4 work 3 mar 0 22 ]kXoG4[L@o3XSn@XZloaC1
+l19
+L18
+VZ;6>>3Xl2hR><k`JZ_^MM3
+!s100 KElbM==^:j=Z4GLzcGP2[2
+R6
+32
+R7
+!i10b 1
+R8
+R46
+R47
+!i113 1
+R11
+R12
+Embr
+Z48 w1591120095
+R1
+R2
+R3
+Z49 8C:/Users/Jacek/Desktop/SYKO/SYKO/MBR.vhd
+Z50 FC:/Users/Jacek/Desktop/SYKO/SYKO/MBR.vhd
+l0
+L4
+VoaSaDV^47AS]ARB:D4SWP1
+!s100 @cC_[lAUMcLZQ>dfHH6722
+R6
+32
+Z51 !s110 1591224799
+!i10b 1
+R8
+Z52 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/MBR.vhd|
+Z53 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/MBR.vhd|
+!i113 1
+R11
+R12
+Aarch
+R1
+R2
+DEx4 work 3 mbr 0 22 oaSaDV^47AS]ARB:D4SWP1
+l19
+L18
+Va[m`Q8N<ZZ[g<[A_[Oa6@2
+!s100 KQVlQXbLoZ5;=`m]ZlEZ<3
+R6
+32
+R51
+!i10b 1
+R8
+R52
+R53
+!i113 1
+R11
+R12
+Ememory
+w1591121631
+DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R1
+R2
+R3
+8C:\Users\Jacek\Desktop\SYKO\SYKO\Memory.vhd
+FC:\Users\Jacek\Desktop\SYKO\SYKO\Memory.vhd
+l0
+L5
+V66o2@XK^z3^MO=AAec]dK0
+!s100 6^9dg4i4P2GUj:h@>ha>=0
+R6
+32
+R51
+!i10b 1
+Z54 !s108 1591224799.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\Jacek\Desktop\SYKO\SYKO\Memory.vhd|
+!s107 C:\Users\Jacek\Desktop\SYKO\SYKO\Memory.vhd|
+!i113 1
+R11
+R12
+Epc
+Z55 w1591128647
+R1
+R2
+R3
+Z56 8C:/Users/Jacek/Desktop/SYKO/SYKO/PC.vhd
+Z57 FC:/Users/Jacek/Desktop/SYKO/SYKO/PC.vhd
+l0
+L4
+V`QPi@zJEd;2g@YhF^E_MW3
+!s100 8iRM_P3:mY>0W2`^<OS9c0
+R6
+32
+R51
+!i10b 1
+R54
+Z58 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/PC.vhd|
+Z59 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/PC.vhd|
+!i113 1
+R11
+R12
+Aarch
+R1
+R2
+DEx4 work 2 pc 0 22 `QPi@zJEd;2g@YhF^E_MW3
+l23
+L21
+V;OD:26GgN:<1B0eIESYoZ3
+!s100 UMcS?^oaF>f6z6B`?EJ:Q2
+R6
+32
+R51
+!i10b 1
+R54
+R58
+R59
+!i113 1
+R11
+R12
+Ereg
+Z60 w1591121662
+R1
+R2
+R3
+Z61 8C:/Users/Jacek/Desktop/SYKO/SYKO/REG.vhd
+Z62 FC:/Users/Jacek/Desktop/SYKO/SYKO/REG.vhd
+l0
+L4
+V]UlWI;OWe>J]c@XbPM:mN3
+!s100 mebab;KL^_lAIL`?6V3Lz1
+R6
+32
+R51
+!i10b 1
+R54
+Z63 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/REG.vhd|
+Z64 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/REG.vhd|
+!i113 1
+R11
+R12
+Aarch
+R1
+R2
+Z65 DEx4 work 3 reg 0 22 ]UlWI;OWe>J]c@XbPM:mN3
+l19
+L18
+Z66 Vc<eb:n=c8Roa7TEGGe=h:1
+Z67 !s100 O1`a;gQB^W_:lf:f`0h9>3
+R6
+32
+R51
+!i10b 1
+R54
+R63
+R64
+!i113 1
+R11
+R12
+Esystem
+w1591224776
+R1
+R2
+R3
+8C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd
+FC:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd
+l0
+L4
+VDe:ZWb8dbnjOCEL::XNVR0
+!s100 S;KofoKRz6l>kfTmI@AWd0
+R6
+32
+!s110 1591224797
+!i10b 1
+!s108 1591224797.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd|
+!s107 C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd|
+!i113 1
+R11
+R12
