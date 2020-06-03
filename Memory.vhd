@@ -19,8 +19,10 @@ architecture arch of Memory is
  type ROM_type is array (0 to 4 ) of std_logic_vector(7 downto 0);
   
 begin
-
- variable rom_data: ROM_type:=(
+  
+	process(mw, mr)
+	
+	 variable rom_data: ROM_type:=(
 	"00000000",
 	"00000000",
 	"00000000",
@@ -28,7 +30,6 @@ begin
 	"00000000"
   );
   
-	process(mw, mr)
 	begin
 		if mw='1' then
 				rom_data(to_integer(unsigned(mar_mem))) := mem_mbr; --AFTER DELAY

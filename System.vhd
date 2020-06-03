@@ -188,7 +188,7 @@ component Memory is
 	);
 end component;
 
-constant ClockPeriod : time := 8ns;
+constant ClockPeriod : time := 8 ns;
 
 begin
 

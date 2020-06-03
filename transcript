@@ -1,0 +1,28 @@
+# Compile of System.vhd was successful.
+# Compile of AG.vhd was successful.
+# Compile of ALU.vhd was successful.
+# Compile of buf.vhd was successful.
+# Compile of CU.vhd was successful.
+# Compile of IMR.vhd was successful.
+# Compile of IR.vhd was successful.
+# Compile of IR_DECODER.vhd was successful.
+# Compile of MAR.vhd was successful.
+# Compile of MBR.vhd was successful.
+# Compile of Memory.vhd failed with 4 errors.
+# Compile of PC.vhd was successful.
+# Compile of REG.vhd was successful.
+# 13 compiles, 1 failed with 4 errors.
+# Compile of System.vhd was successful.
+# Compile of AG.vhd was successful.
+# Compile of ALU.vhd was successful.
+# Compile of buf.vhd was successful.
+# Compile of CU.vhd was successful.
+# Compile of IMR.vhd was successful.
+# Compile of IR.vhd was successful.
+# Compile of IR_DECODER.vhd was successful.
+# Compile of MAR.vhd was successful.
+# Compile of MBR.vhd was successful.
+# Compile of Memory.vhd was successful.
+# Compile of PC.vhd was successful.
+# Compile of REG.vhd was successful.
+# 13 compiles, 0 failed with no errors.
