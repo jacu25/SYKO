@@ -26,27 +26,33 @@ type state is (s0, s1, s2, s3, s4, s5);
 --s0 start
 --s1 praca
 --s2 błąd
-signal present_state, next_state: state;
-signal r_e: std_logic; 
+signal next_state: state;
+signal present_state: state; 
+signal r_e: std_logic := '0'; 
+
 begin
 
 -- ten process zmienia present_state na next_state przy zboczu narastającym oraz
 -- ustawia r_e <= ‘1’ przy zboczu narastającym i re <=’0’ przy zboczu opadającym
+
 clock: process (clk, RESET) is
+
 begin
+
 	if rising_edge(clk) and RESET='1' then
-		present_state <= s0;
-		r_e <= '1';
+		r_e<= '1';
+		present_state<=s0;
 	elsif rising_edge(clk) then
-		present_state <= next_state;
-		r_e<='1';
+		r_e<= '1';
 	elsif falling_edge(clk) then
-		r_e<='0';
+		present_state<=next_state;
+		r_e<= '0';
 	end if;
-end process clock;
+	
+end process;
 
 -- ten proces realizuje graf przejść
-przejscia: process (present_state, ird_out, flags, r_e) is
+przejscia :process(present_state, ird_out, flags, r_e)
 begin
 	oe_ACC <='0';
 	ie_ACC <='0';
@@ -108,9 +114,9 @@ begin
 		next_state <= s5;
 	end case;
 	
-end process przejscia;
+end process;
 
-end architecture arch;
+end arch;
 
 
 
