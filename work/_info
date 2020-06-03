@@ -21,9 +21,9 @@ Vzfc?>nG8g@MQ:LFfg1XIO3
 !s100 [Q?W[DF[eeZe^W5>DFzOf2
 Z6 OP;C;10.4a;61
 32
-Z7 !s110 1591225570
+Z7 !s110 1591225849
 !i10b 1
-Z8 !s108 1591225570.000000
+Z8 !s108 1591225849.000000
 Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/AG.vhd|
 Z10 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/AG.vhd|
 !i113 1
@@ -177,7 +177,7 @@ VZ@:0YnV@BdYYbKW1Hj8M51
 !s100 _aNE<YcB3Gm_dzKC9<5No0
 R6
 32
-Z28 !s110 1591225571
+R7
 !i10b 1
 R8
 R26
@@ -186,23 +186,23 @@ R27
 R11
 R12
 Eimr
-Z29 w1591120009
+Z28 w1591120009
 R1
 R2
 R3
-Z30 8C:/Users/Jacek/Desktop/SYKO/SYKO/IMR.vhd
-Z31 FC:/Users/Jacek/Desktop/SYKO/SYKO/IMR.vhd
+Z29 8C:/Users/Jacek/Desktop/SYKO/SYKO/IMR.vhd
+Z30 FC:/Users/Jacek/Desktop/SYKO/SYKO/IMR.vhd
 l0
 L4
 VDg^`aIDM5`WNMY4^DhEJc2
 !s100 V<@ozX7H0Y_n5YPY[R]Ki2
 R6
 32
-R28
+R7
 !i10b 1
-Z32 !s108 1591225571.000000
-Z33 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/IMR.vhd|
-Z34 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/IMR.vhd|
+R8
+Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/IMR.vhd|
+Z32 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/IMR.vhd|
 !i113 1
 R11
 R12
@@ -216,30 +216,30 @@ VCk3zXAinT`1TahYC2H^`E1
 !s100 E>64OI8WWCN0Q]Q<nZhL>0
 R6
 32
-R28
+R7
 !i10b 1
+R8
+R31
 R32
-R33
-R34
 !i113 1
 R11
 R12
 Eir
-Z35 w1591120899
+Z33 w1591120899
 R1
 R2
 R3
-Z36 8C:/Users/Jacek/Desktop/SYKO/SYKO/IR.vhd
-Z37 FC:/Users/Jacek/Desktop/SYKO/SYKO/IR.vhd
+Z34 8C:/Users/Jacek/Desktop/SYKO/SYKO/IR.vhd
+Z35 FC:/Users/Jacek/Desktop/SYKO/SYKO/IR.vhd
 l0
 L4
 VPTXA?AjHbT]6@^=zmnHZZ1
 !s100 DDAg<Qh>XST^FAf:moBgE3
 R6
 32
-R28
+Z36 !s110 1591225850
 !i10b 1
-R32
+Z37 !s108 1591225850.000000
 Z38 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/IR.vhd|
 Z39 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/IR.vhd|
 !i113 1
@@ -255,9 +255,9 @@ V3m>i]_@Ma79>8?0W=g2_=3
 !s100 U[MVg9A=`1JVooHciBQ6:0
 R6
 32
-R28
+R36
 !i10b 1
-R32
+R37
 R38
 R39
 !i113 1
@@ -276,9 +276,9 @@ VBlb0V<k8ND`?9ldZZhjN<1
 !s100 ]RhO>cE_WKUI2[n0RVZL01
 R6
 32
-R28
+R36
 !i10b 1
-R32
+R37
 Z43 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/IR_DECODER.vhd|
 Z44 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/IR_DECODER.vhd|
 !i113 1
@@ -294,9 +294,9 @@ VDj4MPD<2=HA:FEc[K8KML2
 !s100 BzhQSj_Vb>P]LVR0dKA8R2
 R6
 32
-R28
+R36
 !i10b 1
-R32
+R37
 R43
 R44
 !i113 1
@@ -315,9 +315,9 @@ V]kXoG4[L@o3XSn@XZloaC1
 !s100 6`5?C=AL6P_]O16G[Tc5M2
 R6
 32
-R28
+R36
 !i10b 1
-R32
+R37
 Z48 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/MAR.vhd|
 Z49 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/MAR.vhd|
 !i113 1
@@ -333,9 +333,9 @@ VZ;6>>3Xl2hR><k`JZ_^MM3
 !s100 KElbM==^:j=Z4GLzcGP2[2
 R6
 32
-R28
+R36
 !i10b 1
-R32
+R37
 R48
 R49
 !i113 1
@@ -354,9 +354,9 @@ VoaSaDV^47AS]ARB:D4SWP1
 !s100 @cC_[lAUMcLZQ>dfHH6722
 R6
 32
-R28
+R36
 !i10b 1
-R32
+R37
 Z53 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/MBR.vhd|
 Z54 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/MBR.vhd|
 !i113 1
@@ -372,9 +372,9 @@ Va[m`Q8N<ZZ[g<[A_[Oa6@2
 !s100 KQVlQXbLoZ5;=`m]ZlEZ<3
 R6
 32
-R28
+R36
 !i10b 1
-R32
+R37
 R53
 R54
 !i113 1
@@ -386,19 +386,19 @@ Z56 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 R1
 R2
 R3
-Z57 8C:\Users\Jacek\Desktop\SYKO\SYKO\Memory.vhd
-Z58 FC:\Users\Jacek\Desktop\SYKO\SYKO\Memory.vhd
+Z57 8C:/Users/Jacek/Desktop/SYKO/SYKO/Memory.vhd
+Z58 FC:/Users/Jacek/Desktop/SYKO/SYKO/Memory.vhd
 l0
 L5
 V66o2@XK^z3^MO=AAec]dK0
 !s100 6^9dg4i4P2GUj:h@>ha>=0
 R6
 32
-R28
+R36
 !i10b 1
-R32
-Z59 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\Jacek\Desktop\SYKO\SYKO\Memory.vhd|
-Z60 !s107 C:\Users\Jacek\Desktop\SYKO\SYKO\Memory.vhd|
+R37
+Z59 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/Memory.vhd|
+Z60 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/Memory.vhd|
 !i113 1
 R11
 R12
@@ -413,9 +413,9 @@ VI6BiG0;e0FFd<6nA1oz760
 !s100 9@MzGnS]7aSoAWFSmdWa?3
 R6
 32
-R28
+R36
 !i10b 1
-R32
+R37
 R59
 R60
 !i113 1
@@ -434,9 +434,9 @@ V`QPi@zJEd;2g@YhF^E_MW3
 !s100 8iRM_P3:mY>0W2`^<OS9c0
 R6
 32
-R28
+R36
 !i10b 1
-R32
+R37
 Z64 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/PC.vhd|
 Z65 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/PC.vhd|
 !i113 1
@@ -452,9 +452,9 @@ V;OD:26GgN:<1B0eIESYoZ3
 !s100 UMcS?^oaF>f6z6B`?EJ:Q2
 R6
 32
-R28
+R36
 !i10b 1
-R32
+R37
 R64
 R65
 !i113 1
@@ -473,39 +473,39 @@ V]UlWI;OWe>J]c@XbPM:mN3
 !s100 mebab;KL^_lAIL`?6V3Lz1
 R6
 32
-R28
+Z69 !s110 1591225851
 !i10b 1
-R32
-Z69 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/REG.vhd|
-Z70 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/REG.vhd|
+R37
+Z70 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/REG.vhd|
+Z71 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/REG.vhd|
 !i113 1
 R11
 R12
 Aarch
 R1
 R2
-Z71 DEx4 work 3 reg 0 22 ]UlWI;OWe>J]c@XbPM:mN3
+Z72 DEx4 work 3 reg 0 22 ]UlWI;OWe>J]c@XbPM:mN3
 l19
 L18
-Z72 Vc<eb:n=c8Roa7TEGGe=h:1
-Z73 !s100 O1`a;gQB^W_:lf:f`0h9>3
+Z73 Vc<eb:n=c8Roa7TEGGe=h:1
+Z74 !s100 O1`a;gQB^W_:lf:f`0h9>3
 R6
 32
-!s110 1591225572
-!i10b 1
-R32
 R69
+!i10b 1
+R37
 R70
+R71
 !i113 1
 R11
 R12
 Esystem
-Z74 w1591225457
+Z75 w1591225457
 R1
 R2
 R3
-Z75 8C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd
-Z76 FC:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd
+Z76 8C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd
+Z77 FC:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd
 l0
 L4
 VDe:ZWb8dbnjOCEL::XNVR0
@@ -515,8 +515,8 @@ R6
 R7
 !i10b 1
 R8
-Z77 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd|
-Z78 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd|
+Z78 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd|
+Z79 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd|
 !i113 1
 R11
 R12
@@ -533,8 +533,8 @@ R6
 R7
 !i10b 1
 R8
-R77
 R78
+R79
 !i113 1
 R11
 R12
