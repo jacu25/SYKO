@@ -21,9 +21,9 @@ Vzfc?>nG8g@MQ:LFfg1XIO3
 !s100 [Q?W[DF[eeZe^W5>DFzOf2
 Z6 OP;C;10.4a;61
 32
-Z7 !s110 1591224798
+Z7 !s110 1591225061
 !i10b 1
-Z8 !s108 1591224798.000000
+Z8 !s108 1591225061.000000
 Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/AG.vhd|
 Z10 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/AG.vhd|
 !i113 1
@@ -198,11 +198,11 @@ VDg^`aIDM5`WNMY4^DhEJc2
 !s100 V<@ozX7H0Y_n5YPY[R]Ki2
 R6
 32
-R7
+Z31 !s110 1591225062
 !i10b 1
-R8
-Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/IMR.vhd|
-Z32 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/IMR.vhd|
+Z32 !s108 1591225062.000000
+Z33 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/IMR.vhd|
+Z34 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/IMR.vhd|
 !i113 1
 R11
 R12
@@ -216,32 +216,32 @@ VCk3zXAinT`1TahYC2H^`E1
 !s100 E>64OI8WWCN0Q]Q<nZhL>0
 R6
 32
-R7
-!i10b 1
-R8
 R31
+!i10b 1
 R32
+R33
+R34
 !i113 1
 R11
 R12
 Eir
-Z33 w1591120899
+Z35 w1591120899
 R1
 R2
 R3
-Z34 8C:/Users/Jacek/Desktop/SYKO/SYKO/IR.vhd
-Z35 FC:/Users/Jacek/Desktop/SYKO/SYKO/IR.vhd
+Z36 8C:/Users/Jacek/Desktop/SYKO/SYKO/IR.vhd
+Z37 FC:/Users/Jacek/Desktop/SYKO/SYKO/IR.vhd
 l0
 L4
 VPTXA?AjHbT]6@^=zmnHZZ1
 !s100 DDAg<Qh>XST^FAf:moBgE3
 R6
 32
-R7
+R31
 !i10b 1
-R8
-Z36 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/IR.vhd|
-Z37 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/IR.vhd|
+R32
+Z38 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/IR.vhd|
+Z39 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/IR.vhd|
 !i113 1
 R11
 R12
@@ -255,32 +255,32 @@ V3m>i]_@Ma79>8?0W=g2_=3
 !s100 U[MVg9A=`1JVooHciBQ6:0
 R6
 32
-R7
+R31
 !i10b 1
-R8
-R36
-R37
+R32
+R38
+R39
 !i113 1
 R11
 R12
 Eir_decoder
-Z38 w1591119870
+Z40 w1591119870
 R1
 R2
 R3
-Z39 8C:/Users/Jacek/Desktop/SYKO/SYKO/IR_DECODER.vhd
-Z40 FC:/Users/Jacek/Desktop/SYKO/SYKO/IR_DECODER.vhd
+Z41 8C:/Users/Jacek/Desktop/SYKO/SYKO/IR_DECODER.vhd
+Z42 FC:/Users/Jacek/Desktop/SYKO/SYKO/IR_DECODER.vhd
 l0
 L4
 VBlb0V<k8ND`?9ldZZhjN<1
 !s100 ]RhO>cE_WKUI2[n0RVZL01
 R6
 32
-R7
+R31
 !i10b 1
-R8
-Z41 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/IR_DECODER.vhd|
-Z42 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/IR_DECODER.vhd|
+R32
+Z43 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/IR_DECODER.vhd|
+Z44 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/IR_DECODER.vhd|
 !i113 1
 R11
 R12
@@ -294,32 +294,32 @@ VDj4MPD<2=HA:FEc[K8KML2
 !s100 BzhQSj_Vb>P]LVR0dKA8R2
 R6
 32
-R7
+R31
 !i10b 1
-R8
-R41
-R42
+R32
+R43
+R44
 !i113 1
 R11
 R12
 Emar
-Z43 w1591120129
+Z45 w1591120129
 R1
 R2
 R3
-Z44 8C:/Users/Jacek/Desktop/SYKO/SYKO/MAR.vhd
-Z45 FC:/Users/Jacek/Desktop/SYKO/SYKO/MAR.vhd
+Z46 8C:/Users/Jacek/Desktop/SYKO/SYKO/MAR.vhd
+Z47 FC:/Users/Jacek/Desktop/SYKO/SYKO/MAR.vhd
 l0
 L4
 V]kXoG4[L@o3XSn@XZloaC1
 !s100 6`5?C=AL6P_]O16G[Tc5M2
 R6
 32
-R7
+R31
 !i10b 1
-R8
-Z46 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/MAR.vhd|
-Z47 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/MAR.vhd|
+R32
+Z48 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/MAR.vhd|
+Z49 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/MAR.vhd|
 !i113 1
 R11
 R12
@@ -333,32 +333,32 @@ VZ;6>>3Xl2hR><k`JZ_^MM3
 !s100 KElbM==^:j=Z4GLzcGP2[2
 R6
 32
-R7
+R31
 !i10b 1
-R8
-R46
-R47
+R32
+R48
+R49
 !i113 1
 R11
 R12
 Embr
-Z48 w1591120095
+Z50 w1591120095
 R1
 R2
 R3
-Z49 8C:/Users/Jacek/Desktop/SYKO/SYKO/MBR.vhd
-Z50 FC:/Users/Jacek/Desktop/SYKO/SYKO/MBR.vhd
+Z51 8C:/Users/Jacek/Desktop/SYKO/SYKO/MBR.vhd
+Z52 FC:/Users/Jacek/Desktop/SYKO/SYKO/MBR.vhd
 l0
 L4
 VoaSaDV^47AS]ARB:D4SWP1
 !s100 @cC_[lAUMcLZQ>dfHH6722
 R6
 32
-Z51 !s110 1591224799
+R31
 !i10b 1
-R8
-Z52 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/MBR.vhd|
-Z53 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/MBR.vhd|
+R32
+Z53 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/MBR.vhd|
+Z54 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/MBR.vhd|
 !i113 1
 R11
 R12
@@ -372,11 +372,11 @@ Va[m`Q8N<ZZ[g<[A_[Oa6@2
 !s100 KQVlQXbLoZ5;=`m]ZlEZ<3
 R6
 32
-R51
+R31
 !i10b 1
-R8
-R52
+R32
 R53
+R54
 !i113 1
 R11
 R12
@@ -394,9 +394,9 @@ V66o2@XK^z3^MO=AAec]dK0
 !s100 6^9dg4i4P2GUj:h@>ha>=0
 R6
 32
-R51
+R31
 !i10b 1
-Z54 !s108 1591224799.000000
+R32
 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\Jacek\Desktop\SYKO\SYKO\Memory.vhd|
 !s107 C:\Users\Jacek\Desktop\SYKO\SYKO\Memory.vhd|
 !i113 1
@@ -415,9 +415,9 @@ V`QPi@zJEd;2g@YhF^E_MW3
 !s100 8iRM_P3:mY>0W2`^<OS9c0
 R6
 32
-R51
+R31
 !i10b 1
-R54
+R32
 Z58 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/PC.vhd|
 Z59 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/PC.vhd|
 !i113 1
@@ -433,9 +433,9 @@ V;OD:26GgN:<1B0eIESYoZ3
 !s100 UMcS?^oaF>f6z6B`?EJ:Q2
 R6
 32
-R51
+R31
 !i10b 1
-R54
+R32
 R58
 R59
 !i113 1
@@ -454,9 +454,9 @@ V]UlWI;OWe>J]c@XbPM:mN3
 !s100 mebab;KL^_lAIL`?6V3Lz1
 R6
 32
-R51
+R31
 !i10b 1
-R54
+R32
 Z63 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/REG.vhd|
 Z64 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/REG.vhd|
 !i113 1
@@ -472,32 +472,50 @@ Z66 Vc<eb:n=c8Roa7TEGGe=h:1
 Z67 !s100 O1`a;gQB^W_:lf:f`0h9>3
 R6
 32
-R51
+R31
 !i10b 1
-R54
+R32
 R63
 R64
 !i113 1
 R11
 R12
 Esystem
-w1591224776
+Z68 w1591225057
 R1
 R2
 R3
-8C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd
-FC:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd
+Z69 8C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd
+Z70 FC:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd
 l0
 L4
 VDe:ZWb8dbnjOCEL::XNVR0
 !s100 S;KofoKRz6l>kfTmI@AWd0
 R6
 32
-!s110 1591224797
+R7
 !i10b 1
-!s108 1591224797.000000
-!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd|
-!s107 C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd|
+R8
+Z71 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd|
+Z72 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd|
+!i113 1
+R11
+R12
+Aarchitectur
+R1
+R2
+DEx4 work 6 system 0 22 De:ZWb8dbnjOCEL::XNVR0
+l193
+L7
+VF=YKM<bP7GOO1OoS;<PKC2
+!s100 =J^5oIEP:`cK`LhS6IQC80
+R6
+32
+R7
+!i10b 1
+R8
+R71
+R72
 !i113 1
 R11
 R12

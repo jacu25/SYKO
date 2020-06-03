@@ -183,8 +183,8 @@ component Memory is
 	);
 	port (
 		mw, mr: in std_logic;
-		mem_mbr: inout std_logic_vector(15 downto 0);
-		mar_mem: in  std_logic_vector(15 downto 0)
+		mem_mbr: inout std_logic_vector(7 downto 0);
+		mar_mem: in  std_logic_vector(7 downto 0)
 	);
 end component;
 
@@ -210,7 +210,7 @@ c3: AG port map(ag_out => addressBus , pc_ag => pc_ag, r1_ag => r1_ag, r2_ag => 
 c2: PC port map(start_adr => start_adr, increment => increment, jump_adr => jump_adr, 
 incr => incr, jump => jump, pc_ag => pc_ag, clk=>clk, rst=>rst); 
 c1: Clock port map ( clk => clk);
-c0: IMR port map(ie =>ie_imr, oe => oe_imr, clk => clk, rst=> rst, imr_ag => imr_ag, imr_io => dataBus); 
+c0: REG port map(ie =>ie_imr, oe => oe_imr, clk => clk, rst=> rst, reg_out => imr_ag, reg_io => dataBus); 
 
 end architectur;
 
