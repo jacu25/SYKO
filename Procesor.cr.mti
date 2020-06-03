@@ -1,83 +1,13 @@
-C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd {0 {vcom -work work -2002 -explicit -stats=none C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd
+C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd {2 {vcom -work work -2002 -explicit -stats=none C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Compiling entity System
--- Compiling architecture arch of System
-** Error: (vcom-11) Could not find work.pc.
+-- Compiling architecture architectur of System
+** Warning: C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd(191): (vcom-1207) An abstract literal and an identifier must have a separator between them.
 
-** Error (suppressible): C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd(63): (vcom-1195) Cannot find expanded name "work.PC".
-
-** Error: C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd(63): Unknown expanded name.
-** Error: (vcom-11) Could not find work.ag.
-
-** Error (suppressible): C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd(67): (vcom-1195) Cannot find expanded name "work.AG".
-
-** Error: C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd(67): Unknown expanded name.
-** Error: (vcom-11) Could not find work.reg.
-
-** Error (suppressible): C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd(70): (vcom-1195) Cannot find expanded name "work.REG".
-
-** Error: C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd(70): Unknown expanded name.
-** Error: (vcom-11) Could not find work.reg.
-
-** Error (suppressible): C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd(73): (vcom-1195) Cannot find expanded name "work.REG".
-
-** Error: C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd(73): Unknown expanded name.
-** Error: (vcom-11) Could not find work.ir.
-
-** Error (suppressible): C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd(76): (vcom-1195) Cannot find expanded name "work.IR".
-
-** Error: C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd(76): Unknown expanded name.
-** Error: (vcom-11) Could not find work.reg.
-
-** Error (suppressible): C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd(79): (vcom-1195) Cannot find expanded name "work.REG".
-
-** Error: C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd(79): Unknown expanded name.
-** Error: (vcom-11) Could not find work.alu.
-
-** Error (suppressible): C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd(82): (vcom-1195) Cannot find expanded name "work.alu".
-
-** Error: C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd(82): Unknown expanded name.
-** Error: (vcom-11) Could not find work.mbr.
-
-** Error (suppressible): C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd(85): (vcom-1195) Cannot find expanded name "work.MBR".
-
-** Error: C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd(85): Unknown expanded name.
-** Error: (vcom-11) Could not find work.mar.
-
-** Error (suppressible): C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd(88): (vcom-1195) Cannot find expanded name "work.MAR".
-
-** Error: C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd(88): Unknown expanded name.
-** Error: (vcom-11) Could not find work.cu.
-
-** Error (suppressible): C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd(91): (vcom-1195) Cannot find expanded name "work.CU".
-
-** Error: C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd(91): Unknown expanded name.
-** Error: (vcom-11) Could not find work.memory.
-
-** Error (suppressible): C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd(95): (vcom-1195) Cannot find expanded name "work.Memory".
-
-** Error: C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd(95): Unknown expanded name.
-** Error: (vcom-11) Could not find work.buf.
-
-** Error (suppressible): C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd(98): (vcom-1195) Cannot find expanded name "work.buf".
-
-** Error: C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd(98): Unknown expanded name.
-** Error: (vcom-11) Could not find work.ir_decoder.
-
-** Error (suppressible): C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd(101): (vcom-1195) Cannot find expanded name "work.IR_DECODER".
-
-** Error: C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd(101): Unknown expanded name.
-** Error: (vcom-11) Could not find work.imr.
-
-** Error (suppressible): C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd(104): (vcom-1195) Cannot find expanded name "work.IMR".
-
-** Error: C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd(104): Unknown expanded name.
-** Error: C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd(107): VHDL Compiler exiting
-
-} {8.0 9.0 12.0 14.0 17.0 19.0 22.0 24.0 27.0 29.0 32.0 34.0 37.0 39.0 42.0 44.0 47.0 49.0 52.0 54.0 57.0 59.0 62.0 64.0 67.0 69.0 72.0 74.0 77.0 79.0} {}} C:/Users/Jacek/Desktop/SYKO/SYKO/buf.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Jacek/Desktop/SYKO/SYKO/buf.vhd
+} {} {}} C:/Users/Jacek/Desktop/SYKO/SYKO/buf.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Jacek/Desktop/SYKO/SYKO/buf.vhd
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -157,7 +87,7 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Compiling entity MBR
 -- Compiling architecture arch of MBR
 
-} {} {}} C:/Users/Jacek/Desktop/SYKO/SYKO/Memory.vhd {0 {vcom -work work -2002 -explicit -stats=none C:/Users/Jacek/Desktop/SYKO/SYKO/Memory.vhd
+} {} {}} C:/Users/Jacek/Desktop/SYKO/SYKO/Memory.vhd {0 {vcom -work work -2002 -explicit -stats=none {C:\Users\Jacek\Desktop\SYKO\SYKO\Memory.vhd}
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -165,10 +95,14 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Loading package NUMERIC_STD
 -- Compiling entity Memory
 -- Compiling architecture arch of Memory
-** Error: C:/Users/Jacek/Desktop/SYKO/SYKO/Memory.vhd(21): Variable declaration 'rom_data' not allowed in this region.
-** Error: C:/Users/Jacek/Desktop/SYKO/SYKO/Memory.vhd(43): VHDL Compiler exiting
+** Error: C:\Users\Jacek\Desktop\SYKO\SYKO\Memory.vhd(23): near "variable": syntax error
+** Error: C:\Users\Jacek\Desktop\SYKO\SYKO\Memory.vhd(34): (vcom-1136) Unknown identifier "rom_data".
 
-} {9.0 11.0} {}} C:/Users/Jacek/Desktop/SYKO/SYKO/ALU.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Jacek/Desktop/SYKO/SYKO/ALU.vhd
+** Error: C:\Users\Jacek\Desktop\SYKO\SYKO\Memory.vhd(36): (vcom-1136) Unknown identifier "rom_data".
+
+** Error: C:\Users\Jacek\Desktop\SYKO\SYKO\Memory.vhd(43): VHDL Compiler exiting
+
+} {9.0 11.0 12.0 13.0 14.0 15.0} {}} C:/Users/Jacek/Desktop/SYKO/SYKO/ALU.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Jacek/Desktop/SYKO/SYKO/ALU.vhd
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
 -- Loading package TEXTIO

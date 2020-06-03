@@ -17,7 +17,9 @@ end Memory;
 architecture arch of Memory is
 
  type ROM_type is array (0 to 4 ) of std_logic_vector(7 downto 0);
- 
+  
+begin
+
  variable rom_data: ROM_type:=(
 	"00000000",
 	"00000000",
@@ -26,8 +28,6 @@ architecture arch of Memory is
 	"00000000"
   );
   
-begin
-
 	process(mw, mr)
 	begin
 		if mw='1' then
