@@ -4,7 +4,7 @@ use ieee.std_logic_1164.all;
 entity CU is
 
 	port (clk, RESET: in std_logic; 		--RESET CU-rde
-		ird_out : in std_logic_vector (4 downto 0);
+		ird : in std_logic_vector (4 downto 0);
 		flags : in std_logic_vector (4 downto 0);
 		
 		--sygnały_bledow : out std_logic_vector (??downto 0);
@@ -13,7 +13,7 @@ entity CU is
 		ie_ACC, ie_buf, ie_REG_1, ie_REG_2, ie_IMR, ie_IR : out std_logic;
 		oe_ACC, oe_buf, oe_REG_1, oe_REG_2, oe_IMR, oe_IR : out std_logic;
 		re_MBR, we_MBR, mw, mr, jump, incr, lae : out std_logic;
-		jump_adr, start_adr, increment : out std_logic_vector (7 downto 0);
+		start_adr, increment : out std_logic_vector (7 downto 0);
 		cag : out std_logic_vector (2 downto 0);
 		rst : out std_logic
 		);
@@ -22,7 +22,7 @@ end entity;
 
 architecture arch of CU is
 
-type state is (s0, s1, s2, s3, s4, s5, s6);
+type state is (s0, s1, s2, s3, s4);
 --s0 start
 --s1 praca
 --s2 błąd
@@ -52,7 +52,12 @@ begin
 end process;
 
 -- ten proces realizuje graf przejść
-przejscia :process(present_state, ird_out, flags, r_e)
+przejscia :process(present_state, ird, flags, r_e)
+
+	variable mode;	--tryb adresowania
+	variable reg;	--rejestr
+	variable instr;	--instrukcja
+	
 begin
 
 	--oe_ACC <='0';
@@ -77,114 +82,145 @@ begin
 --graf przejść
 	case present_state is
 	
-	when s0 =>
-	if r_e = '1' then
-		start_adr <= "00000001"; 	--first instruction
-		rst <= '0'; 			--wpisanie start adr
-		cag <= "011";
-		oe_ACC <='0';
-		ie_ACC <='0';
-		ie_REG_1 <= '0';
-		oe_REG_1 <= '0';
-		ie_REG_2 <= '0';
-		oe_REG_2 <= '0';
-		ie_IR <= '0';
-		oe_IR <= '0';
-		ie_IMR <= '0';
-		oe_IMR <= '0';
-		re_MBR <= '0';
-		we_MBR <= '0';
-		mr <= '0';
-		mw <= '0';
-		lae <= '0';
-		jump <= '0';
-		incr <= '0';	--PC address
-	else --POBRANIE 1 INSTRUKCJ
-		rst <= '1';
-		next_state <= s1;
-	end if;
+		when s0 =>
+			if r_e = '1' then
+				start_adr <= "00000001"; 	--first instruction
+				rst <= '0'; 			--wpisanie start adr
+				cag <= "011";
+				oe_ACC <='0';
+				ie_ACC <='0';
+				ie_REG_1 <= '0';
+				oe_REG_1 <= '0';
+				ie_REG_2 <= '0';
+				oe_REG_2 <= '0';
+				ie_IR <= '0';
+				oe_IR <= '0';
+				ie_IMR <= '0';
+				oe_IMR <= '0';
+				re_MBR <= '0';
+				we_MBR <= '0';
+				oe_buf <= '0';
+				ie_buf <= '0';
+				mr <= '0';
+				mw <= '0';
+				lae <= '0';
+				jump <= '0';
+				incr <= '0';	--PC address
+			else --POBRANIE 1 INSTRUKCJ
+				rst <= '1';
+				next_state <= s1;
+			end if;
 
-	when s1 => --
-		if r_e = '1' then
-			cag <= "011";
-			lae<= '1'; 
-			ie_ACC <='0';
-			oe_REG_1 <= '0';
-			oe_REG_2 <= '0';
-			oe_IMR <= '0';
-			oe_IR <= '0';
-		else
-			next_state<= s2;
-		end if;
+		when s1 => --
+			if r_e = '1' then
+				oe_buf <= '0';
+				ie_buf <= '0';
+				cag <= "011";
+				lae<= '1'; 
+				ie_ACC <='0';
+				oe_REG_1 <= '0';
+				oe_REG_2 <= '0';
+				oe_IMR <= '0';
+				oe_IR <= '0';
+				jump<='0';
+			else
+				next_state<= s2;
+			end if;
 
-	when s2 => --odczyt z pamięci
-		if r_e = '1' then
-			mr <= '1';
-			re_MBR <= '1';
-		else
-			re_MBR<= '1';
-			lae <= '0';
-			next_state<= s3;
-		end if;
-	when s3 => --zapis do rejestru instrukcji
-		if r_e = '1' then		
-			increment <= "00000001";
-			ie_IR<= '1';
-		else			
-			oe_IR <= '1';
-			re_MBR <='0';
-			incr <= '1';
-			next_state <= s4;
-		end if;
-			
-	when s4 =>
-		if r_e then
-			case ird_out is
-				when "00001" => ie_ACC <= '1';		--LOAD R1
-				when "00010" => ie_ACC <= '1';		--LOAD R2
-				when "00011" => cag <= "001";  		--LOAD [R1]
-								lae<= '1'; 
-				when "00100" => cag <= "010";		--LOAD [R2]
-								lae<= '1'; 
-				when "00101" =>
-				when "00111" =>
-				when "01000" =>
-			end case;
-		else 
-			case ird_out is
-				when "00001" => oe_REG_1 <= '1';	--LOAD R1
-								next_state <= s1;
-				when "00010" => oe_REG_2 <= '1'; 	--LOAD R2
-								next_state <= s1;
-				when "00011" =>	oe_REG_1 <= '1';	--LOAD [R1]
-								next_state <= s5;
-				when "00100" => oe_REG_2 <= '1';	--LOAD [R2]
-								next_state <= s5;
-				when "00101" =>
-				when "00111" =>
-				when "01000" =>
-			end case;
-		end if;
-		next_state <= s5;
-	
-	when s5 => 	--odczyt z pamięci
-		if r_e then			
-			mr <= '1';
-			re_MBR <= '1';
-		else
-			re_MBR<= '1';
-			lae <= '0';
-			next_state<= s6;
-		end if;
-	when s6 => 	--zapis danych do Acc
-		if r_e then			
-			ie_ACC <= '1';
-		else
-			next_state<= s1;
-		end if;
+		when s2 => --odczyt z pamięci
+			if r_e = '1' then
+				mr <= '1';
+				re_MBR <= '1';
+			else
+				re_MBR<= '1';
+				lae <= '0';
+				next_state<= s3;
+			end if;
+		when s3 => --zapis do rejestru instrukcji
+			if r_e = '1' then		
+				increment <= "00000001";
+				ie_IR<= '1';
+			else			
+				oe_IR <= '1';
+				re_MBR <='0';
+				incr <= '1';
 				
+				a_mode <= ird(4 downto 3); --addressing mode
+				reg <= ird(2);			--register
+				instr <= ird(1 downto 0); --instruction
+
+				next_state <= s4;
+				
+				if instr="11" then		--ERROR
+					next_state <= s10;
+				end if;
+			end if;
+				
+		when s4 =>
+		
+			if r_e = '1' then	
+			
+				case a_mode is
+					when "00" =>		--rejestrowy
+						if instr="10" then --jnof
+							jump <= '1';
+						end if;
+						
+						if reg='0' then 	--reg 1
+							oe_REG_1 <= '1';
+						else				--reg 2
+							oe_REG_2 <= '1';
+						end if;
+						
+					when "01" =>	--bazowy
+					
+					when "10" =>	--przemieszczeniowy
+					
+					when "11" =>	--natychmiastowy
+				
+					
+				end case;
+			else
+				case a_mode is
+					when "00" =>
+						case instr is
+							when "10" => next_state <= s1;
+							when "00" => next_state <= s5;
+						end case;
+				end case;
+		
+		when s5 =>	--OPERACJE LOAD i ADD
+		
+			if r_e = '1' then	
+				case instr is
+
+					when "00" => ie_ACC <= '1';	--LOAD
+					when "01" => ie_buf <= '1';	--ADD
+					
+				end case;
+			else
+				case instr is
+					when "00" => next_state <= s1; --LOAD
+					when "01" => 
+						ie_buf <= '0';
+						oe_IMR <= '0';
+						oe_REG_1 <= '0';
+						oe_IMR <= '0';
+						oe_REG_2 <= '0';
+						next_state <= s6;
+			end if;
+			
+		when s6 =>	--OPERACJE CZ2 - ADD
+		
+			if r_e = '0' then	
+				ie_ACC <= '1';
+				oe_buf <= '1';
+				next_state <= s1;
+			end if;	
+			
+		when s10 => 	--ERROR
+			next_state <= s10;
 	end case;
-	
 end process;
 
 end arch;

@@ -47,12 +47,12 @@ signal IRD_CU : std_logic_vector(4 downto 0);
 signal oe_IMR, ie_IMR: std_logic;
 
 --PC
-signal jump_adr, increment, start_adr : std_logic_vector(7 downto 0);
+signal increment, start_adr : std_logic_vector(7 downto 0);
 signal jump, incr : std_logic;
 
 component CU is
 	port (clk, RESET: in std_logic; 		--RESET CU-rde
-		ird_out : in std_logic_vector (4 downto 0);
+		ird : in std_logic_vector (4 downto 0);
 		flags : in std_logic_vector (4 downto 0);
 		
 		--sygnały_bledow : out std_logic_vector (??downto 0);
@@ -196,16 +196,16 @@ E_AG: AG port map(ag_out => addressBus, pc_ag => pc_ag, r1_ag => r1_ag, r2_ag =>
 E_REG_1: REG port map(ie=>ie_REG_1, oe => oe_REG_1, clk => clk, rst => rst, reg_out => r1_ag, reg_io => dataBus);
 E_REG_2: REG port map(ie=>ie_REG_2, oe => oe_REG_2, clk => clk, rst => rst, reg_out => r2_ag, reg_io => dataBus);
 E_IMR: REG port map(ie => ie_IR, oe => oe_IR, clk => clk, rst => rst, reg_io => dataBus, reg_out =>imr_ag);
-E_PC: PC port map(start_adr => start_adr, increment => increment, jump_adr => jump_adr, incr => incr,
+E_PC: PC port map(start_adr => start_adr, increment => increment, jump_adr => dataBus, incr => incr,
 				jump => jump, pc_io => pc_ag, clk=>clk, rst=>rst); 
 
 E_IR: IR port map(ie => ie_IR, oe => oe_IR, clk => clk, rst => rst, ir_in => dataBus, ir_out =>IR_IRD);
 E_IR_RECODER: IR_DECODER port map(ir_in=>IR_IRD, ir_out=>IRD_CU);
 E_CU : CU port map(clk => clk, RESET => RESET, oe_buf => oe_buf, ie_buf => ie_buf, oe_REG_1 => oe_REG_1,
-				oe_REG_2 => oe_REG_2, ird_out => IRD_CU, flags => flags, ie_ACC => ie_ACC, oe_ACC => oe_ACC,
+				oe_REG_2 => oe_REG_2, ird => IRD_CU, flags => flags, ie_ACC => ie_ACC, oe_ACC => oe_ACC,
 				ie_REG_1 => ie_REG_1, ie_REG_2 => ie_REG_2, ie_IMR => ie_IMR, oe_IMR => oe_IMR, ie_IR => ie_IR,
 				oe_IR => oe_IR, re_MBR => re_MBR, we_MBR => we_MBR, mw => mw, mr => mr, jump => jump, incr => incr,
-				lae => lae, jump_adr => jump_adr, start_adr => start_adr, increment => increment, cag => cag,
+				lae => lae, start_adr => start_adr, increment => increment, cag => cag,
 				rst => rst);
 				
 E_MAR: MAR port map(lae => lae, clk => clk, rst => rst, mar_mem=> mar_mem, mar_in=>addressBus);
