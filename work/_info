@@ -9,23 +9,23 @@ z2
 cModel Technology
 dD:/ModelSim/projekty
 Eag
-Z0 w1591120966
+Z0 w1591122304
 Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-Z3 dC:/Users/Jacek/Desktop/SYKO/SYKO
-Z4 8C:/Users/Jacek/Desktop/SYKO/SYKO/AG.vhd
-Z5 FC:/Users/Jacek/Desktop/SYKO/SYKO/AG.vhd
+Z3 dC:/Users/bhbo9/Documents/GitHub/SYKO
+Z4 8C:/Users/bhbo9/Documents/GitHub/SYKO/AG.vhd
+Z5 FC:/Users/bhbo9/Documents/GitHub/SYKO/AG.vhd
 l0
 L4
 Vzfc?>nG8g@MQ:LFfg1XIO3
 !s100 [Q?W[DF[eeZe^W5>DFzOf2
 Z6 OP;C;10.4a;61
 32
-Z7 !s110 1591225570
+Z7 !s110 1591226036
 !i10b 1
-Z8 !s108 1591225570.000000
-Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/AG.vhd|
-Z10 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/AG.vhd|
+Z8 !s108 1591226036.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bhbo9/Documents/GitHub/SYKO/AG.vhd|
+Z10 !s107 C:/Users/bhbo9/Documents/GitHub/SYKO/AG.vhd|
 !i113 1
 Z11 o-work work -2002 -explicit -O0
 Z12 tExplicit 1
@@ -48,12 +48,12 @@ R10
 R11
 R12
 Ealu
-Z13 w1591128690
+Z13 w1591129941
 R1
 R2
 R3
-Z14 8C:/Users/Jacek/Desktop/SYKO/SYKO/ALU.vhd
-Z15 FC:/Users/Jacek/Desktop/SYKO/SYKO/ALU.vhd
+Z14 8C:/Users/bhbo9/Documents/GitHub/SYKO/ALU.vhd
+Z15 FC:/Users/bhbo9/Documents/GitHub/SYKO/ALU.vhd
 l0
 L4
 VRcfk4i>YKm;7a@1U6_9kF2
@@ -63,8 +63,8 @@ R6
 R7
 !i10b 1
 R8
-Z16 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/ALU.vhd|
-Z17 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/ALU.vhd|
+Z16 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bhbo9/Documents/GitHub/SYKO/ALU.vhd|
+Z17 !s107 C:/Users/bhbo9/Documents/GitHub/SYKO/ALU.vhd|
 !i113 1
 R11
 R12
@@ -87,12 +87,12 @@ R17
 R11
 R12
 Ebuf
-Z18 w1591120011
+R0
 R1
 R2
 R3
-Z19 8C:/Users/Jacek/Desktop/SYKO/SYKO/buf.vhd
-Z20 FC:/Users/Jacek/Desktop/SYKO/SYKO/buf.vhd
+Z18 8C:/Users/bhbo9/Documents/GitHub/SYKO/buf.vhd
+Z19 FC:/Users/bhbo9/Documents/GitHub/SYKO/buf.vhd
 l0
 L4
 V>@HGFa;>ijXE[hZ:@243W0
@@ -102,8 +102,8 @@ R6
 R7
 !i10b 1
 R8
-Z21 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/buf.vhd|
-Z22 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/buf.vhd|
+Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bhbo9/Documents/GitHub/SYKO/buf.vhd|
+Z21 !s107 C:/Users/bhbo9/Documents/GitHub/SYKO/buf.vhd|
 !i113 1
 R11
 R12
@@ -120,8 +120,8 @@ R6
 R7
 !i10b 1
 R8
+R20
 R21
-R22
 !i113 1
 R11
 R12
@@ -129,7 +129,7 @@ Eclock
 w1587831975
 R1
 R2
-R3
+Z22 dC:/Users/Jacek/Desktop/SYKO/SYKO
 8C:/Users/Jacek/Desktop/SYKO/SYKO/Clock.vhd
 FC:/Users/Jacek/Desktop/SYKO/SYKO/Clock.vhd
 l0
@@ -147,12 +147,12 @@ R6
 R11
 R12
 Ecu
-Z23 w1591223931
+Z23 w1591224025
 R1
 R2
 R3
-Z24 8C:/Users/Jacek/Desktop/SYKO/SYKO/CU.vhd
-Z25 FC:/Users/Jacek/Desktop/SYKO/SYKO/CU.vhd
+Z24 8C:/Users/bhbo9/Documents/GitHub/SYKO/CU.vhd
+Z25 FC:/Users/bhbo9/Documents/GitHub/SYKO/CU.vhd
 l0
 L4
 VWmLJ56n=[JU4:4Ff8=78F0
@@ -162,8 +162,8 @@ R6
 R7
 !i10b 1
 R8
-Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/CU.vhd|
-Z27 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/CU.vhd|
+Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bhbo9/Documents/GitHub/SYKO/CU.vhd|
+Z27 !s107 C:/Users/bhbo9/Documents/GitHub/SYKO/CU.vhd|
 !i113 1
 R11
 R12
@@ -177,7 +177,7 @@ VZ@:0YnV@BdYYbKW1Hj8M51
 !s100 _aNE<YcB3Gm_dzKC9<5No0
 R6
 32
-Z28 !s110 1591225571
+R7
 !i10b 1
 R8
 R26
@@ -186,23 +186,23 @@ R27
 R11
 R12
 Eimr
-Z29 w1591120009
+R0
 R1
 R2
 R3
-Z30 8C:/Users/Jacek/Desktop/SYKO/SYKO/IMR.vhd
-Z31 FC:/Users/Jacek/Desktop/SYKO/SYKO/IMR.vhd
+Z28 8C:/Users/bhbo9/Documents/GitHub/SYKO/IMR.vhd
+Z29 FC:/Users/bhbo9/Documents/GitHub/SYKO/IMR.vhd
 l0
 L4
 VDg^`aIDM5`WNMY4^DhEJc2
 !s100 V<@ozX7H0Y_n5YPY[R]Ki2
 R6
 32
-R28
+Z30 !s110 1591226037
 !i10b 1
-Z32 !s108 1591225571.000000
-Z33 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/IMR.vhd|
-Z34 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/IMR.vhd|
+R8
+Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bhbo9/Documents/GitHub/SYKO/IMR.vhd|
+Z32 !s107 C:/Users/bhbo9/Documents/GitHub/SYKO/IMR.vhd|
 !i113 1
 R11
 R12
@@ -216,32 +216,32 @@ VCk3zXAinT`1TahYC2H^`E1
 !s100 E>64OI8WWCN0Q]Q<nZhL>0
 R6
 32
-R28
+R30
 !i10b 1
+R8
+R31
 R32
-R33
-R34
 !i113 1
 R11
 R12
 Eir
-Z35 w1591120899
+R0
 R1
 R2
 R3
-Z36 8C:/Users/Jacek/Desktop/SYKO/SYKO/IR.vhd
-Z37 FC:/Users/Jacek/Desktop/SYKO/SYKO/IR.vhd
+Z33 8C:/Users/bhbo9/Documents/GitHub/SYKO/IR.vhd
+Z34 FC:/Users/bhbo9/Documents/GitHub/SYKO/IR.vhd
 l0
 L4
 VPTXA?AjHbT]6@^=zmnHZZ1
 !s100 DDAg<Qh>XST^FAf:moBgE3
 R6
 32
-R28
+R30
 !i10b 1
-R32
-Z38 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/IR.vhd|
-Z39 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/IR.vhd|
+Z35 !s108 1591226037.000000
+Z36 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bhbo9/Documents/GitHub/SYKO/IR.vhd|
+Z37 !s107 C:/Users/bhbo9/Documents/GitHub/SYKO/IR.vhd|
 !i113 1
 R11
 R12
@@ -255,32 +255,32 @@ V3m>i]_@Ma79>8?0W=g2_=3
 !s100 U[MVg9A=`1JVooHciBQ6:0
 R6
 32
-R28
+R30
 !i10b 1
-R32
-R38
-R39
+R35
+R36
+R37
 !i113 1
 R11
 R12
 Eir_decoder
-Z40 w1591119870
+R0
 R1
 R2
 R3
-Z41 8C:/Users/Jacek/Desktop/SYKO/SYKO/IR_DECODER.vhd
-Z42 FC:/Users/Jacek/Desktop/SYKO/SYKO/IR_DECODER.vhd
+Z38 8C:/Users/bhbo9/Documents/GitHub/SYKO/IR_DECODER.vhd
+Z39 FC:/Users/bhbo9/Documents/GitHub/SYKO/IR_DECODER.vhd
 l0
 L4
 VBlb0V<k8ND`?9ldZZhjN<1
 !s100 ]RhO>cE_WKUI2[n0RVZL01
 R6
 32
-R28
+R30
 !i10b 1
-R32
-Z43 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/IR_DECODER.vhd|
-Z44 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/IR_DECODER.vhd|
+R35
+Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bhbo9/Documents/GitHub/SYKO/IR_DECODER.vhd|
+Z41 !s107 C:/Users/bhbo9/Documents/GitHub/SYKO/IR_DECODER.vhd|
 !i113 1
 R11
 R12
@@ -294,32 +294,32 @@ VDj4MPD<2=HA:FEc[K8KML2
 !s100 BzhQSj_Vb>P]LVR0dKA8R2
 R6
 32
-R28
+R30
 !i10b 1
-R32
-R43
-R44
+R35
+R40
+R41
 !i113 1
 R11
 R12
 Emar
-Z45 w1591120129
+R0
 R1
 R2
 R3
-Z46 8C:/Users/Jacek/Desktop/SYKO/SYKO/MAR.vhd
-Z47 FC:/Users/Jacek/Desktop/SYKO/SYKO/MAR.vhd
+Z42 8C:/Users/bhbo9/Documents/GitHub/SYKO/MAR.vhd
+Z43 FC:/Users/bhbo9/Documents/GitHub/SYKO/MAR.vhd
 l0
 L4
 V]kXoG4[L@o3XSn@XZloaC1
 !s100 6`5?C=AL6P_]O16G[Tc5M2
 R6
 32
-R28
+R30
 !i10b 1
-R32
-Z48 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/MAR.vhd|
-Z49 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/MAR.vhd|
+R35
+Z44 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bhbo9/Documents/GitHub/SYKO/MAR.vhd|
+Z45 !s107 C:/Users/bhbo9/Documents/GitHub/SYKO/MAR.vhd|
 !i113 1
 R11
 R12
@@ -333,32 +333,32 @@ VZ;6>>3Xl2hR><k`JZ_^MM3
 !s100 KElbM==^:j=Z4GLzcGP2[2
 R6
 32
-R28
+R30
 !i10b 1
-R32
-R48
-R49
+R35
+R44
+R45
 !i113 1
 R11
 R12
 Embr
-Z50 w1591120095
+R0
 R1
 R2
 R3
-Z51 8C:/Users/Jacek/Desktop/SYKO/SYKO/MBR.vhd
-Z52 FC:/Users/Jacek/Desktop/SYKO/SYKO/MBR.vhd
+Z46 8C:/Users/bhbo9/Documents/GitHub/SYKO/MBR.vhd
+Z47 FC:/Users/bhbo9/Documents/GitHub/SYKO/MBR.vhd
 l0
 L4
 VoaSaDV^47AS]ARB:D4SWP1
 !s100 @cC_[lAUMcLZQ>dfHH6722
 R6
 32
-R28
+R30
 !i10b 1
-R32
-Z53 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/MBR.vhd|
-Z54 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/MBR.vhd|
+R35
+Z48 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bhbo9/Documents/GitHub/SYKO/MBR.vhd|
+Z49 !s107 C:/Users/bhbo9/Documents/GitHub/SYKO/MBR.vhd|
 !i113 1
 R11
 R12
@@ -372,38 +372,38 @@ Va[m`Q8N<ZZ[g<[A_[Oa6@2
 !s100 KQVlQXbLoZ5;=`m]ZlEZ<3
 R6
 32
-R28
+R30
 !i10b 1
-R32
-R53
-R54
+R35
+R48
+R49
 !i113 1
 R11
 R12
 Ememory
-Z55 w1591225568
-Z56 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z50 w1591225767
+Z51 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 R1
 R2
 R3
-Z57 8C:\Users\Jacek\Desktop\SYKO\SYKO\Memory.vhd
-Z58 FC:\Users\Jacek\Desktop\SYKO\SYKO\Memory.vhd
+Z52 8C:/Users/bhbo9/Documents/GitHub/SYKO/Memory.vhd
+Z53 FC:/Users/bhbo9/Documents/GitHub/SYKO/Memory.vhd
 l0
 L5
 V66o2@XK^z3^MO=AAec]dK0
 !s100 6^9dg4i4P2GUj:h@>ha>=0
 R6
 32
-R28
+R30
 !i10b 1
-R32
-Z59 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\Jacek\Desktop\SYKO\SYKO\Memory.vhd|
-Z60 !s107 C:\Users\Jacek\Desktop\SYKO\SYKO\Memory.vhd|
+R35
+Z54 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bhbo9/Documents/GitHub/SYKO/Memory.vhd|
+Z55 !s107 C:/Users/bhbo9/Documents/GitHub/SYKO/Memory.vhd|
 !i113 1
 R11
 R12
 Aarch
-R56
+R51
 R1
 R2
 DEx4 work 6 memory 0 22 66o2@XK^z3^MO=AAec]dK0
@@ -413,32 +413,32 @@ VI6BiG0;e0FFd<6nA1oz760
 !s100 9@MzGnS]7aSoAWFSmdWa?3
 R6
 32
-R28
+R30
 !i10b 1
-R32
-R59
-R60
+R35
+R54
+R55
 !i113 1
 R11
 R12
 Epc
-Z61 w1591128647
+R13
 R1
 R2
 R3
-Z62 8C:/Users/Jacek/Desktop/SYKO/SYKO/PC.vhd
-Z63 FC:/Users/Jacek/Desktop/SYKO/SYKO/PC.vhd
+Z56 8C:/Users/bhbo9/Documents/GitHub/SYKO/PC.vhd
+Z57 FC:/Users/bhbo9/Documents/GitHub/SYKO/PC.vhd
 l0
 L4
 V`QPi@zJEd;2g@YhF^E_MW3
 !s100 8iRM_P3:mY>0W2`^<OS9c0
 R6
 32
-R28
+R30
 !i10b 1
-R32
-Z64 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/PC.vhd|
-Z65 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/PC.vhd|
+R35
+Z58 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bhbo9/Documents/GitHub/SYKO/PC.vhd|
+Z59 !s107 C:/Users/bhbo9/Documents/GitHub/SYKO/PC.vhd|
 !i113 1
 R11
 R12
@@ -452,89 +452,89 @@ V;OD:26GgN:<1B0eIESYoZ3
 !s100 UMcS?^oaF>f6z6B`?EJ:Q2
 R6
 32
-R28
+R30
 !i10b 1
-R32
-R64
-R65
+R35
+R58
+R59
 !i113 1
 R11
 R12
 Ereg
-Z66 w1591121662
+R23
 R1
 R2
 R3
-Z67 8C:/Users/Jacek/Desktop/SYKO/SYKO/REG.vhd
-Z68 FC:/Users/Jacek/Desktop/SYKO/SYKO/REG.vhd
+Z60 8C:/Users/bhbo9/Documents/GitHub/SYKO/REG.vhd
+Z61 FC:/Users/bhbo9/Documents/GitHub/SYKO/REG.vhd
 l0
 L4
 V]UlWI;OWe>J]c@XbPM:mN3
 !s100 mebab;KL^_lAIL`?6V3Lz1
 R6
 32
-R28
+R30
 !i10b 1
-R32
-Z69 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/REG.vhd|
-Z70 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/REG.vhd|
+R35
+Z62 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bhbo9/Documents/GitHub/SYKO/REG.vhd|
+Z63 !s107 C:/Users/bhbo9/Documents/GitHub/SYKO/REG.vhd|
 !i113 1
 R11
 R12
 Aarch
 R1
 R2
-Z71 DEx4 work 3 reg 0 22 ]UlWI;OWe>J]c@XbPM:mN3
+DEx4 work 3 reg 0 22 ]UlWI;OWe>J]c@XbPM:mN3
 l19
 L18
-Z72 Vc<eb:n=c8Roa7TEGGe=h:1
-Z73 !s100 O1`a;gQB^W_:lf:f`0h9>3
+Vc<eb:n=c8Roa7TEGGe=h:1
+!s100 O1`a;gQB^W_:lf:f`0h9>3
 R6
 32
-!s110 1591225572
+R30
 !i10b 1
-R32
-R69
-R70
+R35
+R62
+R63
 !i113 1
 R11
 R12
 Esystem
-Z74 w1591225457
+R50
 R1
 R2
 R3
-Z75 8C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd
-Z76 FC:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd
+Z64 8C:/Users/bhbo9/Documents/GitHub/SYKO/System.vhd
+Z65 FC:/Users/bhbo9/Documents/GitHub/SYKO/System.vhd
 l0
 L4
 VDe:ZWb8dbnjOCEL::XNVR0
 !s100 S;KofoKRz6l>kfTmI@AWd0
 R6
 32
-R7
+R30
 !i10b 1
-R8
-Z77 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd|
-Z78 !s107 C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd|
+R35
+Z66 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bhbo9/Documents/GitHub/SYKO/System.vhd|
+Z67 !s107 C:/Users/bhbo9/Documents/GitHub/SYKO/System.vhd|
 !i113 1
 R11
 R12
 Aarchitectur
 R1
 R2
-DEx4 work 6 system 0 22 De:ZWb8dbnjOCEL::XNVR0
+Z68 DEx4 work 6 system 0 22 De:ZWb8dbnjOCEL::XNVR0
 l193
 L7
-VB_5Sa2e3nDf5>>67[_4=Y0
-!s100 :^aHaD1HS`dGDj^1KTcT[3
+Z69 VB_5Sa2e3nDf5>>67[_4=Y0
+Z70 !s100 :^aHaD1HS`dGDj^1KTcT[3
 R6
 32
-R7
+R30
 !i10b 1
-R8
-R77
-R78
+R35
+R66
+R67
 !i113 1
 R11
 R12
