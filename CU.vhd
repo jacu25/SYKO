@@ -22,7 +22,7 @@ end entity;
 
 architecture arch of CU is
 
-type state is (s0, s1, s2, s3, s4, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, ERROR);
+type state is (s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, ERROR);
 --s0 start
 --s1 praca
 --s2 błąd
@@ -54,9 +54,9 @@ end process;
 -- ten proces realizuje graf przejść
 przejscia :process(present_state, ird, flags, r_e)
 
-	variable mode;	--tryb adresowania
-	variable reg;	--rejestr
-	variable instr;	--instrukcja
+	variable a_mode : std_logic_vector(1 downto 0);	--tryb adresowania
+	variable reg  : std_logic;	--rejestr
+	variable instr : std_logic_vector(1 downto 0);	--instrukcja
 	
 begin
 
@@ -145,9 +145,9 @@ begin
 				re_MBR <='0';
 				incr <= '1';
 				
-				a_mode <= ird(4 downto 3); --addressing mode
-				reg <= ird(2);			--register
-				instr <= ird(1 downto 0); --instruction
+				a_mode := ird(4 downto 3); --addressing mode
+				reg := ird(2);			--register
+				instr := ird(1 downto 0); --instruction
 
 				next_state <= s4;
 				
@@ -175,15 +175,12 @@ begin
 						end if;
 						
 					when "01" =>	--bazowy
-						if reg = "0" then --reg_1
+						if reg = '0' then 	--reg_1
 							cag <= "001";
-						if reg = "1" then --reg_2	
+						else				--reg_2
 							cag <= "010";
-					when "10" =>	--przemieszczeniowy
-						
-					
-					when "11" =>	--natychmiastowy
-						lae <= '1'
+						end if;
+					when others	=> lae <= '1'; --natychmiastowy/przemieszczenie
 					
 				end case;
 			else
@@ -194,26 +191,23 @@ begin
 						else
 							next_state <= s5;	--load, add
 						end if;
-					when "01" => 		--bazowy
+					when others => 		--bazowy/natychmiast/przemieszczeniowy
 						next_state <= s7;
-					when "10" => 
-					when "11" => 
-						next_state <= s7;
-					
 				end case;
+			end if;
 		
 		when s5 =>	--OPERACJE LOAD i ADD
 		
 			if r_e = '1' then	
 				case instr is
-
 					when "00" => ie_ACC <= '1';	--LOAD
 					when "01" => ie_buf <= '1';	--ADD
-					
+					when others => next_state <= ERROR;
 				end case;
 			else
 				case instr is
-					when "00" => next_state <= s1; --LOAD
+					when "00" => 
+						next_state <= s1; --LOAD
 					when "01" => 
 						ie_buf <= '0';
 						oe_IMR <= '0';
@@ -221,6 +215,9 @@ begin
 						oe_IMR <= '0';
 						oe_REG_2 <= '0';
 						next_state <= s6;
+					when others => 
+						next_state <= ERROR;
+				end case;
 			end if;
 			
 		when s6 =>	--OPERACJE CZ2 - ADD
@@ -235,13 +232,13 @@ begin
 			if r_e = '1' then
 				mr <= '1';
 				re_MBR <= '1';
-				if a_mode = "11" then
+				if a_mode = "11" or a_mode = "10" then	--tryb natychmiastowy/przemiesczeniowy
 					incr <= '1';
 				end if;
 			else
 				re_MBR<= '1';
 				lae <= '0';
-				if a_mode = "11" then --tryb natychmiastowy 
+				if a_mode = "11" or a_mode = "10" then --tryb natychmiastowy/przemiesczeniowy
 					next_state <= s8;
 				elsif instr = "10" then --JNOF tryb bazowy
 					jump <= '1';
@@ -251,19 +248,34 @@ begin
 					
 				end if;
 			end if;
-		when s8 => -- tryb natychmiastowy.2
+		when s8 => -- tryb natychmiastowy.2/przemieszczeniowy.2
 			if r_e = '1' then
 				ie_IMR <= '1';				
 			else
 				re_MBR<= '0';
 				oe_IMR <= '1';
-				if instr "10" then --jnof
+				if instr = "10" then --jnof
 					jump <= '1';
 					next_state <= s1;
-				else 
+				elsif a_mode = "10" then
+					lae <= '1';
+					next_state <= s9; --memory_read
+				else
 					next_state <= s5; --add, load
+				end if;
 			end if;
-						
+		
+		when s9 => -- tryb przemieszczeniowy.3
+			if r_e = '1' then
+				mr <= '1';
+				re_MBR <= '1';
+			else
+				oe_IMR <= '0';
+				re_MBR<= '1';
+				lae <= '0';
+				next_state <= s5;
+			end if;	
+			
 		when ERROR => 
 			next_state <= ERROR;
 	end case;
