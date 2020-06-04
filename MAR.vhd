@@ -28,7 +28,7 @@ begin
 			elsif lae='1' then
 				store := mar_in;
 			end if;
-		elsif (falling_edge(clk)) then
+		elsif falling_edge(clk) then
 			mar_mem <= store after delay;
 		end if;
 		

@@ -1,23 +1,37 @@
-# Compile of System.vhd was successful.
+# Reading D:/ModelSim/tcl/vsim/pref.tcl
+# OpenFile C:/Users/Jacek/Desktop/SYKO/SYKO/Procesor.mpf
+# Loading project Procesor
+# Compile of System.vhd failed with 1 errors.
 # Compile of AG.vhd was successful.
 # Compile of ALU.vhd was successful.
 # Compile of buf.vhd was successful.
 # Compile of CU.vhd was successful.
-# Compile of IMR.vhd was successful.
-# Compile of IR.vhd was successful.
+# Compile of IR.vhd failed with 1 errors.
 # Compile of IR_DECODER.vhd was successful.
 # Compile of MAR.vhd was successful.
 # Compile of MBR.vhd was successful.
-# Compile of Memory.vhd failed with 4 errors.
-# Compile of PC.vhd was successful.
+# Compile of Memory.vhd was successful.
+# Compile of PC.vhd failed with 3 errors.
 # Compile of REG.vhd was successful.
-# 13 compiles, 1 failed with 4 errors.
-# Compile of System.vhd was successful.
+# 12 compiles, 4 failed with 5 errors.
+# Compile of System.vhd failed with 1 errors.
 # Compile of AG.vhd was successful.
 # Compile of ALU.vhd was successful.
 # Compile of buf.vhd was successful.
 # Compile of CU.vhd was successful.
-# Compile of IMR.vhd was successful.
+# Compile of IR.vhd failed with 1 errors.
+# Compile of IR_DECODER.vhd was successful.
+# Compile of MAR.vhd was successful.
+# Compile of MBR.vhd was successful.
+# Compile of Memory.vhd was successful.
+# Compile of PC.vhd failed with 3 errors.
+# Compile of REG.vhd was successful.
+# 12 compiles, 3 failed with 5 errors.
+# Compile of System.vhd failed with 1 errors.
+# Compile of AG.vhd was successful.
+# Compile of ALU.vhd was successful.
+# Compile of buf.vhd was successful.
+# Compile of CU.vhd was successful.
 # Compile of IR.vhd was successful.
 # Compile of IR_DECODER.vhd was successful.
 # Compile of MAR.vhd was successful.
@@ -25,4 +39,82 @@
 # Compile of Memory.vhd was successful.
 # Compile of PC.vhd was successful.
 # Compile of REG.vhd was successful.
-# 13 compiles, 0 failed with no errors.
+# 12 compiles, 1 failed with 1 error.
+# Compile of System.vhd failed with 24 errors.
+# Compile of AG.vhd was successful.
+# Compile of ALU.vhd was successful.
+# Compile of buf.vhd was successful.
+# Compile of CU.vhd was successful.
+# Compile of IR.vhd was successful.
+# Compile of IR_DECODER.vhd was successful.
+# Compile of MAR.vhd was successful.
+# Compile of MBR.vhd was successful.
+# Compile of Memory.vhd was successful.
+# Compile of PC.vhd was successful.
+# Compile of REG.vhd was successful.
+# 12 compiles, 1 failed with 24 errors.
+# Compile of System.vhd failed with 16 errors.
+# Compile of AG.vhd was successful.
+# Compile of ALU.vhd was successful.
+# Compile of buf.vhd was successful.
+# Compile of CU.vhd was successful.
+# Compile of IR.vhd was successful.
+# Compile of IR_DECODER.vhd was successful.
+# Compile of MAR.vhd was successful.
+# Compile of MBR.vhd was successful.
+# Compile of Memory.vhd was successful.
+# Compile of PC.vhd was successful.
+# Compile of REG.vhd was successful.
+# 12 compiles, 1 failed with 16 errors.
+# Compile of System.vhd failed with 17 errors.
+# Compile of AG.vhd was successful.
+# Compile of ALU.vhd was successful.
+# Compile of buf.vhd was successful.
+# Compile of CU.vhd was successful.
+# Compile of IR.vhd was successful.
+# Compile of IR_DECODER.vhd was successful.
+# Compile of MAR.vhd was successful.
+# Compile of MBR.vhd was successful.
+# Compile of Memory.vhd was successful.
+# Compile of PC.vhd was successful.
+# Compile of REG.vhd was successful.
+# 12 compiles, 1 failed with 17 errors.
+# Compile of System.vhd failed with 17 errors.
+# Compile of AG.vhd was successful.
+# Compile of ALU.vhd was successful.
+# Compile of buf.vhd was successful.
+# Compile of CU.vhd was successful.
+# Compile of IR.vhd was successful.
+# Compile of IR_DECODER.vhd was successful.
+# Compile of MAR.vhd was successful.
+# Compile of MBR.vhd was successful.
+# Compile of Memory.vhd was successful.
+# Compile of PC.vhd was successful.
+# Compile of REG.vhd was successful.
+# 12 compiles, 1 failed with 17 errors.
+# Compile of System.vhd failed with 2 errors.
+# Compile of AG.vhd was successful.
+# Compile of ALU.vhd was successful.
+# Compile of buf.vhd was successful.
+# Compile of CU.vhd was successful.
+# Compile of IR.vhd was successful.
+# Compile of IR_DECODER.vhd was successful.
+# Compile of MAR.vhd was successful.
+# Compile of MBR.vhd was successful.
+# Compile of Memory.vhd was successful.
+# Compile of PC.vhd was successful.
+# Compile of REG.vhd was successful.
+# 12 compiles, 1 failed with 2 errors.
+# Compile of System.vhd was successful.
+# Compile of AG.vhd was successful.
+# Compile of ALU.vhd was successful.
+# Compile of buf.vhd was successful.
+# Compile of CU.vhd was successful.
+# Compile of IR.vhd was successful.
+# Compile of IR_DECODER.vhd was successful.
+# Compile of MAR.vhd was successful.
+# Compile of MBR.vhd was successful.
+# Compile of Memory.vhd was successful.
+# Compile of PC.vhd was successful.
+# Compile of REG.vhd was successful.
+# 12 compiles, 0 failed with no errors.

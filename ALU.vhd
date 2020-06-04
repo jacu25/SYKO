@@ -13,10 +13,10 @@ entity alu is
 end alu;
 
 -- flags:	flags(0) = OF,// '1' - overflow
---				flags(1) = CF,// '1' - carry
+--			flags(1) = CF,// '1' - carry
 -- 			flags(2) = SF,// '1' - minus
---				flags(3) = ZF,// '1' - zero
---				flags(4) = PF,// '1' - parity
+--			flags(3) = ZF,// '1' - zero
+--			flags(4) = PF,// '1' - parity
 
 architecture arch of alu is	
 begin
