@@ -22,7 +22,7 @@ end entity;
 
 architecture arch of CU is
 
-type state is (s0, s1, s2, s3, s4);
+type state is (s0, s1, s2, s3, s4, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, ERROR);
 --s0 start
 --s1 praca
 --s2 błąd
@@ -127,7 +127,7 @@ begin
 				next_state<= s2;
 			end if;
 
-		when s2 => --odczyt z pamięci
+		when s2 => --odczyt z pamięci pierwszy
 			if r_e = '1' then
 				mr <= '1';
 				re_MBR <= '1';
@@ -152,7 +152,7 @@ begin
 				next_state <= s4;
 				
 				if instr="11" then		--ERROR
-					next_state <= s10;
+					next_state <= ERROR;
 				end if;
 			end if;
 				
@@ -162,31 +162,44 @@ begin
 			
 				case a_mode is
 					when "00" =>		--rejestrowy
-						if instr="10" then --jnof
+						if instr = "10" then --jnof
 							jump <= '1';
 						end if;
 						
-						if reg='0' then 	--reg 1
+						if reg = '0' then 	--reg 1
 							oe_REG_1 <= '1';
+							lae <= '1';
 						else				--reg 2
 							oe_REG_2 <= '1';
+							lae <= '1';
 						end if;
 						
 					when "01" =>	--bazowy
-					
+						if reg = "0" then --reg_1
+							cag <= "001";
+						if reg = "1" then --reg_2	
+							cag <= "010";
 					when "10" =>	--przemieszczeniowy
+						
 					
 					when "11" =>	--natychmiastowy
-				
+						lae <= '1'
 					
 				end case;
 			else
 				case a_mode is
-					when "00" =>
-						case instr is
-							when "10" => next_state <= s1;
-							when "00" => next_state <= s5;
-						end case;
+					when "00" => 		--rejestrowy
+						if instr = "10" then
+							next_state <= s1; 	--jnof
+						else
+							next_state <= s5;	--load, add
+						end if;
+					when "01" => 		--bazowy
+						next_state <= s7;
+					when "10" => 
+					when "11" => 
+						next_state <= s7;
+					
 				end case;
 		
 		when s5 =>	--OPERACJE LOAD i ADD
@@ -217,9 +230,42 @@ begin
 				oe_buf <= '1';
 				next_state <= s1;
 			end if;	
-			
-		when s10 => 	--ERROR
-			next_state <= s10;
+		
+		when s7 =>	--memory read 
+			if r_e = '1' then
+				mr <= '1';
+				re_MBR <= '1';
+				if a_mode = "11" then
+					incr <= '1';
+				end if;
+			else
+				re_MBR<= '1';
+				lae <= '0';
+				if a_mode = "11" then --tryb natychmiastowy 
+					next_state <= s8;
+				elsif instr = "10" then --JNOF tryb bazowy
+					jump <= '1';
+					next_state <= s1; 
+				else
+					next_state <= s5; --add, load tryb bazowy 
+					
+				end if;
+			end if;
+		when s8 => -- tryb natychmiastowy.2
+			if r_e = '1' then
+				ie_IMR <= '1';				
+			else
+				re_MBR<= '0';
+				oe_IMR <= '1';
+				if instr "10" then --jnof
+					jump <= '1';
+					next_state <= s1;
+				else 
+					next_state <= s5; --add, load
+			end if;
+						
+		when ERROR => 
+			next_state <= ERROR;
 	end case;
 end process;
 
