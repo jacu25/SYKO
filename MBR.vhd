@@ -34,7 +34,7 @@ begin
 		elsif falling_edge(clk) then
 			if re='1' then
 				mbr_data <= store after delay;
-			elsif (we='1') then
+			elsif we='1' then
 				mbr_mem <= store after delay;
 			else
 				mbr_data <= (others=>'Z') after delay;

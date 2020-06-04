@@ -11,7 +11,7 @@ entity buf is
 	port( 
 		ie, oe, clk, rst : in std_logic;
 		buf_in : in std_logic_vector(ND downto 0);
-		buf_out : inout std_logic_vector(ND downto 0)
+		buf_out : out std_logic_vector(ND downto 0)
 	);
 		
 		
