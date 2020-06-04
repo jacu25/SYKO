@@ -4,13 +4,14 @@ use IEEE.STD_LOGIC_1164.all;
 entity buf is
  
 	generic(
+		ND : integer := 7;
 		delay : time := 1 ns
 	);
 	
 	port( 
 		ie, oe, clk, rst : in std_logic;
-		buf_in : in std_logic_vector(7 downto 0);
-		buf_out : inout std_logic_vector(7 downto 0)
+		buf_in : in std_logic_vector(ND downto 0);
+		buf_out : inout std_logic_vector(ND downto 0)
 	);
 		
 		
@@ -21,7 +22,7 @@ begin
 	 
 	process (clk, ie, oe, rst)
 
-	variable store : std_logic_vector (7 downto 0);
+	variable store : std_logic_vector (ND downto 0);
 	begin
 		if (rising_edge(clk)) then
 			if rst='0' then

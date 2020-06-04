@@ -4,8 +4,8 @@ USE IEEE.numeric_std.all;
 
 entity Memory is
 
-	generic(	ND : integer := 7;
-				delay : time := 1 ns
+	generic(
+		delay : time := 1 ns
 	);
 	port (
 		mw, mr: in std_logic;
