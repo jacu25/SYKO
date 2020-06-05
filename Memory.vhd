@@ -9,8 +9,8 @@ entity Memory is
 	);
 	port (
 		mw, mr: in std_logic;
-		mem_mbr: inout std_logic_vector(7 downto 0);
-		mar_mem: in  std_logic_vector(7 downto 0)
+		data: inout std_logic_vector(7 downto 0);
+		address: in  std_logic_vector(7 downto 0)
 	);
 end Memory;
 
@@ -32,11 +32,11 @@ begin
   
 	begin
 		if mw='1' then
-				rom_data(to_integer(unsigned(mar_mem))) := mem_mbr; --AFTER DELAY
+				rom_data(to_integer(unsigned(address))) := data;
 		elsif mr='1' then
-			mem_mbr <= rom_data(to_integer(unsigned(mar_mem))) after delay;
+			data <= rom_data(to_integer(unsigned(address))) after delay;
 		else 
-			mem_mbr <= (others=>'Z') after delay;
+			data <= (others=>'Z') after delay;
 		end if;
 		
 	end process;

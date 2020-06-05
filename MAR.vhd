@@ -9,7 +9,7 @@ entity MAR is
 	
 	port( 
 		lae, clk, rst : in std_logic;
-		mar_mem : out std_logic_vector(ND downto 0);
+		mar_out : out std_logic_vector(ND downto 0);
 		mar_in : in std_logic_vector(ND downto 0)
 	);
 		
@@ -29,7 +29,7 @@ begin
 				store := mar_in;
 			end if;
 		elsif falling_edge(clk) then
-			mar_mem <= store after delay;
+			mar_out <= store after delay;
 		end if;
 		
 	end process;

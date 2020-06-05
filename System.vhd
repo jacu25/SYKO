@@ -68,12 +68,12 @@ component CU is
 end component;
 
 component IR_DECODER is
-	generic(	
-				delay : time := 1 ns
+	generic(
+		delay : time := 1 ns
 	);
-	port (
-		ir_in : in std_logic_vector (7 downto 0);
-		ir_out : out std_logic_vector (4 downto 0)
+	port(
+			ird_in : in std_logic_vector (7 downto 0);
+			ird_out :out std_logic_vector (4 downto 0)
 	);
 end component;
 
@@ -83,7 +83,7 @@ component MAR is
 	);
 	port( 
 		lae, clk, rst : in std_logic;
-		mar_mem : out std_logic_vector(7 downto 0);
+		mar_out : out std_logic_vector(7 downto 0);
 		mar_in : in std_logic_vector(7 downto 0)
 	);	
 end component;
@@ -163,10 +163,10 @@ component AG is
 	);
 	port( 
 		cag : in std_logic_vector (2 downto 0);
-		imr_ag : in std_logic_vector (ND downto 0);
-		r1_ag : in std_logic_vector (ND downto 0);
-		r2_ag : in std_logic_vector (ND downto 0);
-		pc_ag : in std_logic_vector (ND downto 0);
+		we_0 : in std_logic_vector (ND downto 0);
+		we_1 : in std_logic_vector (ND downto 0);
+		we_2 : in std_logic_vector (ND downto 0);
+		we_3 : in std_logic_vector (ND downto 0);
 		ag_out : out std_logic_vector (ND downto 0)
 	);
 end component;
@@ -177,8 +177,8 @@ component Memory is
 	);
 	port (
 		mw, mr: in std_logic;
-		mem_mbr: inout std_logic_vector(7 downto 0);
-		mar_mem: in  std_logic_vector(7 downto 0)
+		data: inout std_logic_vector(7 downto 0);
+		address: in  std_logic_vector(7 downto 0)
 	);
 end component;
 
@@ -192,7 +192,7 @@ E_ACC: REG port map(ie=>ie_ACC, oe => oe_ACC, clk => clk, rst => rst, reg_out =>
 E_ALU: ALU port map(x => dataBus, y => y, z => z, flags => flags);
 E_BUFFOR: buf port map(ie => ie_buf, oe => oe_buf, clk => clk, rst => rst, buf_in => z, buf_out => dataBus);
 
-E_AG: AG port map(ag_out => addressBus, pc_ag => pc_ag, r1_ag => r1_ag, r2_ag => r2_ag, imr_ag => imr_ag, cag => cag);
+E_AG: AG port map(ag_out => addressBus, we_3 => pc_ag, we_1 => r1_ag, we_2 => r2_ag, we_0 => imr_ag, cag => cag);
 E_REG_1: REG port map(ie=>ie_REG_1, oe => oe_REG_1, clk => clk, rst => rst, reg_out => r1_ag, reg_io => dataBus);
 E_REG_2: REG port map(ie=>ie_REG_2, oe => oe_REG_2, clk => clk, rst => rst, reg_out => r2_ag, reg_io => dataBus);
 E_IMR: REG port map(ie => ie_IR, oe => oe_IR, clk => clk, rst => rst, reg_io => dataBus, reg_out =>imr_ag);
@@ -200,7 +200,7 @@ E_PC: PC port map(start_adr => start_adr, increment => increment, jump_adr => da
 				jump => jump, pc_io => pc_ag, clk=>clk, rst=>rst); 
 
 E_IR: IR port map(ie => ie_IR, oe => oe_IR, clk => clk, rst => rst, ir_in => dataBus, ir_out =>IR_IRD);
-E_IR_RECODER: IR_DECODER port map(ir_in=>IR_IRD, ir_out=>IRD_CU);
+E_IR_RECODER: IR_DECODER port map(ird_in=>IR_IRD, ird_out=>IRD_CU);
 E_CU : CU port map(clk => clk, RESET => RESET, oe_buf => oe_buf, ie_buf => ie_buf, oe_REG_1 => oe_REG_1,
 				oe_REG_2 => oe_REG_2, ird => IRD_CU, flags => flags, ie_ACC => ie_ACC, oe_ACC => oe_ACC,
 				ie_REG_1 => ie_REG_1, ie_REG_2 => ie_REG_2, ie_IMR => ie_IMR, oe_IMR => oe_IMR, ie_IR => ie_IR,
@@ -208,9 +208,9 @@ E_CU : CU port map(clk => clk, RESET => RESET, oe_buf => oe_buf, ie_buf => ie_bu
 				lae => lae, start_adr => start_adr, increment => increment, cag => cag,
 				rst => rst);
 				
-E_MAR: MAR port map(lae => lae, clk => clk, rst => rst, mar_mem=> mar_mem, mar_in=>addressBus);
+E_MAR: MAR port map(lae => lae, clk => clk, rst => rst, mar_out => mar_mem, mar_in => addressBus);
 E_MBR: MBR port map(re => re_MBR, we => we_MBR, clk => clk, rst => rst, mbr_mem => mar_mem, mbr_data => dataBus);
-E_MEMORY: Memory port map(mw => mw, mr => mr, mem_mbr => mem_mbr, mar_mem => mar_mem);
+E_MEMORY: Memory port map(mw => mw, mr => mr, address => mem_mbr, data => mar_mem);
 
 end architectur;
 
