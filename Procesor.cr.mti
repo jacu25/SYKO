@@ -1,20 +1,18 @@
-C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd {0 {vcom -work work -2002 -explicit -stats=none C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd
-Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity System
--- Compiling architecture architectur of System
-** Error: C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd(102): near "entity": (vcom-1576) expecting BEGIN.
-
-
-} {8.0 9.0} {}} C:/Users/Jacek/Desktop/SYKO/SYKO/buf.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Jacek/Desktop/SYKO/SYKO/buf.vhd
+C:/Users/Jacek/Desktop/SYKO/SYKO/buf.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Jacek/Desktop/SYKO/SYKO/buf.vhd
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Compiling entity buf
 -- Compiling architecture arch of buf
+
+} {} {}} C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\Jacek\Desktop\SYKO\SYKO\System.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity System
+-- Compiling architecture architectur of System
 
 } {} {}} C:/Users/Jacek/Desktop/SYKO/SYKO/REG.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Jacek/Desktop/SYKO/SYKO/REG.vhd
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
@@ -24,14 +22,6 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Compiling entity REG
 -- Compiling architecture arch of REG
 
-} {} {}} C:/Users/Jacek/Desktop/SYKO/SYKO/CU.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Jacek/Desktop/SYKO/SYKO/CU.vhd
-Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity CU
--- Compiling architecture arch of CU
-
 } {} {}} C:/Users/Jacek/Desktop/SYKO/SYKO/AG.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Jacek/Desktop/SYKO/SYKO/AG.vhd
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
@@ -39,6 +29,14 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Loading package std_logic_1164
 -- Compiling entity AG
 -- Compiling architecture arch of AG
+
+} {} {}} C:/Users/Jacek/Desktop/SYKO/SYKO/CU.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Jacek/Desktop/SYKO/SYKO/CU.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity CU
+-- Compiling architecture arch of CU
 
 } {} {}} C:/Users/Jacek/Desktop/SYKO/SYKO/MAR.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Jacek/Desktop/SYKO/SYKO/MAR.vhd
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
@@ -48,35 +46,31 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Compiling entity MAR
 -- Compiling architecture arch of MAR
 
-} {} {}} C:/Users/Jacek/Desktop/SYKO/SYKO/IR.vhd {0 {vcom -work work -2002 -explicit -stats=none C:/Users/Jacek/Desktop/SYKO/SYKO/IR.vhd
+} {} {}} C:/Users/Jacek/Desktop/SYKO/SYKO/IR.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Jacek/Desktop/SYKO/SYKO/IR.vhd
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Compiling entity IR
 -- Compiling architecture arch of IR
-** Error: C:/Users/Jacek/Desktop/SYKO/SYKO/IR.vhd(31): near "then": (vcom-1576) expecting ')'.
 
-
-} {8.0 9.0} {}} C:/Users/Jacek/Desktop/SYKO/SYKO/PC.vhd {0 {vcom -work work -2002 -explicit -stats=none C:/Users/Jacek/Desktop/SYKO/SYKO/PC.vhd
+} {} {}} C:/Users/Jacek/Desktop/SYKO/SYKO/PC.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Jacek/Desktop/SYKO/SYKO/PC.vhd
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Compiling entity PC
 -- Compiling architecture arch of PC
-** Error: C:/Users/Jacek/Desktop/SYKO/SYKO/PC.vhd(34): (vcom-1136) Unknown identifier "NA".
 
-** Error: C:/Users/Jacek/Desktop/SYKO/SYKO/PC.vhd(34): Cannot resolve expression type.
-** Error: C:/Users/Jacek/Desktop/SYKO/SYKO/PC.vhd(45): VHDL Compiler exiting
-
-} {8.0 9.0 10.0 12.0} {}} C:/Users/Jacek/Desktop/SYKO/SYKO/IR_DECODER.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Jacek/Desktop/SYKO/SYKO/IR_DECODER.vhd
+} {} {}} C:/Users/Jacek/Desktop/SYKO/SYKO/IR_DECODER.vhd {2 {vcom -work work -2002 -explicit -stats=none C:/Users/Jacek/Desktop/SYKO/SYKO/IR_DECODER.vhd
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Compiling entity IR_DECODER
 -- Compiling architecture arch of IR_DECODER
+** Warning: C:/Users/Jacek/Desktop/SYKO/SYKO/IR_DECODER.vhd(27): (vcom-1083) Implicit array operator "=" always returns FALSE (left length 2 is not equal to right length 3).
+
 
 } {} {}} C:/Users/Jacek/Desktop/SYKO/SYKO/MBR.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Jacek/Desktop/SYKO/SYKO/MBR.vhd
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
