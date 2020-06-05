@@ -8,7 +8,7 @@ entity IR is
 	);
 
 	port( 
-		ie, oe, clk, rst : in std_logic;
+		ie, clk, rst : in std_logic;
 		ir_in :in std_logic_vector(ND downto 0);
 		ir_out : out std_logic_vector(ND downto 0)
 	);
@@ -18,7 +18,7 @@ end IR;
 architecture arch of IR is
 begin 
 	 
-	process (clk, ie, oe, rst)
+	process (clk, ie, rst)
 
 	variable store : std_logic_vector (ND downto 0);
 	begin
@@ -29,11 +29,7 @@ begin
 				store := ir_in;
 			end if;
 		elsif falling_edge(clk) then
-			if oe='1' then
-				ir_out <= store after delay;
-			else
-				ir_out <= (others=>'Z') after delay;
-			end if;
+			ir_out <= store after delay;
 		end if;
 	end process;
 end arch;

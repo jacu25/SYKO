@@ -19,15 +19,15 @@ begin
 --WDOBYWAMY:
 --	tryb adresowania	"------**" 
 --	nr rejestry			"-----*--" R1-0, R2-1
---	instrukcja			"**------" LOAD-00, ADD-01, JNOF-10
+--	instrukcja			"---**---" LOAD-00, ADD-01, JNOF-10
 
 process(ird_in) is
 begin
 
-	if ird_in(7 downto 6)="11" then
+	if ird_in(4 downto 3)="11" or (not ird_in(7 downto 6)="000") then
 		ird_out <= (others => '1');	--ERROR
 	else
-		ird_out <= ird_in(1 downto 0)&ird_in(3)&ird_in(7 downto 6);
+		ird_out <= ird_in(1 downto 0)&ird_in(3)&ird_in(4 downto 3);
 	end if;
 	
 end process;

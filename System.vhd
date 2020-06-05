@@ -2,10 +2,15 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 entity System is
+
+	generic( 
+		period : time := 0.25 us
+	);
+	
 end System;
 
 architecture architectur of System is
-constant period : time := 8 ns ;
+
 
 --BUSES
 signal dataBus : std_logic_vector(7 downto 0);
@@ -37,11 +42,11 @@ signal oe_REG_1, ie_REG_1: std_logic;
 --REG_2
 signal oe_REG_2, ie_REG_2: std_logic;
 --IR
-signal oe_IR, ie_IR : std_logic;
+signal ie_IR : std_logic;
 
 --IR_DECODER
-signal IR_IRD : std_logic_vector(7 downto 0);
-signal IRD_CU : std_logic_vector(4 downto 0);
+signal ir_ird : std_logic_vector(7 downto 0);
+signal ird_cu : std_logic_vector(4 downto 0);
 
 --IMR
 signal oe_IMR, ie_IMR: std_logic;
@@ -59,9 +64,9 @@ component CU is
 		
 		--sygnały sterujące:
 		ie_ACC, ie_buf, ie_REG_1, ie_REG_2, ie_IMR, ie_IR : out std_logic;
-		oe_ACC, oe_buf, oe_REG_1, oe_REG_2, oe_IMR, oe_IR : out std_logic;
+		oe_ACC, oe_buf, oe_REG_1, oe_REG_2, oe_IMR : out std_logic;
 		re_MBR, we_MBR, mw, mr, jump, incr, lae : out std_logic;
-		jump_adr, start_adr, increment : out std_logic_vector (7 downto 0);
+		start_adr, increment : out std_logic_vector (7 downto 0);
 		cag : out std_logic_vector (2 downto 0);
 		rst : out std_logic
 		);	
@@ -136,7 +141,7 @@ component IR is
 		delay : time := 1 ns
 	);
 	port( 
-		ie, oe, clk, rst : in std_logic;
+		ie, clk, rst : in std_logic;
 		ir_in :in std_logic_vector(7 downto 0);
 		ir_out : out std_logic_vector(7 downto 0)
 	);
@@ -182,11 +187,9 @@ component Memory is
 	);
 end component;
 
-constant ClockPeriod : time := 8 ns;
-
 begin
 
-clk <= not clk after ClockPeriod / 2;
+clk <= not clk after 0.5*period;
 
 E_ACC: REG port map(ie=>ie_ACC, oe => oe_ACC, clk => clk, rst => rst, reg_out => y, reg_io => dataBus);
 E_ALU: ALU port map(x => dataBus, y => y, z => z, flags => flags);
@@ -195,16 +198,15 @@ E_BUFFOR: buf port map(ie => ie_buf, oe => oe_buf, clk => clk, rst => rst, buf_i
 E_AG: AG port map(ag_out => addressBus, we_3 => pc_ag, we_1 => r1_ag, we_2 => r2_ag, we_0 => imr_ag, cag => cag);
 E_REG_1: REG port map(ie=>ie_REG_1, oe => oe_REG_1, clk => clk, rst => rst, reg_out => r1_ag, reg_io => dataBus);
 E_REG_2: REG port map(ie=>ie_REG_2, oe => oe_REG_2, clk => clk, rst => rst, reg_out => r2_ag, reg_io => dataBus);
-E_IMR: REG port map(ie => ie_IR, oe => oe_IR, clk => clk, rst => rst, reg_io => dataBus, reg_out =>imr_ag);
+E_IMR: REG port map(ie => ie_IMR, oe => oe_IMR, clk => clk, rst => rst, reg_io => dataBus, reg_out =>imr_ag);
 E_PC: PC port map(start_adr => start_adr, increment => increment, jump_adr => dataBus, incr => incr,
 				jump => jump, pc_io => pc_ag, clk=>clk, rst=>rst); 
-
-E_IR: IR port map(ie => ie_IR, oe => oe_IR, clk => clk, rst => rst, ir_in => dataBus, ir_out =>IR_IRD);
-E_IR_RECODER: IR_DECODER port map(ird_in=>IR_IRD, ird_out=>IRD_CU);
+E_IR: IR port map(ie => ie_IR, clk => clk, rst => rst, ir_in => dataBus, ir_out =>ir_ird);
+E_IR_RECODER: IR_DECODER port map(ird_in=>ir_ird, ird_out=>ird_cu);
 E_CU : CU port map(clk => clk, RESET => RESET, oe_buf => oe_buf, ie_buf => ie_buf, oe_REG_1 => oe_REG_1,
-				oe_REG_2 => oe_REG_2, ird => IRD_CU, flags => flags, ie_ACC => ie_ACC, oe_ACC => oe_ACC,
+				oe_REG_2 => oe_REG_2, ird => ird_cu, flags => flags, ie_ACC => ie_ACC, oe_ACC => oe_ACC,
 				ie_REG_1 => ie_REG_1, ie_REG_2 => ie_REG_2, ie_IMR => ie_IMR, oe_IMR => oe_IMR, ie_IR => ie_IR,
-				oe_IR => oe_IR, re_MBR => re_MBR, we_MBR => we_MBR, mw => mw, mr => mr, jump => jump, incr => incr,
+				re_MBR => re_MBR, we_MBR => we_MBR, mw => mw, mr => mr, jump => jump, incr => incr,
 				lae => lae, start_adr => start_adr, increment => increment, cag => cag,
 				rst => rst);
 				

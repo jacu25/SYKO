@@ -7,11 +7,9 @@ entity CU is
 		ird : in std_logic_vector (4 downto 0);
 		flags : in std_logic_vector (4 downto 0);
 		
-		--sygnały_bledow : out std_logic_vector (??downto 0);
-		
 		--sygnały sterujące:
 		ie_ACC, ie_buf, ie_REG_1, ie_REG_2, ie_IMR, ie_IR : out std_logic;
-		oe_ACC, oe_buf, oe_REG_1, oe_REG_2, oe_IMR, oe_IR : out std_logic;
+		oe_ACC, oe_buf, oe_REG_1, oe_REG_2, oe_IMR : out std_logic;
 		re_MBR, we_MBR, mw, mr, jump, incr, lae : out std_logic;
 		start_adr, increment : out std_logic_vector (7 downto 0);
 		cag : out std_logic_vector (2 downto 0);
@@ -67,7 +65,6 @@ begin
 	--ie_REG_2 <= '0';
 	--oe_REG_2 <= '0';
 	--ie_IR <= '0';
-	--oe_IR <= '0';
 	--ie_IMR <= '0';
 	--oe_IMR <= '0';
 	--re_MBR <= '0';
@@ -94,7 +91,6 @@ begin
 				ie_REG_2 <= '0';
 				oe_REG_2 <= '0';
 				ie_IR <= '0';
-				oe_IR <= '0';
 				ie_IMR <= '0';
 				oe_IMR <= '0';
 				re_MBR <= '0';
@@ -121,7 +117,6 @@ begin
 				oe_REG_1 <= '0';
 				oe_REG_2 <= '0';
 				oe_IMR <= '0';
-				oe_IR <= '0';
 				jump<='0';
 			else
 				next_state<= s2;
@@ -141,7 +136,6 @@ begin
 				increment <= "00000001";
 				ie_IR<= '1';
 			else			
-				oe_IR <= '1';
 				re_MBR <='0';
 				incr <= '1';
 				
@@ -159,7 +153,7 @@ begin
 		when s4 =>
 		
 			if r_e = '1' then	
-			
+				incr <= '0';
 				case a_mode is
 					when "00" =>		--rejestrowy
 						if instr = "10" then --jnof
