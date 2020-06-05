@@ -162,10 +162,10 @@ begin
 						
 						if reg = '0' then 	--reg 1
 							oe_REG_1 <= '1';
-							lae <= '1';
+							--lae <= '1';
 						else				--reg 2
 							oe_REG_2 <= '1';
-							lae <= '1';
+							--lae <= '1';
 						end if;
 						
 					when "01" =>	--bazowy
