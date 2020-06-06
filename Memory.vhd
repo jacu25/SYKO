@@ -20,12 +20,12 @@ architecture arch of Memory is
   
 begin
   
-	process(mw, mr)
+	process(mw, mr, address, data)
 	
 	 variable rom_data: ROM_type:=(
 	"00000001",
 	"00001010",
-	"00000000",
+	"00001111",
 	"00000000",
 	"00000000"
   );
