@@ -23,8 +23,8 @@ begin
 	process(mw, mr)
 	
 	 variable rom_data: ROM_type:=(
-	"00000000",
-	"00000000",
+	"00000001",
+	"00001010",
 	"00000000",
 	"00000000",
 	"00000000"
@@ -32,7 +32,7 @@ begin
   
 	begin
 		if mw='1' then
-				rom_data(to_integer(unsigned(address))) := data;
+			rom_data(to_integer(unsigned(address))) := data;
 		elsif mr='1' then
 			data <= rom_data(to_integer(unsigned(address))) after delay;
 		else 

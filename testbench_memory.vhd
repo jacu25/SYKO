@@ -19,10 +19,10 @@ begin
 	   -- Badanie stanu domyślnego
 	   mw <= '0';
 	   mr <= '0';
+	   address <= std_logic_vector(to_unsigned(0,8));
        wait for 10 ns;
        
 	   -- Odczyt spod adresu 0
-	   address <= std_logic_vector(to_unsigned(0,8));
 	   mr <= '1';
 	   wait for 10 ns;
 	   
@@ -31,19 +31,22 @@ begin
 	   mr <= '1';
 	   wait for 10 ns;
 	   
-	   -- Zapis do adresu 1
+	   -- Zapis do adresu 1 liczby 20
+	   mr <= '0';
 	   address <= std_logic_vector(to_unsigned(1,8));
+	   data <= std_logic_vector(to_unsigned(20,8));
 	   mw <= '1';
+	   mr <= '0';
 	   wait for 10 ns;
 	   
 	   -- Odczyt spod adresu 1
-	   mw <= '0';
 	   address <= std_logic_vector(to_unsigned(1,8));
+	   data <= (others => 'Z');
+	   mw <= '0';
 	   mr <= '1';
 	   wait for 10 ns;
 	   
 	   -- Testowanie zwolnievnia linii danych
-	   address <= std_logic_vector(to_unsigned(1,8));
 	   mr <= '0';
 	   wait for 10 ns;
        wait;
