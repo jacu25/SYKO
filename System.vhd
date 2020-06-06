@@ -4,7 +4,7 @@ use ieee.std_logic_1164.all;
 entity System is
 
 	generic( 
-		period : time := 0.25 us
+		period : time := 30 ns
 	);
 	
 end System;
