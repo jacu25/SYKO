@@ -39,7 +39,7 @@ begin
 	end loop;
 	
 	--OF
-	if x(ND)=y(ND) and x(ND)/=result(ND) then
+	if (x(ND)=y(ND) and x(ND)/=result(ND)) then
 		flags_buf(0) := '1';
 	else
 		flags_buf(0) := '0';
@@ -48,15 +48,8 @@ begin
 	--CF
 	flags_buf(1) := carry;
 	
-	--SF
-	flags_buf(2) := result(7);
-	
 	--ZF
-	if result="00000000" then
-		flags_buf(3) := '1';
-	else
-		flags_buf(3) := '0';
-	end if;
+	flags_buf(3) := result(ND);
 
 	--PF
 	for i in 0 to ND loop

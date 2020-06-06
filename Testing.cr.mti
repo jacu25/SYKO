@@ -1,4 +1,22 @@
-C:/Users/bhbo9/Documents/GitHub/SYKO/ALU.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/bhbo9/Documents/GitHub/SYKO/ALU.vhd
+C:/Users/bhbo9/Documents/GitHub/SYKO/testbench_alu.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\bhbo9\Documents\GitHub\SYKO\testbench_alu.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity alu_tb
+-- Compiling architecture behav of alu_tb
+-- Loading entity alu
+
+} {} {}} C:/Users/bhbo9/Documents/GitHub/SYKO/REG.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/bhbo9/Documents/GitHub/SYKO/REG.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity REG
+-- Compiling architecture arch of REG
+
+} {} {}} C:/Users/bhbo9/Documents/GitHub/SYKO/ALU.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/bhbo9/Documents/GitHub/SYKO/ALU.vhd
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
 -- Loading package TEXTIO
