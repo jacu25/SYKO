@@ -5,7 +5,7 @@ entity AG is
 
 	generic( 
 		ND : integer := 7;
-		delay : time := 1 ns
+		delay : time := 3 ns
 	);
 	
 	port( 

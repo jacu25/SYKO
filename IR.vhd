@@ -3,8 +3,9 @@ use IEEE.STD_LOGIC_1164.all;
 
 entity IR is
  
-	generic(	ND : integer := 7;
-				delay : time := 1 ns
+	generic(	
+		ND : integer := 7;
+		delay : time := 3 ns
 	);
 
 	port( 

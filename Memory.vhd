@@ -5,7 +5,7 @@ USE IEEE.numeric_std.all;
 entity Memory is
 
 	generic(
-		delay : time := 1 ns
+		delay : time := 5 ns
 	);
 	port (
 		mw, mr: in std_logic;

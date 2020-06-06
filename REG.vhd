@@ -4,7 +4,7 @@ use IEEE.STD_LOGIC_1164.all;
 entity REG is
  
 	generic(
-		delay : time := 1 ns
+		delay : time := 3 ns
 	);
 	
 	port( 

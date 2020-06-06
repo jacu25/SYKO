@@ -3,8 +3,9 @@ use ieee.std_logic_1164.all;
 
 entity alu is
 
-	generic(	ND : integer := 7;
-				delay : time := 1 ns
+	generic(	
+		ND : integer := 7;
+		delay : time := 3 ns
 	);
 	port(	x, y : in std_logic_vector (ND downto 0);
 			z : out std_logic_vector (ND downto 0) := "00000000";

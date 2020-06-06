@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 
 entity CU is
 
-	port (clk, RESET: in std_logic; 		--RESET CU-rde
+	port (clk, RESET: in std_logic; 		--RESET CU
 		ird : in std_logic_vector (4 downto 0);
 		flags : in std_logic_vector (4 downto 0);
 		
