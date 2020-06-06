@@ -60,9 +60,9 @@ V^]5VJ5DCb6Uej@RT``imS2
 !s100 Eh:CZ8CnfZbLLN>`3WMMP0
 R6
 32
-Z16 !s110 1591457491
+Z16 !s110 1591458872
 !i10b 1
-Z17 !s108 1591457491.000000
+Z17 !s108 1591458872.000000
 Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bhbo9/Documents/GitHub/SYKO/ALU.vhd|
 Z19 !s107 C:/Users/bhbo9/Documents/GitHub/SYKO/ALU.vhd|
 !i113 1
@@ -503,12 +503,12 @@ R69
 R11
 R12
 Ereg
-R0
+Z70 w1591458163
 R1
 R2
 R3
-Z70 8C:/Users/bhbo9/Documents/GitHub/SYKO/REG.vhd
-Z71 FC:/Users/bhbo9/Documents/GitHub/SYKO/REG.vhd
+Z71 8C:/Users/bhbo9/Documents/GitHub/SYKO/REG.vhd
+Z72 FC:/Users/bhbo9/Documents/GitHub/SYKO/REG.vhd
 l0
 L4
 V=cZo?I<WoelQ;oZ6RBC:i2
@@ -518,15 +518,15 @@ R6
 R16
 !i10b 1
 R17
-Z72 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bhbo9/Documents/GitHub/SYKO/REG.vhd|
-Z73 !s107 C:/Users/bhbo9/Documents/GitHub/SYKO/REG.vhd|
+Z73 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bhbo9/Documents/GitHub/SYKO/REG.vhd|
+Z74 !s107 C:/Users/bhbo9/Documents/GitHub/SYKO/REG.vhd|
 !i113 1
 R11
 R12
 Aarch
 R1
 R2
-Z74 DEx4 work 3 reg 0 22 =cZo?I<WoelQ;oZ6RBC:i2
+Z75 DEx4 work 3 reg 0 22 =cZo?I<WoelQ;oZ6RBC:i2
 l19
 L18
 V:RQfN4]Ri8O[?D`IQKnbz1
@@ -536,48 +536,48 @@ R6
 R16
 !i10b 1
 R17
-R72
 R73
+R74
 !i113 1
 R11
 R12
 Ereg_tb
-Z75 w1591457480
+Z76 w1591458870
 R22
 R1
 R2
 R3
-Z76 8C:/Users/bhbo9/Documents/GitHub/SYKO/testbench_REG.vhd
-Z77 FC:/Users/bhbo9/Documents/GitHub/SYKO/testbench_REG.vhd
+Z77 8C:/Users/bhbo9/Documents/GitHub/SYKO/testbench_REG.vhd
+Z78 FC:/Users/bhbo9/Documents/GitHub/SYKO/testbench_REG.vhd
 l0
 L5
 VEFZ=A@6W?1_UVN36cggG42
 !s100 KE^HfR3[c=cz`NYS<`OL23
 R6
 32
-Z78 !s110 1591457492
+Z79 !s110 1591458873
 !i10b 1
-Z79 !s108 1591457492.000000
+R17
 Z80 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bhbo9/Documents/GitHub/SYKO/testbench_REG.vhd|
 Z81 !s107 C:/Users/bhbo9/Documents/GitHub/SYKO/testbench_REG.vhd|
 !i113 1
 R11
 R12
 Aarch
-R74
+R75
 R22
 R1
 R2
 Z82 DEx4 work 6 reg_tb 0 22 EFZ=A@6W?1_UVN36cggG42
 l22
 L11
-V<>IM<eZD[JfCe5[_^[S083
-!s100 hUS9PGUDgi>0UAGVLXG`S2
+VSoD4EGb6imEBTbFBWJG]81
+!s100 Z1K]jcc0iDO4T0I4?9S132
 R6
 32
-R78
-!i10b 1
 R79
+!i10b 1
+R17
 R80
 R81
 !i113 1

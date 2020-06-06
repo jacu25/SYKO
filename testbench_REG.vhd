@@ -28,12 +28,12 @@ begin
 
 		begin
 
-		if falling_edge(clk) then
+		if rising_edge(clk) then
 			present_state<=next_state;
 		end if;
 	end process;
 	
-	process(clk)
+	process(clk,ie,oe ,rst)
 		begin
 		
 		case present_state is 
@@ -44,12 +44,14 @@ begin
 					ie <='0';
 				else
 					next_state <= s1;
+
 				end if;
 			when s1 =>
 				if rising_edge(clk) then
+					ie <='1';
 					rst <= '1';
 					reg_io <= std_logic_vector(to_signed(20,8));
-					ie <='1';
+					
 				else
 					next_state <= s2;
 				end if;	
