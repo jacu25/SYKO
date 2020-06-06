@@ -24,7 +24,7 @@ begin
 process(ird_in) is
 begin
 
-	if ird_in(4 downto 3)="11" or (not ird_in(7 downto 5)="000") then
+	if ird_in(4 downto 3)="11" or ird_in(7 downto 5)="000" then
 		ird_out <= (others => '1') after delay;		--ERROR
 	else
 		ird_out <= ird_in(1 downto 0)&ird_in(2)&ird_in(4 downto 3) after delay;
