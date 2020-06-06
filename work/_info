@@ -60,9 +60,9 @@ V^]5VJ5DCb6Uej@RT``imS2
 !s100 Eh:CZ8CnfZbLLN>`3WMMP0
 R6
 32
-Z16 !s110 1591452846
+Z16 !s110 1591453319
 !i10b 1
-Z17 !s108 1591452846.000000
+Z17 !s108 1591453319.000000
 Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bhbo9/Documents/GitHub/SYKO/ALU.vhd|
 Z19 !s107 C:/Users/bhbo9/Documents/GitHub/SYKO/ALU.vhd|
 !i113 1
@@ -74,8 +74,8 @@ R2
 Z20 DEx4 work 3 alu 0 22 ^]5VJ5DCb6Uej@RT``imS2
 l23
 L22
-VY>TKmeS@>TQj:KSFmGAOh0
-!s100 bJ>kzd:KY<H<iH4i_NJN21
+Z21 VY>TKmeS@>TQj:KSFmGAOh0
+Z22 !s100 bJ>kzd:KY<H<iH4i_NJN21
 R6
 32
 R16
@@ -87,22 +87,22 @@ R19
 R11
 R12
 Ealu_tb
-Z21 w1591452543
-Z22 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z23 w1591453313
+Z24 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 R1
 R2
 R3
-Z23 8C:\Users\bhbo9\Documents\GitHub\SYKO\testbench_alu.vhd
-Z24 FC:\Users\bhbo9\Documents\GitHub\SYKO\testbench_alu.vhd
+Z25 8C:\Users\bhbo9\Documents\GitHub\SYKO\testbench_alu.vhd
+Z26 FC:\Users\bhbo9\Documents\GitHub\SYKO\testbench_alu.vhd
 l0
 L5
 VILjH65B_NICiBSOAbC4jO0
 !s100 T2G5nNc[R;[8R9aQ`B:6S0
 R6
 32
-Z25 !s110 1591452845
+R16
 !i10b 1
-Z26 !s108 1591452845.000000
+R17
 Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\bhbo9\Documents\GitHub\SYKO\testbench_alu.vhd|
 Z28 !s107 C:\Users\bhbo9\Documents\GitHub\SYKO\testbench_alu.vhd|
 !i113 1
@@ -110,19 +110,19 @@ R11
 R12
 Abehav
 R20
-R22
+R24
 R1
 R2
 DEx4 work 6 alu_tb 0 22 ILjH65B_NICiBSOAbC4jO0
 l13
 L8
-VZmFZ@:C?7F`59gffdYIKC1
-!s100 T0WFcZ`QNI6g_>C_N^hY]3
+VmYOoUJ4h@:8L6VVlMb3V`1
+!s100 C[TYZO7C8oD[;hfLca>5A3
 R6
 32
-R25
+R16
 !i10b 1
-R26
+R17
 R27
 R28
 !i113 1
@@ -424,7 +424,7 @@ R11
 R12
 Ememory
 R0
-R22
+R24
 R1
 R2
 R3
@@ -445,7 +445,7 @@ Z67 !s107 C:/Users/bhbo9/Documents/GitHub/SYKO/Memory.vhd|
 R11
 R12
 Aarch
-R22
+R24
 R1
 R2
 DEx4 work 6 memory 0 22 eA6ZI2K8A6ea@4c_6;H033
