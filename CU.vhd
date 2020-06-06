@@ -155,11 +155,8 @@ begin
 			if r_e = '1' then	
 				incr <= '0';
 				case a_mode is
-					when "00" =>		--rejestrowy
-						if instr = "10" then --jnof
-							jump <= '1';
-						end if;
-						
+				
+					when "00" =>		--rejestrowy						
 						if reg = '0' then 	--reg 1
 							oe_REG_1 <= '1';
 							--lae <= '1';
@@ -181,7 +178,11 @@ begin
 				case a_mode is
 					when "00" => 		--rejestrowy
 						if instr = "10" then
+							if not flags(0) then --sprawdzanie flagi OF
+								jump <= '1';
+							end if;
 							next_state <= s1; 	--jnof
+						end if;
 						else
 							next_state <= s5;	--load, add
 						end if;
@@ -235,7 +236,9 @@ begin
 				if a_mode = "11" or a_mode = "10" then --tryb natychmiastowy/przemiesczeniowy
 					next_state <= s8;
 				elsif instr = "10" then --JNOF tryb bazowy
-					jump <= '1';
+					if not flags(0) then --sprawdzanie flagi OF
+						jump <= '1';
+					end if;
 					next_state <= s1; 
 				else
 					next_state <= s5; --add, load tryb bazowy 
@@ -249,7 +252,9 @@ begin
 				re_MBR<= '0';
 				oe_IMR <= '1';
 				if instr = "10" then --jnof
-					jump <= '1';
+					if not flags(0) then --sprawdzanie flagi OF
+						jump <= '1';
+					end if;
 					next_state <= s1;
 				elsif a_mode = "10" then
 					lae <= '1';
