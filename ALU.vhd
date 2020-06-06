@@ -48,6 +48,9 @@ begin
 	--CF
 	flags_buf(1) := carry;
 	
+	--SF
+	flags_buf(2) := result(7);
+	
 	--ZF
 	if result="00000000" then
 		flags_buf(3) := '1';
