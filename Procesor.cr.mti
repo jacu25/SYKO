@@ -6,7 +6,7 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Compiling entity buf
 -- Compiling architecture arch of buf
 
-} {} {}} C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\Jacek\Desktop\SYKO\SYKO\System.vhd}
+} {} {}} C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Jacek/Desktop/SYKO/SYKO/System.vhd
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -30,14 +30,6 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Compiling entity AG
 -- Compiling architecture arch of AG
 
-} {} {}} C:/Users/Jacek/Desktop/SYKO/SYKO/CU.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Jacek/Desktop/SYKO/SYKO/CU.vhd
-Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity CU
--- Compiling architecture arch of CU
-
 } {} {}} C:/Users/Jacek/Desktop/SYKO/SYKO/MAR.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Jacek/Desktop/SYKO/SYKO/MAR.vhd
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
@@ -53,14 +45,6 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Loading package std_logic_1164
 -- Compiling entity IR
 -- Compiling architecture arch of IR
-
-} {} {}} C:/Users/Jacek/Desktop/SYKO/SYKO/PC.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Jacek/Desktop/SYKO/SYKO/PC.vhd
-Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity PC
--- Compiling architecture arch of PC
 
 } {} {}} C:/Users/Jacek/Desktop/SYKO/SYKO/IR_DECODER.vhd {2 {vcom -work work -2002 -explicit -stats=none C:/Users/Jacek/Desktop/SYKO/SYKO/IR_DECODER.vhd
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015

@@ -154,7 +154,7 @@ component PC is
 	);
 	port( 
 		clk, rst, incr, jump : in std_logic;
-		pc_io : inout std_logic_vector (ND downto 0);
+		pc_out : out std_logic_vector (ND downto 0);
 		start_adr : in std_logic_vector (ND downto 0);	
 		increment : in std_logic_vector (ND downto 0);
 		jump_adr : in std_logic_vector (ND downto 0)
@@ -200,7 +200,7 @@ E_REG_1: REG port map(ie=>ie_REG_1, oe => oe_REG_1, clk => clk, rst => rst, reg_
 E_REG_2: REG port map(ie=>ie_REG_2, oe => oe_REG_2, clk => clk, rst => rst, reg_out => r2_ag, reg_io => dataBus);
 E_IMR: REG port map(ie => ie_IMR, oe => oe_IMR, clk => clk, rst => rst, reg_io => dataBus, reg_out =>imr_ag);
 E_PC: PC port map(start_adr => start_adr, increment => increment, jump_adr => dataBus, incr => incr,
-				jump => jump, pc_io => pc_ag, clk=>clk, rst=>rst); 
+				jump => jump, pc_out => pc_ag, clk=>clk, rst=>rst); 
 E_IR: IR port map(ie => ie_IR, clk => clk, rst => rst, ir_in => dataBus, ir_out =>ir_ird);
 E_IR_RECODER: IR_DECODER port map(ird_in=>ir_ird, ird_out=>ird_cu);
 E_CU : CU port map(clk => clk, RESET => RESET, oe_buf => oe_buf, ie_buf => ie_buf, oe_REG_1 => oe_REG_1,

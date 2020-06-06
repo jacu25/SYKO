@@ -10,7 +10,7 @@ entity PC is
 
 	port( 
 		clk, rst, incr, jump : in std_logic;
-		pc_io : inout std_logic_vector (ND downto 0);
+		pc_out : inout std_logic_vector (ND downto 0);
 		start_adr : in std_logic_vector (ND downto 0);	
 		increment : in std_logic_vector (ND downto 0);
 		jump_adr : in std_logic_vector (ND downto 0)
@@ -29,16 +29,16 @@ begin
 	begin
 
 		if (rst='0') then
-			pc_io <= start_adr;
+			pc_out <= start_adr;
 		elsif falling_edge(clk) and incr='1' then
 			ces := '0';
 			for i in 0 to ND loop
-				ch(i) := (ces xor pc_io(i)) xor increment(i);
-				ces := (pc_io(i) and increment(i)) or ((pc_io(i) xor increment(i)) and ces);
+				ch(i) := (ces xor pc_out(i)) xor increment(i);
+				ces := (pc_out(i) and increment(i)) or ((pc_out(i) xor increment(i)) and ces);
 			end loop;
-			pc_io <= ch after delay;
+			pc_out <= ch after delay;
 		elsif falling_edge(clk) and jump='1' then 
-			pc_io <= jump_adr after delay;
+			pc_out <= jump_adr after delay;
 		end if;
 		
 	end  process;
