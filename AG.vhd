@@ -10,10 +10,10 @@ entity AG is
 	
 	port( 
 		cag : in std_logic_vector (2 downto 0);
-		we_0 : in std_logic_vector (ND downto 0);
-		we_1 : in std_logic_vector (ND downto 0);
-		we_2 : in std_logic_vector (ND downto 0);
-		we_3 : in std_logic_vector (ND downto 0);
+		we_0 : in std_logic_vector (ND downto 0); --IMR
+		we_1 : in std_logic_vector (ND downto 0); --REG_1
+		we_2 : in std_logic_vector (ND downto 0); --REG_2
+		we_3 : in std_logic_vector (ND downto 0); --PC
 		ag_out : out std_logic_vector (ND downto 0)
 	);
 	
