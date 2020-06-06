@@ -37,28 +37,27 @@ begin
 			end if;
 	end process;
 	
-	process(r_e, rst, mar_out, mar_in, lae)
+	process(r_e, rst, lae)
 		begin
 		
 		case present_state is 
 			when s0 =>
 				if r_e = '1' then
-					rst <= '0';
+					rst <= '1';
 					lae <= '0';
 				else
 					next_state <= s1;
 				end if;
 			when s1 =>
 				if r_e = '1' then
-					rst <= '1';
-					lae <= '1';
 					mar_in <= std_logic_vector(to_signed(10,8));
+					lae <= '1';
 				else
 					next_state <= s2;
 				end if;	
 			when s2 =>
 				if r_e = '1' then
-					lae <= '0';
+					lae <= '1';
 					mar_in <= std_logic_vector(to_signed(10,8));
 				else
 					next_state <= s3;

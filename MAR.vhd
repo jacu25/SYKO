@@ -21,7 +21,7 @@ begin
 	
 	process (clk, rst, lae, mar_in)
 
-	variable store : std_logic_vector (ND downto 0) := (others => '0');
+	variable store : std_logic_vector (ND downto 0) := "11000001";
 	begin
 		if rising_edge(clk) then
 			if rst='0' then

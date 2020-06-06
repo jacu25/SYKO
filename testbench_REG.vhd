@@ -33,7 +33,7 @@ begin
 			end if;
 	end process;
 	
-	process(clk, ie, oe ,rst)
+	process(r_e, ie, oe ,rst)
 		begin
 		
 		case present_state is 
