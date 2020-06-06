@@ -13,9 +13,7 @@ architecture arch of REG_tb is
 	signal ie, oe, rst : std_logic;
 	signal clk : std_logic := '0';
 type state is (s0, s1, s2, s3, s4, s5);
---s0 start
---s1 praca
---s2 błąd
+
 signal next_state: state;
 signal present_state: state := s0; 
 signal r_e : std_logic;
