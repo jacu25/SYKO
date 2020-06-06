@@ -44,8 +44,8 @@ begin
 		
 		a <= std_logic_vector(to_signed(-120,8));
         b <= std_logic_vector(to_signed(-21,8));
-        -- a and b are now the same, flags(0) should be high
 
         wait;
+		
     end process;
 end behav;
