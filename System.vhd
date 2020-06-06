@@ -195,7 +195,7 @@ E_ACC: REG port map(ie=>ie_ACC, oe => oe_ACC, clk => clk, rst => rst, reg_out =>
 E_ALU: ALU port map(x => dataBus, y => y, z => z, flags => flags);
 E_BUFFOR: buf port map(ie => ie_buf, oe => oe_buf, clk => clk, rst => rst, buf_in => z, buf_out => dataBus);
 
-E_AG: AG port map(ag_out => addressBus, we_3 => pc_ag, we_1 => r1_ag, we_2 => r2_ag, we_0 => imr_ag, cag => cag);
+E_AG: AG port map(ag_out => addressBus, we_0 => imr_ag, we_1 => r1_ag, we_2 => r2_ag, we_3 => pc_ag, cag => cag);
 E_REG_1: REG port map(ie=>ie_REG_1, oe => oe_REG_1, clk => clk, rst => rst, reg_out => r1_ag, reg_io => dataBus);
 E_REG_2: REG port map(ie=>ie_REG_2, oe => oe_REG_2, clk => clk, rst => rst, reg_out => r2_ag, reg_io => dataBus);
 E_IMR: REG port map(ie => ie_IMR, oe => oe_IMR, clk => clk, rst => rst, reg_io => dataBus, reg_out =>imr_ag);

@@ -138,7 +138,7 @@ begin
 			else			
 				re_MBR <='0';
 				incr <= '1';
-				
+				ie_IR <= '0';
 				a_mode := ird(4 downto 3); --addressing mode
 				reg := ird(2);			--register
 				instr := ird(1 downto 0); --instruction
@@ -256,6 +256,7 @@ begin
 					end if;
 					next_state <= s1;
 				elsif a_mode = "10" then
+					cag <= "000";
 					lae <= '1';
 					next_state <= s9; --memory_read
 				else
