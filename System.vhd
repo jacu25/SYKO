@@ -154,7 +154,7 @@ component PC is
 	);
 	port( 
 		clk, rst, incr, jump : in std_logic;
-		pc_out : out std_logic_vector (ND downto 0);
+		pc_out : inout std_logic_vector (ND downto 0);
 		start_adr : in std_logic_vector (ND downto 0);	
 		increment : in std_logic_vector (ND downto 0);
 		jump_adr : in std_logic_vector (ND downto 0)
