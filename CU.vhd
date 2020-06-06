@@ -40,10 +40,12 @@ begin
 	if rising_edge(clk) and RESET='1' then
 		r_e<= '1';
 		present_state<=s0;
+		
 	elsif rising_edge(clk) then
 		r_e<= '1';
-	elsif falling_edge(clk) then
 		present_state<=next_state;
+	elsif falling_edge(clk) then
+
 		r_e<= '0';
 	end if;
 	
