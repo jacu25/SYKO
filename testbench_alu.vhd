@@ -30,6 +30,20 @@ begin
 		a <= std_logic_vector(to_signed(120,8));
         b <= std_logic_vector(to_signed(20,8));
 		
+		wait for 10 ns;
+		
+		a <= std_logic_vector(to_signed(-20,8));
+        b <= std_logic_vector(to_signed(20,8));
+		
+		wait for 10 ns;
+		
+		a <= std_logic_vector(to_signed(-20,8));
+        b <= std_logic_vector(to_signed(21,8));
+		
+		wait for 10 ns;
+		
+		a <= std_logic_vector(to_signed(-120,8));
+        b <= std_logic_vector(to_signed(-21,8));
         -- a and b are now the same, flags(0) should be high
 
         wait;
