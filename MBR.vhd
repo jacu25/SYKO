@@ -9,8 +9,8 @@ entity MBR is
 	
 	port( 
 		re, we, clk, rst : in std_logic;
-		mbr_mem : inout std_logic_vector(7 downto 0);
-		mbr_data : inout std_logic_vector(7 downto 0)
+		mbr_mem, storex: inout std_logic_vector(7 downto 0) := (others =>'Z');
+		mbr_data : inout std_logic_vector(7 downto 0) := (others =>'Z')
 	);
 		
 end MBR;
@@ -18,14 +18,14 @@ end MBR;
 architecture arch of MBR is
 begin 
 	
-	process (clk, re, we, rst)
+	process (clk, re, we, rst, mbr_mem, mbr_data)
 
-	variable store : std_logic_vector (7 downto 0);
+	variable store : std_logic_vector (7 downto 0) := (others =>'Z');
 	begin
 		if rising_edge(clk) then
 			if rst='0' then
 				store := (others=>'0');
-		elsif re='1' then
+			elsif re='1' then
 				store := mbr_mem;
 			elsif we='1' then
 				store := mbr_data;
@@ -40,6 +40,6 @@ begin
 				mbr_data <= (others=>'Z') after delay;
 			end if;
 		end if;
-		
+		storex <= store;
 	end process;
 end arch;
