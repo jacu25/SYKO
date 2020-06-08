@@ -9,7 +9,7 @@ entity REG_tb is
 end REG_tb;
 
 architecture arch of REG_tb is
-    signal reg_io, reg_out : std_logic_vector(7 downto 0);
+    signal reg_io, reg_out : std_logic_vector(7 downto 0 ) := (others =>'Z');
 	signal ie, oe, rst : std_logic;
 	signal clk : std_logic := '0';
 type state is (s0, s1, s2, s3, s4, s5);

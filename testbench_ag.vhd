@@ -5,11 +5,11 @@ use ieee.numeric_std.all;
 entity ag_tb is
 end ag_tb;
 
-architecture arch of alu_tb is
+architecture arch of ag_tb is
 
 	signal cag : std_logic_vector(2 downto 0);
 	signal we_0, we_1, we_2, we_3 : std_logic_vector(7 downto 0);
-	signal ag_out: std_logic_vector(7 downto 0);
+	signal ag_out: std_logic_vector(7 downto 0) := (others =>'Z');
 
 begin
 

@@ -9,8 +9,8 @@ entity REG is
 	
 	port( 
 		ie, oe, clk, rst : in std_logic;
-		reg_out : out std_logic_vector(7 downto 0);
-		reg_io : inout std_logic_vector(7 downto 0)
+		reg_out : out std_logic_vector(7 downto 0) := (others =>'Z');
+		reg_io : inout std_logic_vector(7 downto 0) := (others =>'Z')
 	);
 		
 end REG;
@@ -20,7 +20,7 @@ begin
 	
 	process (clk, ie, oe, rst)
 
-	variable store : std_logic_vector (7 downto 0);
+	variable store : std_logic_vector (7 downto 0) := (others =>'0');
 	begin
 		if rising_edge(clk) then
 			if rst='0' then

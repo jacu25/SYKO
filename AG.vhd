@@ -14,7 +14,7 @@ entity AG is
 		we_1 : in std_logic_vector (ND downto 0); --REG_1
 		we_2 : in std_logic_vector (ND downto 0); --REG_2
 		we_3 : in std_logic_vector (ND downto 0); --PC
-		ag_out : out std_logic_vector (ND downto 0)
+		ag_out : out std_logic_vector (ND downto 0) := (others =>'Z')
 	);
 	
 end AG;
