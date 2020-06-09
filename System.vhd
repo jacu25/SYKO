@@ -13,47 +13,47 @@ architecture architectur of System is
 
 
 --BUSES
-signal dataBus : std_logic_vector(7 downto 0);
-signal addressBus : std_logic_vector(7 downto 0);
-
-signal rst, clk : std_logic :='1';
+signal dataBus : std_logic_vector(7 downto 0) := (others=>'Z');
+signal addressBus : std_logic_vector(7 downto 0) := (others=>'Z');
+signal clk : std_logic :='0';
+signal rst : std_logic :='1';
 signal RESET : std_logic := '1';
 
 --ALU
-signal y, z : std_logic_vector(7 downto 0);
-signal flags : std_logic_vector(4 downto 0);
+signal y, z : std_logic_vector(7 downto 0) := (others=>'Z');
+signal flags : std_logic_vector(4 downto 0) := (others=>'Z');
 
 --ACC
-signal ie_ACC, oe_ACC : std_logic;
+signal ie_ACC, oe_ACC : std_logic := '0';
 
 --buf
-signal oe_buf, ie_buf: std_logic;
+signal oe_buf, ie_buf: std_logic :=  '0';
 
 --MEMORY
-signal lae, re_MBR, we_MBR, mw, mr : std_logic;
-signal mar_mem, mem_mbr : std_logic_vector(7 downto 0);
+signal lae, re_MBR, we_MBR, mw, mr : std_logic := '0';
+signal mar_mem, mem_mbr : std_logic_vector(7 downto 0) := (others=>'Z');
 
 --AG
-signal r1_ag, r2_ag, pc_ag, imr_ag : std_logic_vector(7 downto 0);
-signal cag : std_logic_vector(2 downto 0);
+signal r1_ag, r2_ag, pc_ag, imr_ag : std_logic_vector(7 downto 0) := (others=>'Z');
+signal cag : std_logic_vector(2 downto 0) := "011";
 
 --REG_1
-signal oe_REG_1, ie_REG_1: std_logic;
+signal oe_REG_1, ie_REG_1: std_logic := '0';
 --REG_2
-signal oe_REG_2, ie_REG_2: std_logic;
+signal oe_REG_2, ie_REG_2: std_logic := '0';
 --IR
-signal ie_IR : std_logic;
+signal ie_IR : std_logic := '0';
 
 --IR_DECODER
-signal ir_ird : std_logic_vector(7 downto 0);
-signal ird_cu : std_logic_vector(4 downto 0);
+signal ir_ird : std_logic_vector(7 downto 0) := (others=>'Z');
+signal ird_cu : std_logic_vector(4 downto 0) := (others=>'Z');
 
 --IMR
-signal oe_IMR, ie_IMR: std_logic;
+signal oe_IMR, ie_IMR: std_logic := '0';
 
 --PC
-signal increment, start_adr : std_logic_vector(7 downto 0);
-signal jump, incr : std_logic;
+signal increment, start_adr : std_logic_vector(7 downto 0) := (others=>'Z');
+signal jump, incr : std_logic := '0';
 
 component CU is
 	port (clk, RESET: in std_logic; 		--RESET CU-rde
