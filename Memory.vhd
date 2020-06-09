@@ -9,8 +9,8 @@ entity Memory is
 	);
 	port (
 		mw, mr: in std_logic;
-		data: inout std_logic_vector(7 downto 0);
-		address: in  std_logic_vector(7 downto 0)
+		data: inout std_logic_vector(7 downto 0) := (others =>'Z');
+		address: in  std_logic_vector(7 downto 0) := (others =>'Z')
 	);
 end Memory;
 

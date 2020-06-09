@@ -9,11 +9,11 @@ entity MAR_tb is
 end MAR_tb;
 
 architecture arch of MAR_tb is
-    signal mar_out : std_logic_vector(7 downto 0) := (others => 'Z'); 
-	signal mar_in : std_logic_vector(7 downto 0) := (others => 'Z');
+    signal mar_out : std_logic_vector(7 downto 0); 
+	signal mar_in , storex: std_logic_vector(7 downto 0);
 	
-	signal lae, rst : std_logic := '0';
-	signal clk : std_logic := '0';
+	signal rst : std_logic := '1';
+	signal clk, lae: std_logic := '0';
 	
 type state is (s0, s1, s2, s3, s4, s5);
 
@@ -25,7 +25,7 @@ signal r_e : std_logic := '0';
 begin
 	clk <= not clk after 0.5*period;
 	
-    MAR : entity work.MAR port map(clk => clk, rst => rst, lae => lae, mar_out => mar_out, mar_in => mar_in);
+    MAR : entity work.MAR port map(storex => storex, clk => clk, rst => rst, lae => lae, mar_out => mar_out, mar_in => mar_in);
 	
 	clock: process (clk) is
 		begin

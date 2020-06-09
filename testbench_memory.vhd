@@ -6,8 +6,8 @@ entity memory_tb is
 end memory_tb;
 
 architecture arch of memory_tb is
-    signal data, address : std_logic_vector(7 downto 0);
-	signal mw, mr : std_logic;
+    signal data, address : std_logic_vector(7 downto 0) := (others =>'Z');
+	signal mw, mr : std_logic := '0';
 
 begin
 

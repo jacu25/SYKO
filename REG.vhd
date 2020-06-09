@@ -9,26 +9,37 @@ entity REG is
 	
 	port( 
 		ie, oe, clk, rst : in std_logic;
-		reg_out : out std_logic_vector(7 downto 0) := (others =>'Z');
-		reg_io : inout std_logic_vector(7 downto 0) := (others =>'Z')
+		reg_out : out std_logic_vector(7 downto 0) := (others => 'Z');
+		reg_io : inout std_logic_vector(7 downto 0) := (others => 'Z')
 	);
 		
 end REG;
 
 architecture arch of REG is
+signal r_e : std_logic := '0';
 begin 
-	
-	process (clk, ie, oe, rst)
 
-	variable store : std_logic_vector (7 downto 0) := (others =>'0');
+	clock: process (clk) is
+
+		begin
+			if rising_edge(clk) then
+				r_e<= '1';
+			elsif falling_edge(clk) then
+				r_e<= '0';
+			end if;
+	end process;
+	
+	process (r_e, ie, oe, rst, reg_io)
+
+	variable store : std_logic_vector (7 downto 0) := (others => 'Z');
 	begin
-		if rising_edge(clk) then
+		if r_e='1' then
 			if rst='0' then
 				store := (others=>'0');
 			elsif ie='1' then
 				store := reg_io;
 			end if;
-		elsif falling_edge(clk) then
+		elsif r_e='0' then
 			if oe='1' then
 				reg_io <= store after delay;
 			else

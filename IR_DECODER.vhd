@@ -7,8 +7,8 @@ entity IR_DECODER is
 		delay : time := 3 ns
 	);
 	port(
-			ird_in : in std_logic_vector (7 downto 0);
-			ird_out :out std_logic_vector (4 downto 0)
+			ird_in : in std_logic_vector (7 downto 0) := (others =>'Z');
+			ird_out :out std_logic_vector (4 downto 0) := (others =>'Z')
 	);
 
 end IR_DECODER;
@@ -34,8 +34,5 @@ begin
 		ird_out <= (others => '1') after delay;
 	end if;
 
-
-
-	
 end process;
 end arch;
