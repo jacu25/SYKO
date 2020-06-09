@@ -491,7 +491,7 @@ R71
 R11
 R12
 Embr
-Z72 w1591718369
+Z72 w1591719228
 R1
 R2
 R3
@@ -499,13 +499,13 @@ Z73 8C:/Users/bhbo9/Documents/GitHub/SYKO/MBR.vhd
 Z74 FC:/Users/bhbo9/Documents/GitHub/SYKO/MBR.vhd
 l0
 L4
-VEg8V0o8m;DzFzV40=CkcL3
-!s100 Q<`<_ElK6iKK`Ci7K2QW11
+V]TLa^DdA`^PK_9cWFVQNY3
+!s100 A;cILehmSE2:`7PJR>3FB1
 R6
 32
-Z75 !s110 1591719106
+Z75 !s110 1591719430
 !i10b 1
-Z76 !s108 1591719106.000000
+Z76 !s108 1591719430.000000
 Z77 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bhbo9/Documents/GitHub/SYKO/MBR.vhd|
 Z78 !s107 C:/Users/bhbo9/Documents/GitHub/SYKO/MBR.vhd|
 !i113 1
@@ -514,11 +514,11 @@ R12
 Aarch
 R1
 R2
-Z79 DEx4 work 3 mbr 0 22 Eg8V0o8m;DzFzV40=CkcL3
+Z79 DEx4 work 3 mbr 0 22 ]TLa^DdA`^PK_9cWFVQNY3
 l21
 L18
-Vfk5I4R;X3e1[I@F4HQk7H1
-!s100 JPEHjPV4>zmNBmGYn9hzT2
+VA;Pm>cL8AgS`:0NJ3naNj1
+!s100 cJ^MkWbAbTbzVJ0[n0SQe0
 R6
 32
 R75
@@ -530,7 +530,7 @@ R78
 R11
 R12
 Embr_tb
-Z80 w1591719103
+Z80 w1591719211
 R22
 R1
 R2
@@ -556,11 +556,11 @@ R79
 R22
 R1
 R2
-Z85 DEx4 work 6 mbr_tb 0 22 2JAMSS?7nngH749:@WP<^3
+DEx4 work 6 mbr_tb 0 22 2JAMSS?7nngH749:@WP<^3
 l23
 L11
-VNU_nj9SYnJf<>@ofzZzdh0
-!s100 og=I8P^miV341XEJNjG<e3
+V_^_;YH9aDG[V7Q?NBMX4l2
+!s100 3_>QWVBP2I[?b9V18C0a;3
 R6
 32
 R75
@@ -577,8 +577,8 @@ R22
 R1
 R2
 R3
-Z86 8C:/Users/bhbo9/Documents/GitHub/SYKO/Memory.vhd
-Z87 FC:/Users/bhbo9/Documents/GitHub/SYKO/Memory.vhd
+Z85 8C:/Users/bhbo9/Documents/GitHub/SYKO/Memory.vhd
+Z86 FC:/Users/bhbo9/Documents/GitHub/SYKO/Memory.vhd
 l0
 L5
 VeA6ZI2K8A6ea@4c_6;H033
@@ -588,8 +588,8 @@ R6
 R68
 !i10b 1
 R69
-Z88 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bhbo9/Documents/GitHub/SYKO/Memory.vhd|
-Z89 !s107 C:/Users/bhbo9/Documents/GitHub/SYKO/Memory.vhd|
+Z87 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bhbo9/Documents/GitHub/SYKO/Memory.vhd|
+Z88 !s107 C:/Users/bhbo9/Documents/GitHub/SYKO/Memory.vhd|
 !i113 1
 R11
 R12
@@ -607,13 +607,13 @@ R6
 R68
 !i10b 1
 R69
+R87
 R88
-R89
 !i113 1
 R11
 R12
 Epc
-R0
+Z89 w1591722684
 R1
 R2
 R3
@@ -625,29 +625,71 @@ VK1VjD`]CIGPJgIMJYXTSY2
 !s100 heAB3cIiYkLR6NF:<b^Q33
 R6
 32
-R68
+Z92 !s110 1591722699
 !i10b 1
-R69
-Z92 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bhbo9/Documents/GitHub/SYKO/PC.vhd|
-Z93 !s107 C:/Users/bhbo9/Documents/GitHub/SYKO/PC.vhd|
+Z93 !s108 1591722699.000000
+Z94 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bhbo9/Documents/GitHub/SYKO/PC.vhd|
+Z95 !s107 C:/Users/bhbo9/Documents/GitHub/SYKO/PC.vhd|
 !i113 1
 R11
 R12
 Aarch
 R1
 R2
-DEx4 work 2 pc 0 22 K1VjD`]CIGPJgIMJYXTSY2
-l23
+Z96 DEx4 work 2 pc 0 22 K1VjD`]CIGPJgIMJYXTSY2
+l24
 L21
-VXd:eohFGzL3`Y6YY4WkmD2
-!s100 kM8@lA2@6HNC2G_o_Z>^02
+VzhO>aG`C9=@eC0Hoj:o<?1
+!s100 Aa>M9mz^M48e84?eQXAM;3
 R6
 32
-R68
-!i10b 1
-R69
 R92
+!i10b 1
 R93
+R94
+R95
+!i113 1
+R11
+R12
+Epc_tb
+Z97 w1591722506
+R22
+R1
+R2
+R3
+Z98 8C:/Users/bhbo9/Documents/GitHub/SYKO/testbench_PC.vhd
+Z99 FC:/Users/bhbo9/Documents/GitHub/SYKO/testbench_PC.vhd
+l0
+L5
+VhLDY?U^j;TA`hn_07J>PU2
+!s100 f`iAbeL^kg^jl1:Ugl>=12
+R6
+32
+R92
+!i10b 1
+R93
+Z100 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bhbo9/Documents/GitHub/SYKO/testbench_PC.vhd|
+Z101 !s107 C:/Users/bhbo9/Documents/GitHub/SYKO/testbench_PC.vhd|
+!i113 1
+R11
+R12
+Aarch
+R96
+R22
+R1
+R2
+Z102 DEx4 work 5 pc_tb 0 22 hLDY?U^j;TA`hn_07J>PU2
+l23
+L11
+Z103 V5CLh7W85ccV>>gGhIP9Rm3
+Z104 !s100 TPVLEJlhKBRT3EbE0[`0]0
+R6
+32
+R92
+!i10b 1
+R93
+R100
+R101
 !i113 1
 R11
 R12
@@ -656,8 +698,8 @@ R48
 R1
 R2
 R3
-Z94 8C:/Users/bhbo9/Documents/GitHub/SYKO/REG.vhd
-Z95 FC:/Users/bhbo9/Documents/GitHub/SYKO/REG.vhd
+Z105 8C:/Users/bhbo9/Documents/GitHub/SYKO/REG.vhd
+Z106 FC:/Users/bhbo9/Documents/GitHub/SYKO/REG.vhd
 l0
 L4
 Vb:kgQz<DKj:EN01K=n5do1
@@ -667,15 +709,15 @@ R6
 R16
 !i10b 1
 R17
-Z96 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bhbo9/Documents/GitHub/SYKO/REG.vhd|
-Z97 !s107 C:/Users/bhbo9/Documents/GitHub/SYKO/REG.vhd|
+Z107 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bhbo9/Documents/GitHub/SYKO/REG.vhd|
+Z108 !s107 C:/Users/bhbo9/Documents/GitHub/SYKO/REG.vhd|
 !i113 1
 R11
 R12
 Aarch
 R1
 R2
-Z98 DEx4 work 3 reg 0 22 b:kgQz<DKj:EN01K=n5do1
+Z109 DEx4 work 3 reg 0 22 b:kgQz<DKj:EN01K=n5do1
 l20
 L18
 Vn`JdeYV0LoXCTU9;ga?AM0
@@ -685,8 +727,8 @@ R6
 R16
 !i10b 1
 R17
-R96
-R97
+R107
+R108
 !i113 1
 R11
 R12
@@ -696,24 +738,24 @@ R22
 R1
 R2
 R3
-Z99 8C:/Users/bhbo9/Documents/GitHub/SYKO/testbench_REG.vhd
-Z100 FC:/Users/bhbo9/Documents/GitHub/SYKO/testbench_REG.vhd
+R98
+R99
 l0
 L5
 VEFZ=A@6W?1_UVN36cggG42
 !s100 KE^HfR3[c=cz`NYS<`OL23
 R6
 32
-R16
+Z110 !s110 1591721933
 !i10b 1
-R17
-Z101 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bhbo9/Documents/GitHub/SYKO/testbench_REG.vhd|
-Z102 !s107 C:/Users/bhbo9/Documents/GitHub/SYKO/testbench_REG.vhd|
+Z111 !s108 1591721933.000000
+R100
+R101
 !i113 1
 R11
 R12
 Aarch
-R98
+R109
 R22
 R1
 R2
@@ -724,21 +766,21 @@ VCP=kLhlQZW>JzXHOb1KV31
 !s100 GfzI7KSD5J?9o7RKco_>N1
 R6
 32
-R16
+R110
 !i10b 1
-R17
+R111
+R100
 R101
-R102
 !i113 1
 R11
 R12
 Esystem
-Z103 w1591444917
+Z112 w1591444917
 R1
 R2
 R3
-Z104 8C:/Users/bhbo9/Documents/GitHub/SYKO/System.vhd
-Z105 FC:/Users/bhbo9/Documents/GitHub/SYKO/System.vhd
+Z113 8C:/Users/bhbo9/Documents/GitHub/SYKO/System.vhd
+Z114 FC:/Users/bhbo9/Documents/GitHub/SYKO/System.vhd
 l0
 L4
 V<A>NThoYo66Y8Nc=9WCKJ2
@@ -748,8 +790,8 @@ R6
 R68
 !i10b 1
 R69
-Z106 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bhbo9/Documents/GitHub/SYKO/System.vhd|
-Z107 !s107 C:/Users/bhbo9/Documents/GitHub/SYKO/System.vhd|
+Z115 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bhbo9/Documents/GitHub/SYKO/System.vhd|
+Z116 !s107 C:/Users/bhbo9/Documents/GitHub/SYKO/System.vhd|
 !i113 1
 R11
 R12
@@ -766,8 +808,8 @@ R6
 R68
 !i10b 1
 R69
-R106
-R107
+R115
+R116
 !i113 1
 R11
 R12

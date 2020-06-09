@@ -9,7 +9,7 @@ entity MBR is
 	
 	port( 
 		re, we, clk, rst : in std_logic;
-		mbr_mem, storex: inout std_logic_vector(7 downto 0):= (others =>'Z');
+		mbr_mem : inout std_logic_vector(7 downto 0):= (others =>'Z');
 		mbr_data : inout std_logic_vector(7 downto 0) := (others =>'Z')
 	);
 		
@@ -53,7 +53,6 @@ begin
 				mbr_data <= (others=>'Z') after delay;
 			end if;
 		end if;	
-		storex <= store;
 	end process;
 
 end arch;
