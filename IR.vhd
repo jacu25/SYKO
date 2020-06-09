@@ -10,8 +10,8 @@ entity IR is
 
 	port( 
 		ie, clk, rst : in std_logic;
-		ir_in :in std_logic_vector(ND downto 0);
-		ir_out : out std_logic_vector(ND downto 0)
+		ir_in :in std_logic_vector(ND downto 0) := (others =>'Z');
+		ir_out : out std_logic_vector(ND downto 0) := (others =>'Z')
 	);
 		
 end IR;

@@ -9,11 +9,11 @@ entity AG is
 	);
 	
 	port( 
-		cag : in std_logic_vector (2 downto 0);
-		we_0 : in std_logic_vector (ND downto 0); --IMR
-		we_1 : in std_logic_vector (ND downto 0); --REG_1
-		we_2 : in std_logic_vector (ND downto 0); --REG_2
-		we_3 : in std_logic_vector (ND downto 0); --PC
+		cag : in std_logic_vector (2 downto 0) := (others =>'Z');
+		imr : in std_logic_vector (ND downto 0) := (others =>'Z'); --IMR
+		reg1 : in std_logic_vector (ND downto 0) := (others =>'Z'); --REG_1
+		reg2 : in std_logic_vector (ND downto 0) := (others =>'Z'); --REG_2
+		pc : in std_logic_vector (ND downto 0) := (others =>'Z'); --PC
 		ag_out : out std_logic_vector (ND downto 0) := (others =>'Z')
 	);
 	
@@ -24,10 +24,10 @@ architecture arch of AG is
 begin
 
 	with cag select
-		ag_out  <=	we_0 			after delay when "000",
-					we_1			after delay when "001",
-					we_2 			after delay when "010",
-					we_3 			after delay when "011",
+		ag_out  <=	imr 			after delay when "000",
+					reg1			after delay when "001",
+					reg2 			after delay when "010",
+					pc 			after delay when "011",
 					(others=>'Z') 	after delay when others;
 end arch;
 

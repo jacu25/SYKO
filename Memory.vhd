@@ -23,9 +23,9 @@ begin
 	process(mw, mr, address, data)
 	
 	 variable rom_data: ROM_type:=(
-	"00000001",
+	"00000011",
 	"00001010",
-	"00001111",
+	"11100000",
 	"00000000",
 	"00000000"
   );

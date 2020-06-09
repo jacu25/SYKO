@@ -2,18 +2,21 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 entity CU is
+		--type state is (s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, ERROR);
 
-	port (clk, RESET: in std_logic; 		--RESET CU
-		ird : in std_logic_vector (4 downto 0);
-		flags : in std_logic_vector (4 downto 0);
-		
+	port (clk, RESET: in std_logic := '0'; 		--RESET CU
+		ird : in std_logic_vector (4 downto 0) := (others =>'Z');
+		flags : in std_logic_vector (4 downto 0) := (others =>'Z');
+
 		--sygnały sterujące:
-		ie_ACC, ie_buf, ie_REG_1, ie_REG_2, ie_IMR, ie_IR : out std_logic;
-		oe_ACC, oe_buf, oe_REG_1, oe_REG_2, oe_IMR : out std_logic;
-		re_MBR, we_MBR, mw, mr, jump, incr, lae : out std_logic;
-		start_adr, increment : out std_logic_vector (7 downto 0);
-		cag : out std_logic_vector (2 downto 0);
-		rst : out std_logic
+		ie_ACC, ie_buf, ie_REG_1, ie_REG_2, ie_IMR, ie_IR : out std_logic := '0';
+		oe_ACC, oe_buf, oe_REG_1, oe_REG_2, oe_IMR : out std_logic := '0';
+		re_MBR, we_MBR, mw, mr, jump, incr, lae : out std_logic := '0';
+		start_adr, increment : out std_logic_vector (7 downto 0) := (others =>'Z');
+		cag : out std_logic_vector (2 downto 0) := (others =>'Z');
+		rst : out std_logic := '1'
+		
+		--present_state: out state
 		);
 		
 end entity;
@@ -21,9 +24,6 @@ end entity;
 architecture arch of CU is
 
 type state is (s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, ERROR);
---s0 start
---s1 praca
---s2 błąd
 signal next_state: state;
 signal present_state: state; 
 signal r_e: std_logic := '0'; 
@@ -45,7 +45,6 @@ begin
 		r_e<= '1';
 		present_state<=next_state;
 	elsif falling_edge(clk) then
-
 		r_e<= '0';
 	end if;
 	
@@ -83,7 +82,7 @@ begin
 	
 		when s0 =>
 			if r_e = '1' then
-				start_adr <= "00000001"; 	--first instruction
+				start_adr <= "00000000"; 	--first instruction
 				rst <= '0'; 			--wpisanie start adr
 				cag <= "011";
 				oe_ACC <='0';
@@ -114,12 +113,12 @@ begin
 				oe_buf <= '0';
 				ie_buf <= '0';
 				cag <= "011";
-				lae<= '1'; 
+				lae <= '1'; 
 				ie_ACC <='0';
 				oe_REG_1 <= '0';
 				oe_REG_2 <= '0';
 				oe_IMR <= '0';
-				jump<='0';
+				jump <= '0';
 			else
 				next_state<= s2;
 			end if;

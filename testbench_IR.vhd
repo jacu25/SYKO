@@ -9,7 +9,7 @@ entity IR_tb is
 end IR_tb;
 
 architecture arch of IR_tb is
-    signal ir_out, ir_in : std_logic_vector(7 downto 0);
+    signal ir_out, ir_in : std_logic_vector(7 downto 0) := (others =>'Z');
 	signal ie, rst : std_logic;
 	signal clk : std_logic := '0';
 type state is (s0, s1, s2, s3, s4, s5);

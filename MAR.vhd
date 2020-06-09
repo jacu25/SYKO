@@ -10,7 +10,7 @@ entity MAR is
 	
 	port( 
 		lae, clk, rst : in std_logic;
-		mar_out, storex: out std_logic_vector(ND downto 0) := (others => 'Z');
+		mar_out : out std_logic_vector(ND downto 0) := (others => 'Z');
 		mar_in : in std_logic_vector(ND downto 0) := (others => 'Z')
 	);
 	signal store : std_logic_vector (ND downto 0) := (others => 'Z');		
@@ -41,6 +41,5 @@ begin
 		elsif r_e='0' then
 			mar_out <= store after delay;
 		end if;
-		storex <= store;
 	end process;
 end arch;

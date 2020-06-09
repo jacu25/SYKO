@@ -30,7 +30,7 @@ begin
 		begin
 			if rising_edge(clk) then
 				r_e<= '1';
-				present_state<=next_state;
+				present_state <= next_state;
 			elsif falling_edge(clk) then
 				r_e<= '0';
 			end if;

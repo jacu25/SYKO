@@ -11,6 +11,8 @@ end System;
 
 architecture architectur of System is
 
+--type state is (s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, ERROR);
+--signal present_state: state; 
 
 --BUSES
 signal dataBus : std_logic_vector(7 downto 0) := (others=>'Z');
@@ -57,8 +59,8 @@ signal jump, incr : std_logic := '0';
 
 component CU is
 	port (clk, RESET: in std_logic; 		--RESET CU-rde
-		ird : in std_logic_vector (4 downto 0);
-		flags : in std_logic_vector (4 downto 0);
+		ird : in std_logic_vector (4 downto 0) := (others =>'Z');
+		flags : in std_logic_vector (4 downto 0) := (others =>'Z');
 		
 		--sygnały_bledow : out std_logic_vector (??downto 0);
 		
@@ -66,8 +68,8 @@ component CU is
 		ie_ACC, ie_buf, ie_REG_1, ie_REG_2, ie_IMR, ie_IR : out std_logic;
 		oe_ACC, oe_buf, oe_REG_1, oe_REG_2, oe_IMR : out std_logic;
 		re_MBR, we_MBR, mw, mr, jump, incr, lae : out std_logic;
-		start_adr, increment : out std_logic_vector (7 downto 0);
-		cag : out std_logic_vector (2 downto 0);
+		start_adr, increment : out std_logic_vector (7 downto 0) := (others =>'Z');
+		cag : out std_logic_vector (2 downto 0) := (others =>'Z');
 		rst : out std_logic
 		);	
 end component;
@@ -77,8 +79,8 @@ component IR_DECODER is
 		delay : time := 1 ns
 	);
 	port(
-			ird_in : in std_logic_vector (7 downto 0);
-			ird_out :out std_logic_vector (4 downto 0)
+			ird_in : in std_logic_vector (7 downto 0) := (others =>'Z');
+			ird_out :out std_logic_vector (4 downto 0) := (others =>'Z')
 	);
 end component;
 
@@ -88,8 +90,8 @@ component MAR is
 	);
 	port( 
 		lae, clk, rst : in std_logic;
-		mar_out : out std_logic_vector(7 downto 0);
-		mar_in : in std_logic_vector(7 downto 0)
+		mar_out : out std_logic_vector(7 downto 0) := (others =>'Z');
+		mar_in : in std_logic_vector(7 downto 0) := (others =>'Z')
 	);	
 end component;
 
@@ -99,8 +101,8 @@ component BUF is
 	);
 	port( 
 		ie, oe, clk, rst : in std_logic;
-		buf_in : in std_logic_vector(7 downto 0);
-		buf_out : out std_logic_vector(7 downto 0)
+		buf_in : in std_logic_vector(7 downto 0) := (others =>'Z');
+		buf_out : out std_logic_vector(7 downto 0) := (others =>'Z')
 	);
 end component;
 
@@ -110,8 +112,8 @@ component MBR is
 	);
 	port( 
 		re, we, clk, rst : in std_logic;
-		mbr_mem : inout std_logic_vector(7 downto 0);
-		mbr_data : inout std_logic_vector(7 downto 0)
+		mbr_mem : inout std_logic_vector(7 downto 0) := (others =>'Z');
+		mbr_data : inout std_logic_vector(7 downto 0) := (others =>'Z')
 	);
 end component;
 
@@ -120,8 +122,8 @@ component ALU is
 				delay : time := 1 ns
 	);
 	port(	x, y : in std_logic_vector (ND downto 0);
-			z : out std_logic_vector (ND downto 0) := "00000000";
-			flags : out std_logic_vector (4 downto 0) := "00000"
+			z : out std_logic_vector (ND downto 0) := (others =>'Z');
+			flags : out std_logic_vector (4 downto 0) := (others =>'Z')
 	);
 end component;
 
@@ -131,8 +133,8 @@ component REG is
 	);
 	port( 
 		ie, oe, clk, rst : in std_logic;
-		reg_out : out std_logic_vector(7 downto 0);
-		reg_io : inout std_logic_vector(7 downto 0)
+		reg_out : out std_logic_vector(7 downto 0) := (others =>'Z');
+		reg_io : inout std_logic_vector(7 downto 0) := (others =>'Z')
 	);
 end component;
 
@@ -142,8 +144,8 @@ component IR is
 	);
 	port( 
 		ie, clk, rst : in std_logic;
-		ir_in :in std_logic_vector(7 downto 0);
-		ir_out : out std_logic_vector(7 downto 0)
+		ir_in :in std_logic_vector(7 downto 0) := (others =>'Z');
+		ir_out : out std_logic_vector(7 downto 0):= (others =>'Z')
 	);
 end component;
 
@@ -154,10 +156,10 @@ component PC is
 	);
 	port( 
 		clk, rst, incr, jump : in std_logic;
-		pc_out : inout std_logic_vector (ND downto 0);
-		start_adr : in std_logic_vector (ND downto 0);	
-		increment : in std_logic_vector (ND downto 0);
-		jump_adr : in std_logic_vector (ND downto 0)
+		pc_out : inout std_logic_vector (ND downto 0) := (others =>'Z');
+		start_adr : in std_logic_vector (ND downto 0) := (others =>'Z');	
+		increment : in std_logic_vector (ND downto 0) := (others =>'Z');
+		jump_adr : in std_logic_vector (ND downto 0) := (others =>'Z')
 		);
 end component;
 
@@ -167,12 +169,12 @@ component AG is
 		delay : time := 1 ns
 	);
 	port( 
-		cag : in std_logic_vector (2 downto 0);
-		we_0 : in std_logic_vector (ND downto 0);
-		we_1 : in std_logic_vector (ND downto 0);
-		we_2 : in std_logic_vector (ND downto 0);
-		we_3 : in std_logic_vector (ND downto 0);
-		ag_out : out std_logic_vector (ND downto 0)
+		cag : in std_logic_vector (2 downto 0) := (others =>'Z');
+		imr : in std_logic_vector (ND downto 0) := (others =>'Z'); --IMR
+		reg1 : in std_logic_vector (ND downto 0) := (others =>'Z'); --REG_1
+		reg2 : in std_logic_vector (ND downto 0) := (others =>'Z'); --REG_2
+		pc : in std_logic_vector (ND downto 0) := (others =>'Z'); --PC
+		ag_out : out std_logic_vector (ND downto 0) := (others =>'Z')
 	);
 end component;
 
@@ -182,20 +184,21 @@ component Memory is
 	);
 	port (
 		mw, mr: in std_logic;
-		data: inout std_logic_vector(7 downto 0);
-		address: in  std_logic_vector(7 downto 0)
+		data: inout std_logic_vector(7 downto 0) := (others =>'Z');
+		address: in  std_logic_vector(7 downto 0) := (others =>'Z')
 	);
 end component;
 
 begin
 
 clk <= not clk after 0.5*period;
+RESET <= '0' after 50 ns;
 
 E_ACC: REG port map(ie=>ie_ACC, oe => oe_ACC, clk => clk, rst => rst, reg_out => y, reg_io => dataBus);
 E_ALU: ALU port map(x => dataBus, y => y, z => z, flags => flags);
 E_BUFFOR: buf port map(ie => ie_buf, oe => oe_buf, clk => clk, rst => rst, buf_in => z, buf_out => dataBus);
 
-E_AG: AG port map(ag_out => addressBus, we_0 => imr_ag, we_1 => r1_ag, we_2 => r2_ag, we_3 => pc_ag, cag => cag);
+E_AG: AG port map(ag_out => addressBus, imr => imr_ag, reg1 => r1_ag, reg2 => r2_ag, pc => pc_ag, cag => cag);
 E_REG_1: REG port map(ie=>ie_REG_1, oe => oe_REG_1, clk => clk, rst => rst, reg_out => r1_ag, reg_io => dataBus);
 E_REG_2: REG port map(ie=>ie_REG_2, oe => oe_REG_2, clk => clk, rst => rst, reg_out => r2_ag, reg_io => dataBus);
 E_IMR: REG port map(ie => ie_IMR, oe => oe_IMR, clk => clk, rst => rst, reg_io => dataBus, reg_out =>imr_ag);
@@ -211,8 +214,8 @@ E_CU : CU port map(clk => clk, RESET => RESET, oe_buf => oe_buf, ie_buf => ie_bu
 				rst => rst);
 				
 E_MAR: MAR port map(lae => lae, clk => clk, rst => rst, mar_out => mar_mem, mar_in => addressBus);
-E_MBR: MBR port map(re => re_MBR, we => we_MBR, clk => clk, rst => rst, mbr_mem => mar_mem, mbr_data => dataBus);
-E_MEMORY: Memory port map(mw => mw, mr => mr, address => mem_mbr, data => mar_mem);
+E_MBR: MBR port map(re => re_MBR, we => we_MBR, clk => clk, rst => rst, mbr_mem => mem_mbr, mbr_data => dataBus);
+E_MEMORY: Memory port map(mw => mw, mr => mr, data => mem_mbr, address => mar_mem);
 
 end architectur;
 
