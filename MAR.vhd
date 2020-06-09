@@ -10,27 +10,35 @@ entity MAR is
 	
 	port( 
 		lae, clk, rst : in std_logic;
-		mar_out, storex: out std_logic_vector(ND downto 0);
-		mar_in : in std_logic_vector(ND downto 0)
+		mar_out, storex: out std_logic_vector(ND downto 0) := (others => 'Z');
+		mar_in : in std_logic_vector(ND downto 0) := (others => 'Z')
 	);
-	signal store : std_logic_vector (ND downto 0) := (others => '1');		
+	signal store : std_logic_vector (ND downto 0) := (others => 'Z');		
 end MAR;
 
 architecture arch of MAR is
-
+signal r_e : std_logic := '0';
 begin 
 
-	process (clk, rst, lae, mar_in)
+	clock: process (clk) is
 
-
+		begin
+			if rising_edge(clk) then
+				r_e <= '1';
+			elsif falling_edge(clk) then
+				r_e <= '0';
+			end if;
+	end process;
+	
+	process (r_e, rst, lae, mar_in)
 	begin
-		if rising_edge(clk) then
+		if r_e='1' then
 			if rst='0' then
 				store <= (others=>'0');
 			elsif lae='1' then
 				store <= mar_in;
 			end if;
-		elsif falling_edge(clk) then
+		elsif r_e='0' then
 			mar_out <= store after delay;
 		end if;
 		storex <= store;
