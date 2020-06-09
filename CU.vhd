@@ -14,9 +14,9 @@ entity CU is
 		re_MBR, we_MBR, mw, mr, jump, incr, lae : out std_logic := '0';
 		start_adr, increment : out std_logic_vector (7 downto 0) := (others =>'Z');
 		cag : out std_logic_vector (2 downto 0) := (others =>'Z');
-		rst : out std_logic := '1'
+		rst : out std_logic := '1';
 		
-		--present_state: out state
+		stateX : out integer
 		);
 		
 end entity;
@@ -81,6 +81,7 @@ begin
 	case present_state is
 	
 		when s0 =>
+		stateX <= 0;
 			if r_e = '1' then
 				start_adr <= "00000000"; 	--first instruction
 				rst <= '0'; 			--wpisanie start adr
@@ -109,6 +110,7 @@ begin
 			end if;
 
 		when s1 => --
+		stateX <= 1;
 			if r_e = '1' then
 				incr <= '0';
 				oe_buf <= '0';
@@ -125,6 +127,7 @@ begin
 			end if;
 
 		when s2 => --odczyt z pamięci pierwszy
+		stateX <= 2;
 			if r_e = '1' then
 				mr <= '1';
 				re_MBR <= '1';
@@ -135,6 +138,7 @@ begin
 				next_state<= s3;
 			end if;
 		when s3 => --zapis do rejestru instrukcji
+		stateX <= 3;
 			if r_e = '1' then		
 				increment <= "00000001";
 				ie_IR<= '1';
@@ -154,7 +158,7 @@ begin
 			end if;
 				
 		when s4 =>
-		
+		stateX <= 4;
 			if r_e = '1' then	
 				incr <= '0';
 				case a_mode is
@@ -194,9 +198,8 @@ begin
 			end if;
 		
 		when s5 =>	--OPERACJE LOAD i ADD
-		
+		stateX <= 5;
 			if r_e = '1' then	
-				incr <= '0';
 				case instr is
 					when "00" => ie_ACC <= '1';	--LOAD
 					when "01" => 
@@ -222,7 +225,7 @@ begin
 			end if;
 			
 		when s6 =>	--OPERACJE CZ2 - ADD
-		
+		stateX <= 6;
 			if r_e = '0' then	
 				ie_ACC <= '1';
 				oe_buf <= '1';
@@ -230,13 +233,11 @@ begin
 			end if;	
 		
 		when s7 =>	--memory read 
+		stateX <= 7;
 			if r_e = '1' then
 				mr <= '1';
 				re_MBR <= '1';
 			else
-				if a_mode = "11" or a_mode = "10" then	--tryb natychmiastowy/przemiesczeniowy
-					incr <= '1';
-				end if;
 				mr <= '0';
 				re_MBR<= '1';
 				lae <= '0';
@@ -253,8 +254,8 @@ begin
 				end if;
 			end if;
 		when s8 => -- tryb natychmiastowy.2/przemieszczeniowy.2
+		stateX <= 8;
 			if r_e = '1' then
-				incr <= '0';
 				ie_IMR <= '1';				
 			else
 				ie_IMR <= '0';	
@@ -275,6 +276,7 @@ begin
 			end if;
 		
 		when s9 => -- tryb przemieszczeniowy.3
+		stateX <= 9;
 			if r_e = '1' then
 				mr <= '1';
 				re_MBR <= '1';
@@ -286,6 +288,7 @@ begin
 			end if;	
 			
 		when ERROR => 
+		stateX <= 10;
 			incr <= '0';
 			next_state <= ERROR;
 	end case;
