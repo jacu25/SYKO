@@ -9,7 +9,7 @@ entity MBR is
 	
 	port( 
 		re, we, clk, rst : in std_logic;
-		mbr_mem, storex: inout std_logic_vector(7 downto 0) := (others =>'Z');
+		mbr_mem, storex: inout std_logic_vector(7 downto 0):= (others =>'Z');
 		mbr_data : inout std_logic_vector(7 downto 0) := (others =>'Z')
 	);
 		
@@ -20,7 +20,7 @@ begin
 	
 	process (clk, re, we, rst, mbr_mem, mbr_data)
 
-	variable store : std_logic_vector (7 downto 0) := (others =>'Z');
+	variable store : std_logic_vector (7 downto 0) := (others =>'0');
 	begin
 		if rising_edge(clk) then
 			if rst='0' then

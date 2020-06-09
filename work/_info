@@ -60,9 +60,9 @@ V^]5VJ5DCb6Uej@RT``imS2
 !s100 Eh:CZ8CnfZbLLN>`3WMMP0
 R6
 32
-Z16 !s110 1591659175
+Z16 !s110 1591662256
 !i10b 1
-Z17 !s108 1591659175.000000
+Z17 !s108 1591662256.000000
 Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bhbo9/Documents/GitHub/SYKO/ALU.vhd|
 Z19 !s107 C:/Users/bhbo9/Documents/GitHub/SYKO/ALU.vhd|
 !i113 1
@@ -341,9 +341,9 @@ VKEEa1dm3EU@MISciFV4?D0
 !s100 Yo^PEicl?T<Gk5H:E?Y[H2
 R6
 32
-Z51 !s110 1591659176
+Z51 !s110 1591662257
 !i10b 1
-Z52 !s108 1591659176.000000
+Z52 !s108 1591662257.000000
 Z53 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bhbo9/Documents/GitHub/SYKO/IR_DECODER.vhd|
 Z54 !s107 C:/Users/bhbo9/Documents/GitHub/SYKO/IR_DECODER.vhd|
 !i113 1
@@ -381,9 +381,9 @@ V`QCjGoo]jgf]4:fALWl@W1
 !s100 Io]eDdY=fL4]^1In_eWFb0
 R6
 32
-R16
+R51
 !i10b 1
-R17
+R52
 Z59 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bhbo9/Documents/GitHub/SYKO/testbench_IR.vhd|
 Z60 !s107 C:/Users/bhbo9/Documents/GitHub/SYKO/testbench_IR.vhd|
 !i113 1
@@ -401,9 +401,9 @@ V0UgY^_9NZgcRgj0R>b]`>1
 !s100 gFgf:GN3Z<]m]nBDmc1co1
 R6
 32
-R16
+R51
 !i10b 1
-R17
+R52
 R59
 R60
 !i113 1
@@ -491,7 +491,7 @@ R71
 R11
 R12
 Embr
-Z72 w1591659039
+Z72 w1591662253
 R1
 R2
 R3
@@ -499,8 +499,8 @@ Z73 8C:/Users/bhbo9/Documents/GitHub/SYKO/MBR.vhd
 Z74 FC:/Users/bhbo9/Documents/GitHub/SYKO/MBR.vhd
 l0
 L4
-VYdKZmgY1Vj4M`XPQ_Y5TU2
-!s100 ooi5M^PoXz]^H<Hn]ZE151
+VEg8V0o8m;DzFzV40=CkcL3
+!s100 Q<`<_ElK6iKK`Ci7K2QW11
 R6
 32
 R51
@@ -514,11 +514,11 @@ R12
 Aarch
 R1
 R2
-Z77 DEx4 work 3 mbr 0 22 YdKZmgY1Vj4M`XPQ_Y5TU2
+Z77 DEx4 work 3 mbr 0 22 Eg8V0o8m;DzFzV40=CkcL3
 l19
 L18
-VNj9QGBZ6^2X7?j`?gd?FT3
-!s100 Q_;;Dj:0=F=z<ATTTUIYH3
+VSb?S[3bL:5NZPoV9:[EcV0
+!s100 P[m6=GjX9EJGjeA?KdWGb3
 R6
 32
 R51
@@ -530,7 +530,7 @@ R76
 R11
 R12
 Embr_tb
-Z78 w1591659171
+Z78 w1591661591
 R22
 R1
 R2
@@ -557,10 +557,10 @@ R22
 R1
 R2
 Z83 DEx4 work 6 mbr_tb 0 22 2JAMSS?7nngH749:@WP<^3
-l21
+l18
 L11
-VW>DUTB@:eKYHNem=Il[Qm0
-!s100 b=PN?AzllSTC_Lnm6S@@e2
+Z84 VJ9;H9WBhjITBoSc:MFbLz2
+Z85 !s100 e[ZQYGSPMOZnNMAodYb`d2
 R6
 32
 R51
@@ -577,8 +577,8 @@ R22
 R1
 R2
 R3
-Z84 8C:/Users/bhbo9/Documents/GitHub/SYKO/Memory.vhd
-Z85 FC:/Users/bhbo9/Documents/GitHub/SYKO/Memory.vhd
+Z86 8C:/Users/bhbo9/Documents/GitHub/SYKO/Memory.vhd
+Z87 FC:/Users/bhbo9/Documents/GitHub/SYKO/Memory.vhd
 l0
 L5
 VeA6ZI2K8A6ea@4c_6;H033
@@ -588,8 +588,8 @@ R6
 R68
 !i10b 1
 R69
-Z86 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bhbo9/Documents/GitHub/SYKO/Memory.vhd|
-Z87 !s107 C:/Users/bhbo9/Documents/GitHub/SYKO/Memory.vhd|
+Z88 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bhbo9/Documents/GitHub/SYKO/Memory.vhd|
+Z89 !s107 C:/Users/bhbo9/Documents/GitHub/SYKO/Memory.vhd|
 !i113 1
 R11
 R12
@@ -607,8 +607,8 @@ R6
 R68
 !i10b 1
 R69
-R86
-R87
+R88
+R89
 !i113 1
 R11
 R12
@@ -617,8 +617,8 @@ R0
 R1
 R2
 R3
-Z88 8C:/Users/bhbo9/Documents/GitHub/SYKO/PC.vhd
-Z89 FC:/Users/bhbo9/Documents/GitHub/SYKO/PC.vhd
+Z90 8C:/Users/bhbo9/Documents/GitHub/SYKO/PC.vhd
+Z91 FC:/Users/bhbo9/Documents/GitHub/SYKO/PC.vhd
 l0
 L4
 VK1VjD`]CIGPJgIMJYXTSY2
@@ -628,8 +628,8 @@ R6
 R68
 !i10b 1
 R69
-Z90 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bhbo9/Documents/GitHub/SYKO/PC.vhd|
-Z91 !s107 C:/Users/bhbo9/Documents/GitHub/SYKO/PC.vhd|
+Z92 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bhbo9/Documents/GitHub/SYKO/PC.vhd|
+Z93 !s107 C:/Users/bhbo9/Documents/GitHub/SYKO/PC.vhd|
 !i113 1
 R11
 R12
@@ -646,18 +646,18 @@ R6
 R68
 !i10b 1
 R69
-R90
-R91
+R92
+R93
 !i113 1
 R11
 R12
 Ereg
-Z92 w1591658142
+Z94 w1591658142
 R1
 R2
 R3
-Z93 8C:/Users/bhbo9/Documents/GitHub/SYKO/REG.vhd
-Z94 FC:/Users/bhbo9/Documents/GitHub/SYKO/REG.vhd
+Z95 8C:/Users/bhbo9/Documents/GitHub/SYKO/REG.vhd
+Z96 FC:/Users/bhbo9/Documents/GitHub/SYKO/REG.vhd
 l0
 L4
 VGoVLPzniHeeUmm0>W9VBG0
@@ -667,15 +667,15 @@ R6
 R16
 !i10b 1
 R17
-Z95 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bhbo9/Documents/GitHub/SYKO/REG.vhd|
-Z96 !s107 C:/Users/bhbo9/Documents/GitHub/SYKO/REG.vhd|
+Z97 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bhbo9/Documents/GitHub/SYKO/REG.vhd|
+Z98 !s107 C:/Users/bhbo9/Documents/GitHub/SYKO/REG.vhd|
 !i113 1
 R11
 R12
 Aarch
 R1
 R2
-Z97 DEx4 work 3 reg 0 22 GoVLPzniHeeUmm0>W9VBG0
+Z99 DEx4 work 3 reg 0 22 GoVLPzniHeeUmm0>W9VBG0
 l19
 L18
 V;@l@;O^didRc4FbH`07zY2
@@ -685,19 +685,19 @@ R6
 R16
 !i10b 1
 R17
-R95
-R96
+R97
+R98
 !i113 1
 R11
 R12
 Ereg_tb
-R92
+R94
 R22
 R1
 R2
 R3
-Z98 8C:/Users/bhbo9/Documents/GitHub/SYKO/testbench_REG.vhd
-Z99 FC:/Users/bhbo9/Documents/GitHub/SYKO/testbench_REG.vhd
+Z100 8C:/Users/bhbo9/Documents/GitHub/SYKO/testbench_REG.vhd
+Z101 FC:/Users/bhbo9/Documents/GitHub/SYKO/testbench_REG.vhd
 l0
 L5
 VEFZ=A@6W?1_UVN36cggG42
@@ -707,13 +707,13 @@ R6
 R16
 !i10b 1
 R17
-Z100 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bhbo9/Documents/GitHub/SYKO/testbench_REG.vhd|
-Z101 !s107 C:/Users/bhbo9/Documents/GitHub/SYKO/testbench_REG.vhd|
+Z102 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bhbo9/Documents/GitHub/SYKO/testbench_REG.vhd|
+Z103 !s107 C:/Users/bhbo9/Documents/GitHub/SYKO/testbench_REG.vhd|
 !i113 1
 R11
 R12
 Aarch
-R97
+R99
 R22
 R1
 R2
@@ -727,18 +727,18 @@ R6
 R16
 !i10b 1
 R17
-R100
-R101
+R102
+R103
 !i113 1
 R11
 R12
 Esystem
-Z102 w1591444917
+Z104 w1591444917
 R1
 R2
 R3
-Z103 8C:/Users/bhbo9/Documents/GitHub/SYKO/System.vhd
-Z104 FC:/Users/bhbo9/Documents/GitHub/SYKO/System.vhd
+Z105 8C:/Users/bhbo9/Documents/GitHub/SYKO/System.vhd
+Z106 FC:/Users/bhbo9/Documents/GitHub/SYKO/System.vhd
 l0
 L4
 V<A>NThoYo66Y8Nc=9WCKJ2
@@ -748,8 +748,8 @@ R6
 R68
 !i10b 1
 R69
-Z105 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bhbo9/Documents/GitHub/SYKO/System.vhd|
-Z106 !s107 C:/Users/bhbo9/Documents/GitHub/SYKO/System.vhd|
+Z107 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/bhbo9/Documents/GitHub/SYKO/System.vhd|
+Z108 !s107 C:/Users/bhbo9/Documents/GitHub/SYKO/System.vhd|
 !i113 1
 R11
 R12
@@ -766,8 +766,8 @@ R6
 R68
 !i10b 1
 R69
-R105
-R106
+R107
+R108
 !i113 1
 R11
 R12
