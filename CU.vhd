@@ -200,6 +200,7 @@ begin
 		when s5 =>	--OPERACJE LOAD i ADD
 		stateX <= 5;
 			if r_e = '1' then	
+				incr <= '0';
 				case instr is
 					when "00" => ie_ACC <= '1';	--LOAD
 					when "01" => 
@@ -238,6 +239,9 @@ begin
 				mr <= '1';
 				re_MBR <= '1';
 			else
+				if a_mode = "11" or a_mode = "10" then	--tryb natychmiastowy/przemiesczeniowy
+					incr <= '1';
+				end if;
 				mr <= '0';
 				re_MBR<= '1';
 				lae <= '0';
@@ -256,6 +260,7 @@ begin
 		when s8 => -- tryb natychmiastowy.2/przemieszczeniowy.2
 		stateX <= 8;
 			if r_e = '1' then
+				incr <= '0';
 				ie_IMR <= '1';				
 			else
 				ie_IMR <= '0';	
