@@ -23,7 +23,7 @@ end entity;
 
 architecture arch of CU is
 
-type state is (s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, ERROR);
+type state is (s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, ERROR);
 signal next_state: state;
 signal present_state: state; 
 signal r_e: std_logic := '0'; 
@@ -186,15 +186,25 @@ begin
 					when "00" => 		--rejestrowy
 						if instr = "10" then
 							if flags(0)='0' then --sprawdzanie flagi OF
-								jump <= '1';
+								next_state <= s10;
+							else
+								next_state <= s1; 	--jnof
 							end if;
-							next_state <= s1; 	--jnof
 						else
 							next_state <= s5;	--load, add
 						end if;
 					when others => 		--bazowy/natychmiast/przemieszczeniowy
 						next_state <= s7;
 				end case;
+			end if;
+			
+		when s10 =>
+		stateX <= 10;
+			if r_e='1' then
+				
+			elsif r_e='0' then
+				jump <= '1';
+				next_state <= s1;
 			end if;
 		
 		when s5 =>	--OPERACJE LOAD i ADD
@@ -227,12 +237,17 @@ begin
 			
 		when s6 =>	--OPERACJE CZ2 - ADD
 		stateX <= 6;
-			if r_e = '0' then	
+			if r_e = '1' then
 				ie_ACC <= '1';
+				--ie_buf <= '1';
+			elsif r_e = '0' then	
+				ie_ACC <= '0';
+				re_MBR <= '0';
 				oe_buf <= '1';
+				--ie_buf <= '0';
 				next_state <= s1;
 			end if;	
-		
+	
 		when s7 =>	--memory read 
 		stateX <= 7;
 			if r_e = '1' then

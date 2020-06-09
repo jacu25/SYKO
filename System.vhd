@@ -68,7 +68,7 @@ component flags_buf is
 		delay : time := 3 ns
 	);
 	port( 
-		ie, rst : in std_logic;
+		ie, rst, clk : in std_logic;
 		flags_in : in std_logic_vector(4 downto 0) := (others => 'Z');
 		flags_out : out std_logic_vector(4 downto 0) := (others => 'Z')
 	);	
@@ -212,7 +212,7 @@ begin
 clk <= not clk after 0.5*period;
 RESET <= '0' after 50 ns;
 
-E_FLAGS:  FLAGS_BUF port map(rst => rst, ie=>ie_flags, flags_in => alu_flags, flags_out => flags);
+E_FLAGS:  FLAGS_BUF port map(clk => clk, rst => rst, ie=>ie_flags, flags_in => alu_flags, flags_out => flags);
 E_ACC: REG port map(ie=>ie_ACC, oe => oe_ACC, clk => clk, rst => rst, reg_out => y, reg_io => dataBus);
 E_ALU: ALU port map(x => dataBus, y => y, z => z, flags => alu_flags);
 E_BUFFOR: buf port map(ie => ie_buf, oe => oe_buf, clk => clk, rst => rst, buf_in => z, buf_out => dataBus);
@@ -225,7 +225,7 @@ E_PC: PC port map(start_adr => start_adr, increment => increment, jump_adr => da
 				jump => jump, pc_out => pc_ag, clk=>clk, rst=>rst); 
 E_IR: IR port map(ie => ie_IR, clk => clk, rst => rst, ir_in => dataBus, ir_out =>ir_ird);
 E_IR_RECODER: IR_DECODER port map(ird_in=>ir_ird, ird_out=>ird_cu);
-E_CU : CU port map(stateX => stateX, clk => clk, RESET => RESET, oe_buf => oe_buf, ie_buf => ie_buf, oe_REG_1 => oe_REG_1,
+E_CU : CU port map(ie_flags => ie_flags, stateX => stateX, clk => clk, RESET => RESET, oe_buf => oe_buf, ie_buf => ie_buf, oe_REG_1 => oe_REG_1,
 				oe_REG_2 => oe_REG_2, ird => ird_cu, flags => flags, ie_ACC => ie_ACC, oe_ACC => oe_ACC,
 				ie_REG_1 => ie_REG_1, ie_REG_2 => ie_REG_2, ie_IMR => ie_IMR, oe_IMR => oe_IMR, ie_IR => ie_IR,
 				re_MBR => re_MBR, we_MBR => we_MBR, mw => mw, mr => mr, jump => jump, incr => incr,
