@@ -24,6 +24,8 @@ signal RESET : std_logic := '1';
 --ALU
 signal y, z : std_logic_vector(7 downto 0) := (others=>'Z');
 signal flags : std_logic_vector(4 downto 0) := (others=>'Z');
+signal ie_flags : std_logic := '0';
+signal alu_flags : std_logic_vector(4 downto 0) := (others=>'Z');
 
 --ACC
 signal ie_ACC, oe_ACC : std_logic := '0';
@@ -57,6 +59,19 @@ signal oe_IMR, ie_IMR: std_logic := '0';
 signal increment, start_adr : std_logic_vector(7 downto 0) := (others=>'Z');
 signal jump, incr : std_logic := '0';
 
+component flags_buf is
+ 
+	generic(
+		ND : integer := 4;
+		delay : time := 3 ns
+	);
+	port( 
+		ie, rst : in std_logic;
+		flags_in : in std_logic_vector(4 downto 0) := (others => 'Z');
+		flags_out : out std_logic_vector(4 downto 0) := (others => 'Z')
+	);	
+end component;
+
 component CU is
 	port (clk, RESET: in std_logic; 		--RESET CU-rde
 		ird : in std_logic_vector (4 downto 0) := (others =>'Z');
@@ -65,7 +80,7 @@ component CU is
 		--sygnały_bledow : out std_logic_vector (??downto 0);
 		
 		--sygnały sterujące:
-		ie_ACC, ie_buf, ie_REG_1, ie_REG_2, ie_IMR, ie_IR : out std_logic;
+		ie_ACC, ie_buf, ie_REG_1, ie_REG_2, ie_IMR, ie_IR, ie_flags: out std_logic;
 		oe_ACC, oe_buf, oe_REG_1, oe_REG_2, oe_IMR : out std_logic;
 		re_MBR, we_MBR, mw, mr, jump, incr, lae : out std_logic;
 		start_adr, increment : out std_logic_vector (7 downto 0) := (others =>'Z');
@@ -193,9 +208,9 @@ begin
 
 clk <= not clk after 0.5*period;
 RESET <= '0' after 50 ns;
-
+E_FLAGS:  FLAGS_BUF port map(rst => rst, ie=>ie_flags, flags_in => alu_flags, flags_out => flags);
 E_ACC: REG port map(ie=>ie_ACC, oe => oe_ACC, clk => clk, rst => rst, reg_out => y, reg_io => dataBus);
-E_ALU: ALU port map(x => dataBus, y => y, z => z, flags => flags);
+E_ALU: ALU port map(x => dataBus, y => y, z => z, flags => alu_flags);
 E_BUFFOR: buf port map(ie => ie_buf, oe => oe_buf, clk => clk, rst => rst, buf_in => z, buf_out => dataBus);
 
 E_AG: AG port map(ag_out => addressBus, imr => imr_ag, reg1 => r1_ag, reg2 => r2_ag, pc => pc_ag, cag => cag);

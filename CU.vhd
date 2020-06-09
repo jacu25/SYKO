@@ -9,7 +9,7 @@ entity CU is
 		flags : in std_logic_vector (4 downto 0) := (others =>'Z');
 
 		--sygnały sterujące:
-		ie_ACC, ie_buf, ie_REG_1, ie_REG_2, ie_IMR, ie_IR : out std_logic := '0';
+		ie_ACC, ie_buf, ie_REG_1, ie_REG_2, ie_IMR, ie_IR, ie_flags : out std_logic := '0';
 		oe_ACC, oe_buf, oe_REG_1, oe_REG_2, oe_IMR : out std_logic := '0';
 		re_MBR, we_MBR, mw, mr, jump, incr, lae : out std_logic := '0';
 		start_adr, increment : out std_logic_vector (7 downto 0) := (others =>'Z');
@@ -128,6 +128,7 @@ begin
 				mr <= '1';
 				re_MBR <= '1';
 			else
+				mr <= '0';
 				re_MBR<= '1';
 				lae <= '0';
 				next_state<= s3;
@@ -196,7 +197,9 @@ begin
 			if r_e = '1' then	
 				case instr is
 					when "00" => ie_ACC <= '1';	--LOAD
-					when "01" => ie_buf <= '1';	--ADD
+					when "01" => 
+						ie_buf <= '1';	--ADD
+						ie_flags <= '1';
 					when others => next_state <= ERROR;
 				end case;
 			else
@@ -204,6 +207,7 @@ begin
 					when "00" => 
 						next_state <= s1; --LOAD
 					when "01" => 
+						ie_flags <= '0';
 						ie_buf <= '0';
 						oe_IMR <= '0';
 						oe_REG_1 <= '0';
@@ -231,6 +235,7 @@ begin
 					incr <= '1';
 				end if;
 			else
+				mr <= '0';
 				re_MBR<= '1';
 				lae <= '0';
 				if a_mode = "11" or a_mode = "10" then --tryb natychmiastowy/przemiesczeniowy
