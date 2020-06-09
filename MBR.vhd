@@ -16,13 +16,26 @@ entity MBR is
 end MBR;
 
 architecture arch of MBR is
-begin 
-	
-	process (clk, re, we, rst, mbr_mem, mbr_data)
 
-	variable store : std_logic_vector (7 downto 0) := (others =>'0');
+signal r_e : std_logic := '0';
+begin 
+
+	clock: process (clk) is
+
+		begin
+			if rising_edge(clk) then
+				r_e<= '1';
+			elsif falling_edge(clk) then
+				r_e<= '0';
+			end if;
+	end process;
+	
+	
+	process (r_e, re, we, rst, mbr_mem, mbr_data)
+
+	variable store : std_logic_vector (7 downto 0):= (others => 'Z');
 	begin
-		if rising_edge(clk) then
+		if r_e='1' then
 			if rst='0' then
 				store := (others=>'0');
 			elsif re='1' then
@@ -31,7 +44,7 @@ begin
 				store := mbr_data;
 			end if;
 			
-		elsif falling_edge(clk) then
+		elsif r_e = '0' then
 			if re='1' then
 				mbr_data <= store after delay;
 			elsif we='1' then
@@ -39,7 +52,8 @@ begin
 			else
 				mbr_data <= (others=>'Z') after delay;
 			end if;
-		end if;
+		end if;	
 		storex <= store;
 	end process;
+
 end arch;

@@ -1,14 +1,4 @@
-C:/Users/bhbo9/Documents/GitHub/SYKO/testbench_MBR.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/bhbo9/Documents/GitHub/SYKO/testbench_MBR.vhd
-Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity MBR_tb
--- Compiling architecture arch of MBR_tb
--- Loading entity MBR
-
-} {} {}} C:/Users/bhbo9/Documents/GitHub/SYKO/IR_DECODER.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/bhbo9/Documents/GitHub/SYKO/IR_DECODER.vhd
+C:/Users/bhbo9/Documents/GitHub/SYKO/IR_DECODER.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/bhbo9/Documents/GitHub/SYKO/IR_DECODER.vhd
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -44,13 +34,13 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Compiling architecture arch of alu_tb
 -- Loading entity alu
 
-} {} {}} C:/Users/bhbo9/Documents/GitHub/SYKO/ALU.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/bhbo9/Documents/GitHub/SYKO/ALU.vhd
+} {} {}} C:/Users/bhbo9/Documents/GitHub/SYKO/REG.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/bhbo9/Documents/GitHub/SYKO/REG.vhd
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity alu
--- Compiling architecture arch of alu
+-- Compiling entity REG
+-- Compiling architecture arch of REG
 
 } {} {}} C:/Users/bhbo9/Documents/GitHub/SYKO/testbench_IR.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/bhbo9/Documents/GitHub/SYKO/testbench_IR.vhd
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
@@ -62,13 +52,13 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Compiling architecture arch of IR_tb
 -- Loading entity IR
 
-} {} {}} C:/Users/bhbo9/Documents/GitHub/SYKO/IR.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/bhbo9/Documents/GitHub/SYKO/IR.vhd
+} {} {}} C:/Users/bhbo9/Documents/GitHub/SYKO/ALU.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/bhbo9/Documents/GitHub/SYKO/ALU.vhd
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity IR
--- Compiling architecture arch of IR
+-- Compiling entity alu
+-- Compiling architecture arch of alu
 
 } {} {}} C:/Users/bhbo9/Documents/GitHub/SYKO/testbench_IR_DECODER.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/bhbo9/Documents/GitHub/SYKO/testbench_IR_DECODER.vhd
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
@@ -79,5 +69,13 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Compiling entity IRD_tb
 -- Compiling architecture arch of IRD_tb
 -- Loading entity IR_DECODER
+
+} {} {}} C:/Users/bhbo9/Documents/GitHub/SYKO/IR.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/bhbo9/Documents/GitHub/SYKO/IR.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity IR
+-- Compiling architecture arch of IR
 
 } {} {}}
