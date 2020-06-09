@@ -20,6 +20,7 @@ signal next_state: state;
 signal present_state: state := s0; 
 signal r_e : std_logic;
 begin
+
 	clk <= not clk after 0.5*period;
 	
     REG : entity work.REG port map(ie => ie, oe => oe, clk => clk, reg_io => reg_io, reg_out => reg_out, rst => rst);
@@ -74,12 +75,11 @@ begin
 				if r_e = '1' then
 					rst <= '0';
 				else
+					rst <= '1';
 					next_state <= s5;
 				end if;	
 			when s5 =>
-				if falling_edge(clk) then
 					next_state <= s5;
-				end if;	
 		end case;
     end process;
 end arch;

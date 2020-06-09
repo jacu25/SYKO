@@ -9,8 +9,8 @@ entity MAR_tb is
 end MAR_tb;
 
 architecture arch of MAR_tb is
-    signal mar_out : std_logic_vector(7 downto 0); 
-	signal mar_in , storex: std_logic_vector(7 downto 0);
+    signal mar_out : std_logic_vector(7 downto 0) := (others => 'Z'); 
+	signal mar_in , storex: std_logic_vector(7 downto 0) := (others => 'Z');
 	
 	signal rst : std_logic := '1';
 	signal clk, lae: std_logic := '0';
@@ -53,33 +53,32 @@ begin
 					mar_in <= std_logic_vector(to_signed(10,8));
 					lae <= '1';
 				else
+					mar_in <= (others => 'Z');
+					lae <= '0';
 					next_state <= s2;
 				end if;	
 			when s2 =>
 				if r_e = '1' then
-					lae <= '1';
-					mar_in <= std_logic_vector(to_signed(10,8));
+					mar_in <= std_logic_vector(to_signed(20,8));
 				else
 					next_state <= s3;
 				end if;
 			when s3 =>
 				if r_e = '1' then
 					lae <= '1';
-					mar_in <= std_logic_vector(to_signed(10,8));
 				else
+					lae <= '0';
 					next_state <= s4;
 				end if;	
 			when s4 =>
 				if r_e = '1' then
-					lae <= '0';
-					mar_in <= std_logic_vector(to_signed(10,8));
+					rst <= '0';
 				else
+					rst <= '1';
 					next_state <= s5;
 				end if;	
 			when s5 =>
-				if falling_edge(clk) then
-					next_state <= s5;
-				end if;	
+				next_state <= s5;
 		end case;
     end process;
 end arch;
