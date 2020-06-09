@@ -15,8 +15,8 @@ entity PC is
 		increment : in std_logic_vector (ND downto 0):= (others =>'Z');
 		jump_adr : in std_logic_vector (ND downto 0) := (others =>'Z')
 		);
-
 end PC;
+
 
 architecture arch of PC is
 

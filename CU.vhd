@@ -110,6 +110,7 @@ begin
 
 		when s1 => --
 			if r_e = '1' then
+				incr <= '0';
 				oe_buf <= '0';
 				ie_buf <= '0';
 				cag <= "011";
@@ -195,6 +196,7 @@ begin
 		when s5 =>	--OPERACJE LOAD i ADD
 		
 			if r_e = '1' then	
+				incr <= '0';
 				case instr is
 					when "00" => ie_ACC <= '1';	--LOAD
 					when "01" => 
@@ -231,10 +233,10 @@ begin
 			if r_e = '1' then
 				mr <= '1';
 				re_MBR <= '1';
+			else
 				if a_mode = "11" or a_mode = "10" then	--tryb natychmiastowy/przemiesczeniowy
 					incr <= '1';
 				end if;
-			else
 				mr <= '0';
 				re_MBR<= '1';
 				lae <= '0';
@@ -252,8 +254,10 @@ begin
 			end if;
 		when s8 => -- tryb natychmiastowy.2/przemieszczeniowy.2
 			if r_e = '1' then
+				incr <= '0';
 				ie_IMR <= '1';				
 			else
+				ie_IMR <= '0';	
 				re_MBR<= '0';
 				oe_IMR <= '1';
 				if instr = "10" then --jnof
@@ -282,6 +286,7 @@ begin
 			end if;	
 			
 		when ERROR => 
+			incr <= '0';
 			next_state <= ERROR;
 	end case;
 end process;

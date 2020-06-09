@@ -208,6 +208,7 @@ begin
 
 clk <= not clk after 0.5*period;
 RESET <= '0' after 50 ns;
+
 E_FLAGS:  FLAGS_BUF port map(rst => rst, ie=>ie_flags, flags_in => alu_flags, flags_out => flags);
 E_ACC: REG port map(ie=>ie_ACC, oe => oe_ACC, clk => clk, rst => rst, reg_out => y, reg_io => dataBus);
 E_ALU: ALU port map(x => dataBus, y => y, z => z, flags => alu_flags);

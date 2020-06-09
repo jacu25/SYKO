@@ -34,7 +34,7 @@ begin
 	
 	process (r_e, ie, rst)
 
-	variable store : std_logic_vector (ND downto 0);
+	variable store : std_logic_vector (ND downto 0) := (others =>'Z');
 	begin
 		if r_e = '1' then
 			if rst='0' then
