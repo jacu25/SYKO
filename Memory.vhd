@@ -16,18 +16,22 @@ end Memory;
 
 architecture arch of Memory is
 
- type ROM_type is array (0 to 4 ) of std_logic_vector(7 downto 0);
+ type ROM_type is array (0 to 7 ) of std_logic_vector(7 downto 0);
   
 begin
   
 	process(mw, mr, address, data)
 	
 	 variable rom_data: ROM_type:=(
-	"00000011",
-	"00001010",
-	"11100000",
+	"00000011",	--LOAD N
+	"01111111",	--liczba
+	"00001010",	--ADD P
+	"00000111", -- 7
+	"00010000", --JNOF REG1
 	"00000000",
-	"00000000"
+	"00000000",
+	"01000000"
+
   );
   
 	begin
