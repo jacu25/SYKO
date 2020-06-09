@@ -74,12 +74,11 @@ begin
 				if r_e = '1' then
 					rst <= '0';
 				else
+					rst <= '1';
 					next_state <= s5;
 				end if;	
 			when s5 =>
-				if falling_edge(clk) then
 					next_state <= s5;
-				end if;	
 		end case;
     end process;
 end arch;
