@@ -23,7 +23,7 @@ end entity;
 
 architecture arch of CU is
 
-type state is (s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, ERROR);
+type state is (s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, S11, ERROR);
 signal next_state: state;
 signal present_state: state; 
 signal r_e: std_logic := '0'; 
@@ -211,6 +211,7 @@ begin
 		stateX <= 5;
 			if r_e = '1' then	
 				incr <= '0';
+				mr <= '0';
 				case instr is
 					when "00" => ie_ACC <= '1';	--LOAD
 					when "01" => 
@@ -223,7 +224,9 @@ begin
 					when "00" => 
 						next_state <= s1; --LOAD
 						ie_ACC <= '0';
-					when "01" => 
+					when "01" =>  --ADD
+						re_MBR <= '0';
+						oe_buf <= '1';
 						ie_flags <= '0';
 						ie_buf <= '0';
 						oe_IMR <= '0';
@@ -243,7 +246,7 @@ begin
 			elsif r_e = '0' then	
 				ie_ACC <= '0';
 				re_MBR <= '0';
-				oe_buf <= '1';
+				--oe_buf <= '1';
 				next_state <= s1;
 			end if;	
 	
@@ -279,7 +282,7 @@ begin
 			else
 				ie_IMR <= '0';	
 				re_MBR<= '0';
-				oe_IMR <= '1';
+				
 				if instr = "10" then --jnof
 					if flags(0)='0' then --sprawdzanie flagi OF
 						jump <= '1';
@@ -290,6 +293,7 @@ begin
 					lae <= '1';
 					next_state <= s9; --memory_read
 				else
+					oe_IMR <= '1';
 					next_state <= s5; --add, load
 				end if;
 			end if;
@@ -297,17 +301,24 @@ begin
 		when s9 => -- tryb przemieszczeniowy.3
 		stateX <= 9;
 			if r_e = '1' then
-				mr <= '1';
-				re_MBR <= '1';
+				--re_MBR <= '1';
 			else
-				oe_IMR <= '0';
+				--oe_IMR <= '0';
+				mr <= '1';
 				re_MBR<= '1';
 				lae <= '0';
+				next_state <= s11;
+			end if;	
+			
+		when s11 =>
+		stateX <= 11;
+			if r_e = '1' then
+			else
 				next_state <= s5;
 			end if;	
 			
 		when ERROR => 
-		stateX <= 10;
+		stateX <= 12;
 			incr <= '0';
 			next_state <= ERROR;
 	end case;
