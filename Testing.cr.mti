@@ -46,13 +46,13 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Compiling architecture arch of alu_tb
 -- Loading entity alu
 
-} {} {}} C:/Users/bhbo9/Documents/GitHub/SYKO/ALU.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/bhbo9/Documents/GitHub/SYKO/ALU.vhd
+} {} {}} C:/Users/bhbo9/Documents/GitHub/SYKO/IR.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/bhbo9/Documents/GitHub/SYKO/IR.vhd
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity alu
--- Compiling architecture arch of alu
+-- Compiling entity IR
+-- Compiling architecture arch of IR
 
 } {} {}} C:/Users/bhbo9/Documents/GitHub/SYKO/REG.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/bhbo9/Documents/GitHub/SYKO/REG.vhd
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015

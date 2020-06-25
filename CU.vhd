@@ -240,12 +240,10 @@ begin
 		stateX <= 6;
 			if r_e = '1' then
 				ie_ACC <= '1';
-				--ie_buf <= '1';
 			elsif r_e = '0' then	
 				ie_ACC <= '0';
 				re_MBR <= '0';
 				oe_buf <= '1';
-				--ie_buf <= '0';
 				next_state <= s1;
 			end if;	
 	
