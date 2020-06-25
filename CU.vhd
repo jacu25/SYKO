@@ -243,7 +243,6 @@ begin
 				ie_ACC <= '1';
 			elsif r_e = '0' then	
 				ie_ACC <= '0';
-				re_MBR <= '0';
 				next_state <= s1;
 			end if;	
 	
