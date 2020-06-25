@@ -28,7 +28,7 @@ begin
 	   wait for 15 ns;
 	   
 	   -- Odczyt spod adresu 2
-	   address <= std_logic_vector(to_unsigned(2,8));
+	   address <= std_logic_vector(to_unsigned(1,8));
 	   wait for 15 ns;
 	   
 	   mr <= '0';
@@ -36,13 +36,13 @@ begin
 	   
 	   -- Zapis do adresu 2 liczby 20
 	   mw <= '1';
-	   address <= std_logic_vector(to_unsigned(1,8));
+	   address <= std_logic_vector(to_unsigned(0,8));
 	   data <= std_logic_vector(to_unsigned(20,8));
 	   wait for 15 ns;
 	   
 	   -- Odczyt spod adresu 2
 	   mr <= '1';
-	   address <= std_logic_vector(to_unsigned(1,8));
+	   address <= std_logic_vector(to_unsigned(0,8));
 	   data <= (others => 'Z');
 	   mw <= '0';
 	   wait for 15 ns;

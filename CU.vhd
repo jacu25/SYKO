@@ -206,7 +206,7 @@ begin
 				jump <= '1';
 				next_state <= s1;
 			end if;
-		
+			
 		when s5 =>	--OPERACJE LOAD i ADD
 		stateX <= 5;
 			if r_e = '1' then	
@@ -222,6 +222,7 @@ begin
 				case instr is
 					when "00" => 
 						next_state <= s1; --LOAD
+						ie_ACC <= '0';
 					when "01" => 
 						ie_flags <= '0';
 						ie_buf <= '0';

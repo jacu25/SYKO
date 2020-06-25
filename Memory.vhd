@@ -20,13 +20,13 @@ architecture arch of Memory is
   
 begin
   
-	process(mw, mr, address, data)
+	process(mw, mr, address, data) is
 	
 	 variable rom_data: ROM_type:=(
 	"00000011",	--LOAD N
 	"00000001",	--liczba
 	"00001010",	--ADD P
-	"00000111", -- 7
+	"00000111", --liczba 7
 	"00010000", --JNOF REG1
 	"00000000",	--EMPTY
 	"00000000", --EMPTY
