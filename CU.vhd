@@ -166,10 +166,8 @@ begin
 					when "00" =>		--rejestrowy						
 						if reg = '0' then 	--reg 1
 							oe_REG_1 <= '1';
-							--lae <= '1';
 						else				--reg 2
 							oe_REG_2 <= '1';
-							--lae <= '1';
 						end if;
 						
 					when "01" =>	--bazowy
@@ -246,7 +244,6 @@ begin
 			elsif r_e = '0' then	
 				ie_ACC <= '0';
 				re_MBR <= '0';
-				--oe_buf <= '1';
 				next_state <= s1;
 			end if;	
 	
@@ -301,9 +298,7 @@ begin
 		when s9 => -- tryb przemieszczeniowy.3
 		stateX <= 9;
 			if r_e = '1' then
-				--re_MBR <= '1';
 			else
-				--oe_IMR <= '0';
 				mr <= '1';
 				re_MBR<= '1';
 				lae <= '0';
